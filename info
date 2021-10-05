@@ -1,0 +1,14 @@
+svn checkout svn+ssh://wboussella@jaguar.emi-u.bordeaux.fr/net/cremi/inbouchet/hidden/CHAPEAU/svnnachos/ nachos
+
+I 
+Si putchar est implémenté, il doit afficher sur la sortie a puis s'est n suiveurs en ascii (je pense)
+
+Je pense que c'est une erreur car cela peut perturber l'interieur du buffer et donc peut sauter des charactères,
+mais aussi cela ne donne pas l'occasion a l'utilisateur de confirmer ce qu'il ecrit
+
+II 1
+le code recopie ce qu'on ecrit, lit toujours 1 de plus que ce qu'elle ecrit 
+
+test
+
+blala
