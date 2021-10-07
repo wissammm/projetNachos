@@ -41,5 +41,9 @@ void ConsoleDriver::PutString(const char s[]){
 }
 
 void ConsoleDriver::GetString(char*s,int n){
-    // ...
+
+    int ch = ConsoleDriver::GetChar();
+    while(ch!=-1){
+        
+    }
 }
