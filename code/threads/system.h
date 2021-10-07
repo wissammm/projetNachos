@@ -17,7 +17,7 @@
 #include "timer.h"
 #include <consoledriver.h>
 
-
+#define MAX_STRING_SIZE 64
 // Initialization and cleanup routines
 extern void Initialize (int argc, char **argv);	// Initialization,
 						// called before anything else

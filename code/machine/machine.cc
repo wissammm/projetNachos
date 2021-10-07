@@ -435,3 +435,16 @@ void Machine::WriteRegister(int num, int value)
 	registers[num] = value;
     }
 
+#ifdef CHANGED
+int Machine::copyStringFromMachine(int from, char *to, unsigned size){
+    unsigned int i=0;
+    int buf;
+    while((i<size)&& machine->ReadMem(from+i,1,&buf)){
+        to[i]=(char)buf;
+        i++;
+    }
+    to[i]='\0';
+    return i;
+}
+
+#endif CHANGED

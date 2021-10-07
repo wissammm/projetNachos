@@ -136,6 +136,9 @@ class Machine:public dontcopythis {
 				// memory (at addr).  Return FALSE if a 
 				// correct translation couldn't be found.
     
+	int copyStringFromMachine(int from, char *to, unsigned size);//like strcpy
+
+
     ExceptionType Translate(int virtAddr, int* physAddr, int size, bool writing, bool debug);
     				// Translate an address, and check for 
 				// alignment.  Set the use and dirty bits in 

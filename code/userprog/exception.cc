@@ -89,6 +89,18 @@ ExceptionHandler (ExceptionType which)
 		    consoledriver->PutChar(machine->ReadRegister(4));
 		    break;
 		  }
+		  case SC_PutString:
+		  {
+			DEBUG ('s',"PutString\n ");
+			int c = machine->ReadRegister (4); // recupération de la chaine de caractère
+            char* to = new char[MAX_STRING_SIZE+1]; // buffer le +1 permet d'ajouter le caractere de fin de chaine
+			
+            machine->copyStringFromMachine(c, to, MAX_STRING_SIZE); // copie chaine mips vers chaine Linux
+			while()
+			consoledriver->PutString(to);
+			free(to);
+			break;
+		  }
 		  #endif CHANGED
 		default:
 		  {
