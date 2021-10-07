@@ -32,7 +32,7 @@ int ConsoleDriver::GetChar(){
 }
 void ConsoleDriver::PutString(const char s[]){
     
-    int i = 0;*7
+    int i = 0;
     
     while(s[i]!='\0'){
         ConsoleDriver::PutChar(s[i]);

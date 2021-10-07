@@ -64,8 +64,7 @@ UpdatePC ()
 //      are in machine.h.
 //----------------------------------------------------------------------
 
-void
-ExceptionHandler (ExceptionType which)
+void ExceptionHandler (ExceptionType which)
 {
     int type = machine->ReadRegister (2);
     int address = machine->registers[BadVAddrReg];
@@ -95,9 +94,16 @@ ExceptionHandler (ExceptionType which)
 			int c = machine->ReadRegister (4); // recupération de la chaine de caractère
             char* to = new char[MAX_STRING_SIZE+1]; // buffer le +1 permet d'ajouter le caractere de fin de chaine
 			
-            machine->copyStringFromMachine(c, to, MAX_STRING_SIZE); // copie chaine mips vers chaine Linux
-			while()
+            int i = machine->copyStringFromMachine(c, to, MAX_STRING_SIZE); // copie chaine mips vers chaine Linux
 			consoledriver->PutString(to);
+			
+			
+			int cpt=1;
+			while(i==-1){
+				i = machine->copyStringFromMachine(c+((MAX_STRING_SIZE+1)*cpt), to, MAX_STRING_SIZE);
+				consoledriver->PutString(to);
+				cpt++;
+			}
 			free(to);
 			break;
 		  }

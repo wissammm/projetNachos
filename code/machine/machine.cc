@@ -440,11 +440,23 @@ int Machine::copyStringFromMachine(int from, char *to, unsigned size){
     unsigned int i=0;
     int buf;
     while((i<size)&& machine->ReadMem(from+i,1,&buf)){
-        to[i]=(char)buf;
+		char c =(char)buf;
+        to[i]= c;
         i++;
+		if(c=='\0'){
+			break;
+		}
     }
-    to[i]='\0';
-    return i;
+	machine->ReadMem(from+i,1,&buf);
+	if((i==size)&&((char)buf!='\0')){
+		to[i]=(char)buf;
+		return -1;
+	}
+	else{
+		to[i]='\0';
+    	return i;
+	}
+    
 }
 
 #endif CHANGED
