@@ -23,7 +23,7 @@
  *	Initialize running a C program, by calling "main". 
  *
  * 	NOTE: This has to be first, so that it gets loaded at location 0.
- *	The Nachos kernel always starts a program by jumping to location 0.
+ *	
  * -------------------------------------------------------------
  */
 
@@ -33,7 +33,7 @@
 	.ent	__start
 __start:
 	jal	main
-	move	$4,$0		
+	move	$4,$2		
 	jal	Exit	 /* if we return from main, exit(0) */
 	.end __start
 
@@ -154,6 +154,13 @@ PutChar:
 	j	$31
 	.end PutChar
 
+	.globl GetChar
+	.ent	PutChar
+GetChar:
+	addiu $2,$0,SC_GetChar
+	syscall
+	j	$31
+	.end GetChar
 
 	.globl PutString
 	.ent	PutString

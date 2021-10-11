@@ -107,6 +107,20 @@ void ExceptionHandler (ExceptionType which)
 			free(to);
 			break;
 		  }
+
+		  case SC_GetChar:
+		  {
+		    DEBUG ('s',"GetChar\n ");
+		    machine->WriteRegister(2,consoledriver->GetChar());
+		    break;
+		  }
+
+		  case SC_Exit:
+		  {
+			  
+			  Exit(machine->ReadRegister(4));
+			  break;
+		  }
 		  #endif CHANGED
 		default:
 		  {

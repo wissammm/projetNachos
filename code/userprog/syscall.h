@@ -32,9 +32,11 @@
 #define SC_Fork		9
 #define SC_Yield	10
 
+
 #ifdef CHANGED
 #define SC_PutString  11
 #define SC_PutChar  12
+#define SC_GetChar 13
 #endif CHANGED
 
 #ifdef IN_USER_MODE
@@ -145,6 +147,11 @@ void PutChar(char c);
 
 void PutString(const char s[]);
 #endif CHANGED
+
+#ifdef CHANGED
+int GetChar();
+#endif CHANGED
+
 
 #endif // IN_USER_MODE
 

@@ -1,0 +1,191 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/home/wissam/Documents/projetNachos/code'
+set -e; \
+for i in threads userprog ; do \
+	make -C $i nachos; \
+done ; \
+for i in bin test; do \
+	make -C $i all; \
+done
+make[1]: Entering directory '/home/wissam/Documents/projetNachos/code/threads'
+g++ -g -Wall -Wextra -Wshadow -I../threads -I../machine -DTHREADS -DHOST_x86_64 -DHAVE_VALGRIND -DLINUX -DCHANGED  -fsanitize=undefined -MM switch.S | \
+	sed -e 's|\(.*\)\.o:|.\1.d \1.o:|g' > .switch.d
+g++ -g -Wall -Wextra -Wshadow -I../threads -I../machine -DTHREADS -DHOST_x86_64 -DHAVE_VALGRIND -DLINUX -DCHANGED  -fsanitize=undefined -MM ../machine/timer.cc | \
+	sed -e 's|\(.*\)\.o:|.\1.d \1.o:|g' > .timer.d
+g++ -g -Wall -Wextra -Wshadow -I../threads -I../machine -DTHREADS -DHOST_x86_64 -DHAVE_VALGRIND -DLINUX -DCHANGED  -fsanitize=undefined -MM ../machine/sysdep.cc | \
+	sed -e 's|\(.*\)\.o:|.\1.d \1.o:|g' > .sysdep.d
+g++ -g -Wall -Wextra -Wshadow -I../threads -I../machine -DTHREADS -DHOST_x86_64 -DHAVE_VALGRIND -DLINUX -DCHANGED  -fsanitize=undefined -MM ../machine/stats.cc | \
+	sed -e 's|\(.*\)\.o:|.\1.d \1.o:|g' > .stats.d
+g++ -g -Wall -Wextra -Wshadow -I../threads -I../machine -DTHREADS -DHOST_x86_64 -DHAVE_VALGRIND -DLINUX -DCHANGED  -fsanitize=undefined -MM ../machine/interrupt.cc | \
+	sed -e 's|\(.*\)\.o:|.\1.d \1.o:|g' > .interrupt.d
+ 
+g++ -g -Wall -Wextra -Wshadow -I../threads -I../machine -DTHREADS -DHOST_x86_64 -DHAVE_VALGRIND -DLINUX -DCHANGED  -fsanitize=undefined -MM threadtest.cc | \
+	sed -e 's|\(.*\)\.o:|.\1.d \1.o:|g' > .threadtest.d
+g++ -g -Wall -Wextra -Wshadow -I../threads -I../machine -DTHREADS -DHOST_x86_64 -DHAVE_VALGRIND -DLINUX -DCHANGED  -fsanitize=undefined -MM utility.cc | \
+	sed -e 's|\(.*\)\.o:|.\1.d \1.o:|g' > .utility.d
+ 
+g++ -g -Wall -Wextra -Wshadow -I../threads -I../machine -DTHREADS -DHOST_x86_64 -DHAVE_VALGRIND -DLINUX -DCHANGED  -fsanitize=undefined -MM thread.cc | \
+	sed -e 's|\(.*\)\.o:|.\1.d \1.o:|g' > .thread.d
+g++ -g -Wall -Wextra -Wshadow -I../threads -I../machine -DTHREADS -DHOST_x86_64 -DHAVE_VALGRIND -DLINUX -DCHANGED  -fsanitize=undefined -MM system.cc | \
+	sed -e 's|\(.*\)\.o:|.\1.d \1.o:|g' > .system.d
+g++ -g -Wall -Wextra -Wshadow -I../threads -I../machine -DTHREADS -DHOST_x86_64 -DHAVE_VALGRIND -DLINUX -DCHANGED  -fsanitize=undefined -MM synchlist.cc | \
+	sed -e 's|\(.*\)\.o:|.\1.d \1.o:|g' > .synchlist.d
+g++ -g -Wall -Wextra -Wshadow -I../threads -I../machine -DTHREADS -DHOST_x86_64 -DHAVE_VALGRIND -DLINUX -DCHANGED  -fsanitize=undefined -MM synch.cc | \
+	sed -e 's|\(.*\)\.o:|.\1.d \1.o:|g' > .synch.d
+ 
+g++ -g -Wall -Wextra -Wshadow -I../threads -I../machine -DTHREADS -DHOST_x86_64 -DHAVE_VALGRIND -DLINUX -DCHANGED  -fsanitize=undefined -MM scheduler.cc | \
+	sed -e 's|\(.*\)\.o:|.\1.d \1.o:|g' > .scheduler.d
+ 
+g++ -g -Wall -Wextra -Wshadow -I../threads -I../machine -DTHREADS -DHOST_x86_64 -DHAVE_VALGRIND -DLINUX -DCHANGED  -fsanitize=undefined -MM list.cc | \
+	sed -e 's|\(.*\)\.o:|.\1.d \1.o:|g' > .list.d
+ 
+g++ -g -Wall -Wextra -Wshadow -I../threads -I../machine -DTHREADS -DHOST_x86_64 -DHAVE_VALGRIND -DLINUX -DCHANGED  -fsanitize=undefined -MM main.cc | \
+	sed -e 's|\(.*\)\.o:|.\1.d \1.o:|g' > .main.d
+ 
+g++ -g -Wall -Wextra -Wshadow -I../threads -I../machine -DTHREADS -DHOST_x86_64 -DHAVE_VALGRIND -DLINUX -DCHANGED  -fsanitize=undefined -c main.cc -o main.o
+g++ -g -Wall -Wextra -Wshadow -I../threads -I../machine -DTHREADS -DHOST_x86_64 -DHAVE_VALGRIND -DLINUX -DCHANGED  -fsanitize=undefined -c list.cc -o list.o
+ 
+g++ -g -Wall -Wextra -Wshadow -I../threads -I../machine -DTHREADS -DHOST_x86_64 -DHAVE_VALGRIND -DLINUX -DCHANGED  -fsanitize=undefined -c scheduler.cc -o scheduler.o
+g++ -g -Wall -Wextra -Wshadow -I../threads -I../machine -DTHREADS -DHOST_x86_64 -DHAVE_VALGRIND -DLINUX -DCHANGED  -fsanitize=undefined -c synch.cc -o synch.o
+g++ -g -Wall -Wextra -Wshadow -I../threads -I../machine -DTHREADS -DHOST_x86_64 -DHAVE_VALGRIND -DLINUX -DCHANGED  -fsanitize=undefined -c synchlist.cc -o synchlist.o
+g++ -g -Wall -Wextra -Wshadow -I../threads -I../machine -DTHREADS -DHOST_x86_64 -DHAVE_VALGRIND -DLINUX -DCHANGED  -fsanitize=undefined -c system.cc -o system.o
+g++ -g -Wall -Wextra -Wshadow -I../threads -I../machine -DTHREADS -DHOST_x86_64 -DHAVE_VALGRIND -DLINUX -DCHANGED  -fsanitize=undefined -c thread.cc -o thread.o
+g++ -g -Wall -Wextra -Wshadow -I../threads -I../machine -DTHREADS -DHOST_x86_64 -DHAVE_VALGRIND -DLINUX -DCHANGED  -fsanitize=undefined -c utility.cc -o utility.o
+g++ -g -Wall -Wextra -Wshadow -I../threads -I../machine -DTHREADS -DHOST_x86_64 -DHAVE_VALGRIND -DLINUX -DCHANGED  -fsanitize=undefined -c threadtest.cc -o threadtest.o
+g++ -g -Wall -Wextra -Wshadow -I../threads -I../machine -DTHREADS -DHOST_x86_64 -DHAVE_VALGRIND -DLINUX -DCHANGED  -fsanitize=undefined -c ../machine/interrupt.cc -o interrupt.o
+g++ -g -Wall -Wextra -Wshadow -I../threads -I../machine -DTHREADS -DHOST_x86_64 -DHAVE_VALGRIND -DLINUX -DCHANGED  -fsanitize=undefined -c ../machine/stats.cc -o stats.o
+g++ -g -Wall -Wextra -Wshadow -I../threads -I../machine -DTHREADS -DHOST_x86_64 -DHAVE_VALGRIND -DLINUX -DCHANGED  -fsanitize=undefined -c ../machine/sysdep.cc -o sysdep.o
+g++ -g -Wall -Wextra -Wshadow -I../threads -I../machine -DTHREADS -DHOST_x86_64 -DHAVE_VALGRIND -DLINUX -DCHANGED  -fsanitize=undefined -c ../machine/timer.cc -o timer.o
+gcc -E -P -I../threads -I../machine -DHOST_x86_64 -DHAVE_VALGRIND -DLINUX ../threads/switch.S > swtch.s
+gcc -c -g -o switch.o swtch.s
+rm swtch.s
+g++ main.o list.o scheduler.o synch.o synchlist.o system.o thread.o utility.o threadtest.o interrupt.o stats.o sysdep.o timer.o switch.o -g -fsanitize=undefined -o nachos
+make[1]: Leaving directory '/home/wissam/Documents/projetNachos/code/threads'
+ 
+make[1]: Entering directory '/home/wissam/Documents/projetNachos/code/userprog'
+ 
+g++ -g -Wall -Wextra -Wshadow -I../bin -I../filesys -I../userprog -I../threads -I../machine -DUSER_PROGRAM -DFILESYS_NEEDED -DFILESYS_STUB -DHOST_x86_64 -DHAVE_VALGRIND -DLINUX -DCHANGED  -fsanitize=undefined -MM ../threads/switch.S | \
+	sed -e 's|\(.*\)\.o:|.\1.d \1.o:|g' > .switch.d
+ 
+g++ -g -Wall -Wextra -Wshadow -I../bin -I../filesys -I../userprog -I../threads -I../machine -DUSER_PROGRAM -DFILESYS_NEEDED -DFILESYS_STUB -DHOST_x86_64 -DHAVE_VALGRIND -DLINUX -DCHANGED  -fsanitize=undefined -MM ../machine/consoledriver.cc | \
+	sed -e 's|\(.*\)\.o:|.\1.d \1.o:|g' > .consoledriver.d
+ 
+g++ -g -Wall -Wextra -Wshadow -I../bin -I../filesys -I../userprog -I../threads -I../machine -DUSER_PROGRAM -DFILESYS_NEEDED -DFILESYS_STUB -DHOST_x86_64 -DHAVE_VALGRIND -DLINUX -DCHANGED  -fsanitize=undefined -MM ../machine/translate.cc | \
+	sed -e 's|\(.*\)\.o:|.\1.d \1.o:|g' > .translate.d
+ 
+g++ -g -Wall -Wextra -Wshadow -I../bin -I../filesys -I../userprog -I../threads -I../machine -DUSER_PROGRAM -DFILESYS_NEEDED -DFILESYS_STUB -DHOST_x86_64 -DHAVE_VALGRIND -DLINUX -DCHANGED  -fsanitize=undefined -MM ../machine/mipssim.cc | \
+	sed -e 's|\(.*\)\.o:|.\1.d \1.o:|g' > .mipssim.d
+g++ -g -Wall -Wextra -Wshadow -I../bin -I../filesys -I../userprog -I../threads -I../machine -DUSER_PROGRAM -DFILESYS_NEEDED -DFILESYS_STUB -DHOST_x86_64 -DHAVE_VALGRIND -DLINUX -DCHANGED  -fsanitize=undefined -MM ../machine/machine.cc | \
+	sed -e 's|\(.*\)\.o:|.\1.d \1.o:|g' > .machine.d
+g++ -g -Wall -Wextra -Wshadow -I../bin -I../filesys -I../userprog -I../threads -I../machine -DUSER_PROGRAM -DFILESYS_NEEDED -DFILESYS_STUB -DHOST_x86_64 -DHAVE_VALGRIND -DLINUX -DCHANGED  -fsanitize=undefined -MM ../machine/console.cc | \
+	sed -e 's|\(.*\)\.o:|.\1.d \1.o:|g' > .console.d
+g++ -g -Wall -Wextra -Wshadow -I../bin -I../filesys -I../userprog -I../threads -I../machine -DUSER_PROGRAM -DFILESYS_NEEDED -DFILESYS_STUB -DHOST_x86_64 -DHAVE_VALGRIND -DLINUX -DCHANGED  -fsanitize=undefined -MM progtest.cc | \
+	sed -e 's|\(.*\)\.o:|.\1.d \1.o:|g' > .progtest.d
+g++ -g -Wall -Wextra -Wshadow -I../bin -I../filesys -I../userprog -I../threads -I../machine -DUSER_PROGRAM -DFILESYS_NEEDED -DFILESYS_STUB -DHOST_x86_64 -DHAVE_VALGRIND -DLINUX -DCHANGED  -fsanitize=undefined -MM exception.cc | \
+	sed -e 's|\(.*\)\.o:|.\1.d \1.o:|g' > .exception.d
+g++ -g -Wall -Wextra -Wshadow -I../bin -I../filesys -I../userprog -I../threads -I../machine -DUSER_PROGRAM -DFILESYS_NEEDED -DFILESYS_STUB -DHOST_x86_64 -DHAVE_VALGRIND -DLINUX -DCHANGED  -fsanitize=undefined -MM bitmap.cc | \
+	sed -e 's|\(.*\)\.o:|.\1.d \1.o:|g' > .bitmap.d
+g++ -g -Wall -Wextra -Wshadow -I../bin -I../filesys -I../userprog -I../threads -I../machine -DUSER_PROGRAM -DFILESYS_NEEDED -DFILESYS_STUB -DHOST_x86_64 -DHAVE_VALGRIND -DLINUX -DCHANGED  -fsanitize=undefined -MM addrspace.cc | \
+	sed -e 's|\(.*\)\.o:|.\1.d \1.o:|g' > .addrspace.d
+g++ -g -Wall -Wextra -Wshadow -I../bin -I../filesys -I../userprog -I../threads -I../machine -DUSER_PROGRAM -DFILESYS_NEEDED -DFILESYS_STUB -DHOST_x86_64 -DHAVE_VALGRIND -DLINUX -DCHANGED  -fsanitize=undefined -MM ../machine/timer.cc | \
+	sed -e 's|\(.*\)\.o:|.\1.d \1.o:|g' > .timer.d
+ 
+g++ -g -Wall -Wextra -Wshadow -I../bin -I../filesys -I../userprog -I../threads -I../machine -DUSER_PROGRAM -DFILESYS_NEEDED -DFILESYS_STUB -DHOST_x86_64 -DHAVE_VALGRIND -DLINUX -DCHANGED  -fsanitize=undefined -MM ../machine/sysdep.cc | \
+	sed -e 's|\(.*\)\.o:|.\1.d \1.o:|g' > .sysdep.d
+ 
+g++ -g -Wall -Wextra -Wshadow -I../bin -I../filesys -I../userprog -I../threads -I../machine -DUSER_PROGRAM -DFILESYS_NEEDED -DFILESYS_STUB -DHOST_x86_64 -DHAVE_VALGRIND -DLINUX -DCHANGED  -fsanitize=undefined -MM ../machine/stats.cc | \
+	sed -e 's|\(.*\)\.o:|.\1.d \1.o:|g' > .stats.d
+ 
+g++ -g -Wall -Wextra -Wshadow -I../bin -I../filesys -I../userprog -I../threads -I../machine -DUSER_PROGRAM -DFILESYS_NEEDED -DFILESYS_STUB -DHOST_x86_64 -DHAVE_VALGRIND -DLINUX -DCHANGED  -fsanitize=undefined -MM ../machine/interrupt.cc | \
+	sed -e 's|\(.*\)\.o:|.\1.d \1.o:|g' > .interrupt.d
+ 
+g++ -g -Wall -Wextra -Wshadow -I../bin -I../filesys -I../userprog -I../threads -I../machine -DUSER_PROGRAM -DFILESYS_NEEDED -DFILESYS_STUB -DHOST_x86_64 -DHAVE_VALGRIND -DLINUX -DCHANGED  -fsanitize=undefined -MM ../threads/threadtest.cc | \
+	sed -e 's|\(.*\)\.o:|.\1.d \1.o:|g' > .threadtest.d
+ 
+g++ -g -Wall -Wextra -Wshadow -I../bin -I../filesys -I../userprog -I../threads -I../machine -DUSER_PROGRAM -DFILESYS_NEEDED -DFILESYS_STUB -DHOST_x86_64 -DHAVE_VALGRIND -DLINUX -DCHANGED  -fsanitize=undefined -MM ../threads/utility.cc | \
+	sed -e 's|\(.*\)\.o:|.\1.d \1.o:|g' > .utility.d
+ 
+g++ -g -Wall -Wextra -Wshadow -I../bin -I../filesys -I../userprog -I../threads -I../machine -DUSER_PROGRAM -DFILESYS_NEEDED -DFILESYS_STUB -DHOST_x86_64 -DHAVE_VALGRIND -DLINUX -DCHANGED  -fsanitize=undefined -MM ../threads/thread.cc | \
+	sed -e 's|\(.*\)\.o:|.\1.d \1.o:|g' > .thread.d
+g++ -g -Wall -Wextra -Wshadow -I../bin -I../filesys -I../userprog -I../threads -I../machine -DUSER_PROGRAM -DFILESYS_NEEDED -DFILESYS_STUB -DHOST_x86_64 -DHAVE_VALGRIND -DLINUX -DCHANGED  -fsanitize=undefined -MM ../threads/system.cc | \
+	sed -e 's|\(.*\)\.o:|.\1.d \1.o:|g' > .system.d
+g++ -g -Wall -Wextra -Wshadow -I../bin -I../filesys -I../userprog -I../threads -I../machine -DUSER_PROGRAM -DFILESYS_NEEDED -DFILESYS_STUB -DHOST_x86_64 -DHAVE_VALGRIND -DLINUX -DCHANGED  -fsanitize=undefined -MM ../threads/synchlist.cc | \
+	sed -e 's|\(.*\)\.o:|.\1.d \1.o:|g' > .synchlist.d
+ 
+g++ -g -Wall -Wextra -Wshadow -I../bin -I../filesys -I../userprog -I../threads -I../machine -DUSER_PROGRAM -DFILESYS_NEEDED -DFILESYS_STUB -DHOST_x86_64 -DHAVE_VALGRIND -DLINUX -DCHANGED  -fsanitize=undefined -MM ../threads/synch.cc | \
+	sed -e 's|\(.*\)\.o:|.\1.d \1.o:|g' > .synch.d
+ 
+g++ -g -Wall -Wextra -Wshadow -I../bin -I../filesys -I../userprog -I../threads -I../machine -DUSER_PROGRAM -DFILESYS_NEEDED -DFILESYS_STUB -DHOST_x86_64 -DHAVE_VALGRIND -DLINUX -DCHANGED  -fsanitize=undefined -MM ../threads/scheduler.cc | \
+	sed -e 's|\(.*\)\.o:|.\1.d \1.o:|g' > .scheduler.d
+ 
+g++ -g -Wall -Wextra -Wshadow -I../bin -I../filesys -I../userprog -I../threads -I../machine -DUSER_PROGRAM -DFILESYS_NEEDED -DFILESYS_STUB -DHOST_x86_64 -DHAVE_VALGRIND -DLINUX -DCHANGED  -fsanitize=undefined -MM ../threads/list.cc | \
+	sed -e 's|\(.*\)\.o:|.\1.d \1.o:|g' > .list.d
+ 
+g++ -g -Wall -Wextra -Wshadow -I../bin -I../filesys -I../userprog -I../threads -I../machine -DUSER_PROGRAM -DFILESYS_NEEDED -DFILESYS_STUB -DHOST_x86_64 -DHAVE_VALGRIND -DLINUX -DCHANGED  -fsanitize=undefined -MM ../threads/main.cc | \
+	sed -e 's|\(.*\)\.o:|.\1.d \1.o:|g' > .main.d
+ 
+g++ -g -Wall -Wextra -Wshadow -I../bin -I../filesys -I../userprog -I../threads -I../machine -DUSER_PROGRAM -DFILESYS_NEEDED -DFILESYS_STUB -DHOST_x86_64 -DHAVE_VALGRIND -DLINUX -DCHANGED  -fsanitize=undefined -c ../threads/main.cc -o main.o
+g++ -g -Wall -Wextra -Wshadow -I../bin -I../filesys -I../userprog -I../threads -I../machine -DUSER_PROGRAM -DFILESYS_NEEDED -DFILESYS_STUB -DHOST_x86_64 -DHAVE_VALGRIND -DLINUX -DCHANGED  -fsanitize=undefined -c ../threads/list.cc -o list.o
+ 
+g++ -g -Wall -Wextra -Wshadow -I../bin -I../filesys -I../userprog -I../threads -I../machine -DUSER_PROGRAM -DFILESYS_NEEDED -DFILESYS_STUB -DHOST_x86_64 -DHAVE_VALGRIND -DLINUX -DCHANGED  -fsanitize=undefined -c ../threads/scheduler.cc -o scheduler.o
+g++ -g -Wall -Wextra -Wshadow -I../bin -I../filesys -I../userprog -I../threads -I../machine -DUSER_PROGRAM -DFILESYS_NEEDED -DFILESYS_STUB -DHOST_x86_64 -DHAVE_VALGRIND -DLINUX -DCHANGED  -fsanitize=undefined -c ../threads/synch.cc -o synch.o
+g++ -g -Wall -Wextra -Wshadow -I../bin -I../filesys -I../userprog -I../threads -I../machine -DUSER_PROGRAM -DFILESYS_NEEDED -DFILESYS_STUB -DHOST_x86_64 -DHAVE_VALGRIND -DLINUX -DCHANGED  -fsanitize=undefined -c ../threads/synchlist.cc -o synchlist.o
+g++ -g -Wall -Wextra -Wshadow -I../bin -I../filesys -I../userprog -I../threads -I../machine -DUSER_PROGRAM -DFILESYS_NEEDED -DFILESYS_STUB -DHOST_x86_64 -DHAVE_VALGRIND -DLINUX -DCHANGED  -fsanitize=undefined -c ../threads/system.cc -o system.o
+g++ -g -Wall -Wextra -Wshadow -I../bin -I../filesys -I../userprog -I../threads -I../machine -DUSER_PROGRAM -DFILESYS_NEEDED -DFILESYS_STUB -DHOST_x86_64 -DHAVE_VALGRIND -DLINUX -DCHANGED  -fsanitize=undefined -c ../threads/thread.cc -o thread.o
+g++ -g -Wall -Wextra -Wshadow -I../bin -I../filesys -I../userprog -I../threads -I../machine -DUSER_PROGRAM -DFILESYS_NEEDED -DFILESYS_STUB -DHOST_x86_64 -DHAVE_VALGRIND -DLINUX -DCHANGED  -fsanitize=undefined -c ../threads/utility.cc -o utility.o
+g++ -g -Wall -Wextra -Wshadow -I../bin -I../filesys -I../userprog -I../threads -I../machine -DUSER_PROGRAM -DFILESYS_NEEDED -DFILESYS_STUB -DHOST_x86_64 -DHAVE_VALGRIND -DLINUX -DCHANGED  -fsanitize=undefined -c ../threads/threadtest.cc -o threadtest.o
+g++ -g -Wall -Wextra -Wshadow -I../bin -I../filesys -I../userprog -I../threads -I../machine -DUSER_PROGRAM -DFILESYS_NEEDED -DFILESYS_STUB -DHOST_x86_64 -DHAVE_VALGRIND -DLINUX -DCHANGED  -fsanitize=undefined -c ../machine/interrupt.cc -o interrupt.o
+g++ -g -Wall -Wextra -Wshadow -I../bin -I../filesys -I../userprog -I../threads -I../machine -DUSER_PROGRAM -DFILESYS_NEEDED -DFILESYS_STUB -DHOST_x86_64 -DHAVE_VALGRIND -DLINUX -DCHANGED  -fsanitize=undefined -c ../machine/stats.cc -o stats.o
+g++ -g -Wall -Wextra -Wshadow -I../bin -I../filesys -I../userprog -I../threads -I../machine -DUSER_PROGRAM -DFILESYS_NEEDED -DFILESYS_STUB -DHOST_x86_64 -DHAVE_VALGRIND -DLINUX -DCHANGED  -fsanitize=undefined -c ../machine/sysdep.cc -o sysdep.o
+g++ -g -Wall -Wextra -Wshadow -I../bin -I../filesys -I../userprog -I../threads -I../machine -DUSER_PROGRAM -DFILESYS_NEEDED -DFILESYS_STUB -DHOST_x86_64 -DHAVE_VALGRIND -DLINUX -DCHANGED  -fsanitize=undefined -c ../machine/timer.cc -o timer.o
+g++ -g -Wall -Wextra -Wshadow -I../bin -I../filesys -I../userprog -I../threads -I../machine -DUSER_PROGRAM -DFILESYS_NEEDED -DFILESYS_STUB -DHOST_x86_64 -DHAVE_VALGRIND -DLINUX -DCHANGED  -fsanitize=undefined -c addrspace.cc -o addrspace.o
+g++ -g -Wall -Wextra -Wshadow -I../bin -I../filesys -I../userprog -I../threads -I../machine -DUSER_PROGRAM -DFILESYS_NEEDED -DFILESYS_STUB -DHOST_x86_64 -DHAVE_VALGRIND -DLINUX -DCHANGED  -fsanitize=undefined -c bitmap.cc -o bitmap.o
+g++ -g -Wall -Wextra -Wshadow -I../bin -I../filesys -I../userprog -I../threads -I../machine -DUSER_PROGRAM -DFILESYS_NEEDED -DFILESYS_STUB -DHOST_x86_64 -DHAVE_VALGRIND -DLINUX -DCHANGED  -fsanitize=undefined -c exception.cc -o exception.o
+g++ -g -Wall -Wextra -Wshadow -I../bin -I../filesys -I../userprog -I../threads -I../machine -DUSER_PROGRAM -DFILESYS_NEEDED -DFILESYS_STUB -DHOST_x86_64 -DHAVE_VALGRIND -DLINUX -DCHANGED  -fsanitize=undefined -c progtest.cc -o progtest.o
+g++ -g -Wall -Wextra -Wshadow -I../bin -I../filesys -I../userprog -I../threads -I../machine -DUSER_PROGRAM -DFILESYS_NEEDED -DFILESYS_STUB -DHOST_x86_64 -DHAVE_VALGRIND -DLINUX -DCHANGED  -fsanitize=undefined -c ../machine/console.cc -o console.o
+g++ -g -Wall -Wextra -Wshadow -I../bin -I../filesys -I../userprog -I../threads -I../machine -DUSER_PROGRAM -DFILESYS_NEEDED -DFILESYS_STUB -DHOST_x86_64 -DHAVE_VALGRIND -DLINUX -DCHANGED  -fsanitize=undefined -c ../machine/machine.cc -o machine.o
+g++ -g -Wall -Wextra -Wshadow -I../bin -I../filesys -I../userprog -I../threads -I../machine -DUSER_PROGRAM -DFILESYS_NEEDED -DFILESYS_STUB -DHOST_x86_64 -DHAVE_VALGRIND -DLINUX -DCHANGED  -fsanitize=undefined -c ../machine/mipssim.cc -o mipssim.o
+g++ -g -Wall -Wextra -Wshadow -I../bin -I../filesys -I../userprog -I../threads -I../machine -DUSER_PROGRAM -DFILESYS_NEEDED -DFILESYS_STUB -DHOST_x86_64 -DHAVE_VALGRIND -DLINUX -DCHANGED  -fsanitize=undefined -c ../machine/translate.cc -o translate.o
+g++ -g -Wall -Wextra -Wshadow -I../bin -I../filesys -I../userprog -I../threads -I../machine -DUSER_PROGRAM -DFILESYS_NEEDED -DFILESYS_STUB -DHOST_x86_64 -DHAVE_VALGRIND -DLINUX -DCHANGED  -fsanitize=undefined -c ../machine/consoledriver.cc -o consoledriver.o
+gcc -E -P -I../bin -I../filesys -I../userprog -I../threads -I../machine -DHOST_x86_64 -DHAVE_VALGRIND -DLINUX ../threads/switch.S > swtch.s
+gcc -c -g -o switch.o swtch.s
+rm swtch.s
+g++ main.o list.o scheduler.o synch.o synchlist.o system.o thread.o utility.o threadtest.o interrupt.o stats.o sysdep.o timer.o addrspace.o bitmap.o exception.o progtest.o console.o machine.o mipssim.o translate.o consoledriver.o switch.o -g -fsanitize=undefined -o nachos
+make[1]: Leaving directory '/home/wissam/Documents/projetNachos/code/userprog'
+ 
+make[1]: Entering directory '/home/wissam/Documents/projetNachos/code/bin'
+ 
+gcc -I./ -I../threads -Wall -Wextra -Wshadow   -c -o coff2noff.o coff2noff.c
+gcc coff2noff.o -o coff2noff
+make[1]: Leaving directory '/home/wissam/Documents/projetNachos/code/bin'
+ 
+make[1]: Entering directory '/home/wissam/Documents/projetNachos/code/test'
+ 
+/opt/xgcc/mipsel/bin/gcc -E -P -I../userprog -I../threads -DCHANGED start.S > strt.s
+/opt/xgcc/mipsel/bin/as  -o start.o strt.s
+rm strt.s
+/opt/xgcc/mipsel/bin/gcc -DIN_USER_MODE -I../userprog -I../threads -Wall -O2 -DCHANGED  -c getchar.c
+/opt/xgcc/mipsel/bin/ld -T script -N start.o getchar.o -o getchar.coff
+../bin/coff2noff getchar.coff getchar
+/opt/xgcc/mipsel/bin/gcc -DIN_USER_MODE -I../userprog -I../threads -Wall -O2 -DCHANGED  -c halt.c
+/opt/xgcc/mipsel/bin/ld -T script -N start.o halt.o -o halt.coff
+../bin/coff2noff halt.coff halt
+/opt/xgcc/mipsel/bin/gcc -DIN_USER_MODE -I../userprog -I../threads -Wall -O2 -DCHANGED  -c putstring.c
+/opt/xgcc/mipsel/bin/ld -T script -N start.o putstring.o -o putstring.coff
+../bin/coff2noff putstring.coff putstring
+/opt/xgcc/mipsel/bin/gcc -DIN_USER_MODE -I../userprog -I../threads -Wall -O2 -DCHANGED  -c sort.c
+/opt/xgcc/mipsel/bin/ld -T script -N start.o sort.o -o sort.coff
+../bin/coff2noff sort.coff sort
+/opt/xgcc/mipsel/bin/gcc -DIN_USER_MODE -I../userprog -I../threads -Wall -O2 -DCHANGED  -c shell.c
+/opt/xgcc/mipsel/bin/ld -T script -N start.o shell.o -o shell.coff
+../bin/coff2noff shell.coff shell
+/opt/xgcc/mipsel/bin/gcc -DIN_USER_MODE -I../userprog -I../threads -Wall -O2 -DCHANGED  -c matmult.c
+/opt/xgcc/mipsel/bin/ld -T script -N start.o matmult.o -o matmult.coff
+../bin/coff2noff matmult.coff matmult
+/opt/xgcc/mipsel/bin/gcc -DIN_USER_MODE -I../userprog -I../threads -Wall -O2 -DCHANGED  -c putchar.c
+/opt/xgcc/mipsel/bin/ld -T script -N start.o putchar.o -o putchar.coff
+../bin/coff2noff putchar.coff putchar
+rm getchar.o matmult.o sort.o putstring.o shell.o putchar.o halt.o
+make[1]: Leaving directory '/home/wissam/Documents/projetNachos/code/test'
+make: Leaving directory '/home/wissam/Documents/projetNachos/code'
+ 

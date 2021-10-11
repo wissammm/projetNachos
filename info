@@ -12,3 +12,14 @@ le code recopie ce qu'on ecrit, lit toujours 1 de plus que ce qu'elle ecrit
 test
  jkve
 blala
+
+
+00000170 <main>:
+ 170:	3c040000 	lui	r4,0x0
+ 174:	27bdffe8 	addiu	r29,r29,-24
+ 178:	afbf0010 	sw	r31,16(r29)
+ 17c:	0c000056 	jal	158 <PutString>
+ 180:	24840200 	addiu	r4,r4,512
+ 184:	0c000026 	jal	98 <Halt>
+ 188:	00000000 	nop
+	...

@@ -3,5 +3,6 @@
     "files.associations": {
         "random": "cpp",
         "syscall.h": "c"
-    }
+    },
+    "C_Cpp.dimInactiveRegions": false
 }
