@@ -117,7 +117,6 @@ void ExceptionHandler (ExceptionType which)
 
 		  case SC_Exit:
 		  {
-			  
 			  Exit(machine->ReadRegister(4));
 			  break;
 		  }
