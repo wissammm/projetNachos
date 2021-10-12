@@ -459,4 +459,16 @@ int Machine::copyStringFromMachine(int from, char *to, unsigned size){
     
 }
 
+int Machine::copyStringToMachine(char *from, int to, unsigned size){
+    unsigned i = 0;
+	int res;
+
+	while((i<size)&&(*(from+i)!='\0')){
+		res = *(from+i);
+		machine->WriteMem(to+i,1,res);
+		i++;
+	}
+	machine->WriteMem(to+i,1,'\0'); 
+}
+
 #endif CHANGED

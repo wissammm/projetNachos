@@ -136,8 +136,10 @@ class Machine:public dontcopythis {
 				// memory (at addr).  Return FALSE if a 
 				// correct translation couldn't be found.
     
+	#ifdef CHANGED
 	int copyStringFromMachine(int from, char *to, unsigned size);//like strcpy
-
+	int copyStringToMachine(char *from, int to, unsigned size);//like euuuuh je sais pas on verra plus tard
+	#endif CHANGED
 
     ExceptionType Translate(int virtAddr, int* physAddr, int size, bool writing, bool debug);
     				// Translate an address, and check for 
