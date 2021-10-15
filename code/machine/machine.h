@@ -138,7 +138,7 @@ class Machine:public dontcopythis {
     
 	#ifdef CHANGED
 	int copyStringFromMachine(int from, char *to, unsigned size);//like strcpy
-	int copyStringToMachine(char *from, int to, unsigned size);//like euuuuh je sais pas on verra plus tard
+	void copyStringToMachine(char *from, int to, unsigned size);//like euuuuh je sais pas on verra plus tard
 	#endif CHANGED
 
     ExceptionType Translate(int virtAddr, int* physAddr, int size, bool writing, bool debug);

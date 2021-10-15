@@ -37,6 +37,7 @@
 #define SC_PutString  11
 #define SC_PutChar  12
 #define SC_GetChar 13
+#define SC_GetString 14
 #endif CHANGED
 
 #ifdef IN_USER_MODE

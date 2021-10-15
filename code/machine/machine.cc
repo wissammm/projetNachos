@@ -436,39 +436,47 @@ void Machine::WriteRegister(int num, int value)
     }
 
 #ifdef CHANGED
-int Machine::copyStringFromMachine(int from, char *to, unsigned size){
+
+/***************************************************************
+ * Nous avons mis les deux fonction suivantes dans machine pour
+ * car c'est une opération car on trouvait qu'elle ressemblait
+ * à readMem et writeMem, cependant vu que son utilisation est 
+ * principalement destinée à la console, on aurait pu les mettre
+ * dans console.cc
+ ***************************************************************/
+int Machine::copyStringFromMachine(int from, char *to, unsigned size){ 
     unsigned int i=0;
-    int buf;
-    while((i<size)&& machine->ReadMem(from+i,1,&buf)){
+    int buf; //buffer qui stockera 1 char
+    while((i<size)&& machine->ReadMem(from+i,1,&buf)){//from +i est le prochain charactère en mémoire que l'on stock à buf 
 		char c =(char)buf;
-        to[i]= c;
+        to[i]= c; // on rajoute le charactère lu
         i++;
-		if(c=='\0'){
+		if(c=='\0'){// fin de la chaine de charactère
 			break;
 		}
     }
 	machine->ReadMem(from+i,1,&buf);
 	if((i==size)&&((char)buf!='\0')){
 		to[i]=(char)buf;
-		return -1;
+		return -1; // retourne -1 pour dire que la chaine n'est pas fini
 	}
 	else{
-		to[i]='\0';
+		to[i]='\0'; //sinon fin de chaine 
     	return i;
 	}
     
 }
 
-int Machine::copyStringToMachine(char *from, int to, unsigned size){
-    unsigned i = 0;
-	int res;
+void Machine::copyStringToMachine(char *from, int to, unsigned size){
+    unsigned int i = 0;
+	int buf;
 
-	while((i<size)&&(*(from+i)!='\0')){
-		res = *(from+i);
-		machine->WriteMem(to+i,1,res);
+	while((i<size)&&(*(from+i)!='\0')){ // tant que c'est pas la fin de la chiane de charactèrers 
+		buf = *(from+i);
+		machine->WriteMem(to+i,1,buf); //écrire dans to res
 		i++;
 	}
-	machine->WriteMem(to+i,1,'\0'); 
+	machine->WriteMem(to+i,1,'\0'); //fin de chaine 
 }
 
 #endif CHANGED

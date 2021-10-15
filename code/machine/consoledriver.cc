@@ -34,16 +34,25 @@ void ConsoleDriver::PutString(const char s[]){
     
     int i = 0;
     
-    while(s[i]!='\0'){
+    while(s[i]!='\0'){ //tant que c'est pas la fin du tableau de charactères
         ConsoleDriver::PutChar(s[i]);
         i++;
     }
 }
 
 void ConsoleDriver::GetString(char*s,int n){
-
-    int ch = ConsoleDriver::GetChar();
-    while(ch!=-1){
-        
+    char ch;
+    for(int i = 0;i<n;i++){
+        ch=ConsoleDriver::GetChar();
+        if(ch==-1 ){ //EOF
+            s[i]='\0';
+            break;
+        }
+        else if((char)ch=='\n'){
+            s[i]='\n';
+            s[i+1]='\0';//on ajoute \n a la fin du string
+            break;
+        }
+        s[i]=(char)ch;
     }
 }
