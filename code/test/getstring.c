@@ -5,5 +5,4 @@ int main(){
     GetString(&s,20);
     PutString(s);
     Halt();
-    
 }
