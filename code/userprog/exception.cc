@@ -132,6 +132,17 @@ void ExceptionHandler (ExceptionType which)
 			  Exit(machine->ReadRegister(4));
 			  break;
 		  }
+
+		  case SC_ThreadCreate:
+		  {
+			  //do_ThreadCreate(int f, void *arg);
+		  }
+		  
+		  case SC_ThreadExit:
+		  {
+			  
+		  }
+
 		  #endif CHANGED
 		default:
 		  {

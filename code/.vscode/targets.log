@@ -9,7 +9,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # There is NO WARRANTY, to the extent permitted by law.
  
 
-# Make data base, printed on Fri Oct 15 14:20:42 2021
+# Make data base, printed on Wed Nov  3 15:06:14 2021
 
 # Variables
 
@@ -38,7 +38,7 @@ NACHOS_SYS := LINUX_SYS
 # environment
 IM_CONFIG_PHASE = 1
 # environment
-PLATFORMIO_IDE = 2.3.3
+PLATFORMIO_IDE = 2.3.4
 # automatic
 @D = $(patsubst %/,%,$(dir $@))
 # environment
@@ -54,13 +54,13 @@ CURDIR := /home/wissam/Documents/projetNachos/code/threads
 # makefile
 SHELL = /bin/sh
 # environment
-SNAP_DATA = /var/snap/code/77
+SNAP_DATA = /var/snap/code/78
 # makefile (from '../Makefile.common', line 36)
 VM_O := 
 # environment
-VSCODE_NLS_CONFIG = {"locale":"fr","availableLanguages":{"*":"fr"},"_languagePackId":"726f0529a8f06dbc748431c91e26ad5e.fr","_translationsConfigFile":"/home/wissam/.config/Code/clp/726f0529a8f06dbc748431c91e26ad5e.fr/tcf.json","_cacheRoot":"/home/wissam/.config/Code/clp/726f0529a8f06dbc748431c91e26ad5e.fr","_resolvedLanguagePackCoreLocation":"/home/wissam/.config/Code/clp/726f0529a8f06dbc748431c91e26ad5e.fr/c13f1abb110fc756f9b3a6f16670df9cd9d4cf63","_corruptedFile":"/home/wissam/.config/Code/clp/726f0529a8f06dbc748431c91e26ad5e.fr/corrupted.info","_languagePackSupport":true}
+VSCODE_NLS_CONFIG = {"locale":"fr","availableLanguages":{"*":"fr"},"_languagePackId":"726f0529a8f06dbc748431c91e26ad5e.fr","_translationsConfigFile":"/home/wissam/.config/Code/clp/726f0529a8f06dbc748431c91e26ad5e.fr/tcf.json","_cacheRoot":"/home/wissam/.config/Code/clp/726f0529a8f06dbc748431c91e26ad5e.fr","_resolvedLanguagePackCoreLocation":"/home/wissam/.config/Code/clp/726f0529a8f06dbc748431c91e26ad5e.fr/6cba118ac49a1b88332f312a8f67186f7f3c1643","_corruptedFile":"/home/wissam/.config/Code/clp/726f0529a8f06dbc748431c91e26ad5e.fr/corrupted.info","_languagePackSupport":true}
 # environment
-JOURNAL_STREAM = 8:47463
+JOURNAL_STREAM = 8:47808
 # makefile (from '../Makefile.dep', line 40)
 CFLAGS = -g -Wall -Wextra -Wshadow $(INCPATH) $(DEFINES) $(HOST) -DCHANGED  -fsanitize=undefined
 # environment
@@ -92,13 +92,13 @@ VSCODE_VERBOSE_LOGGING = true
 # makefile (from '../Makefile.common', line 56)
 AS = gcc -c
 # environment
-_ = /snap/code/77/usr/share/code/code
+_ = /snap/code/78/usr/share/code/code
 # makefile (from '../Makefile.common', line 38)
 FILESYS_O := directory.o filehdr.o filesys.o fstest.o openfile.o synchdisk.o disk.o
 # makefile (from '../Makefile.dep', line 13)
 NACHOS_VALGRIND := -DHAVE_VALGRIND
 # environment
-MANAGERPID = 1334
+MANAGERPID = 1520
 # environment
 LESSOPEN = | /usr/bin/lesspipe %s
 # makefile (from '../Makefile.common', line 53)
@@ -106,7 +106,7 @@ CPP = gcc -E -P
 # environment
 VSCODE_CWD = /home/wissam
 # environment
-GSETTINGS_SCHEMA_DIR = /snap/code/77/usr/share/glib-2.0/schemas
+GSETTINGS_SCHEMA_DIR = /snap/code/78/usr/share/glib-2.0/schemas
 # default
 MAKE_HOST := x86_64-pc-linux-gnu
 # environment
@@ -118,15 +118,15 @@ LD = g++
 # environment
 GPG_AGENT_INFO = /run/user/1000/gnupg/S.gpg-agent:0:1
 # environment
-SESSION_MANAGER = local/wissam-VivoBook-ASUSLaptop-X512FAC-X512FA:@/tmp/.ICE-unix/1573,unix/wissam-VivoBook-ASUSLaptop-X512FAC-X512FA:/tmp/.ICE-unix/1573
+SESSION_MANAGER = local/wissam-VivoBook-ASUSLaptop-X512FAC-X512FA:@/tmp/.ICE-unix/1758,unix/wissam-VivoBook-ASUSLaptop-X512FAC-X512FA:/tmp/.ICE-unix/1758
 # environment
 XDG_RUNTIME_DIR = /run/user/1000
 # environment
 GDK_PIXBUF_MODULE_FILE = /home/wissam/snap/code/common/.cache/gdk-pixbuf-loaders.cache
 # environment
-SNAP = /snap/code/77
+SNAP = /snap/code/78
 # environment
-SNAP_VERSION = c13f1abb
+SNAP_VERSION = 6cba118a
 # environment
 XDG_MENU_PREFIX = gnome-
 # environment
@@ -136,11 +136,11 @@ DISABLE_WAYLAND = 1
 # environment
 VSCODE_CRASH_REPORTER_START_OPTIONS = {"companyName":"Microsoft","productName":"VSCode","submitURL":"appcenter://code?aid=fba07a4d-84bd-4fc8-a125-9640fc8ce171&uid=f0bfaa38-c1a6-4dca-9363-94313c87cba5&iid=f0bfaa38-c1a6-4dca-9363-94313c87cba5&sid=f0bfaa38-c1a6-4dca-9363-94313c87cba5","uploadToServer":true}
 # environment
-INVOCATION_ID = f054229f060a4263aa8db70cb569e163
+INVOCATION_ID = 06b7d155fec94462a5c0d109a0877454
 # makefile (from '../Makefile.dep', line 41)
 LDFLAGS = -g -fsanitize=undefined
 # environment
-GDK_PIXBUF_MODULEDIR = /snap/code/77/usr/lib/x86_64-linux-gnu/gdk-pixbuf-2.0/2.10.0/loaders
+GDK_PIXBUF_MODULEDIR = /snap/code/78/usr/lib/x86_64-linux-gnu/gdk-pixbuf-2.0/2.10.0/loaders
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # environment
@@ -150,7 +150,7 @@ XDG_SESSION_DESKTOP = ubuntu
 # environment
 SSH_AUTH_SOCK = /run/user/1000/keyring/ssh
 # environment
-GIO_LAUNCHED_DESKTOP_FILE_PID = 100675
+GIO_LAUNCHED_DESKTOP_FILE_PID = 11576
 # automatic
 %F = $(notdir $%)
 # environment
@@ -168,7 +168,7 @@ PWD = /home/wissam/Documents/projetNachos/code
 # default
 .LOADED := 
 # environment
-SSH_AGENT_PID = 1530
+SSH_AGENT_PID = 1714
 # environment
 ORIGINAL_XDG_CURRENT_DESKTOP = ubuntu:GNOME
 # environment
@@ -184,7 +184,7 @@ VSCODE_CLI = 1
 # makefile (from 'Makefile', line 10)
 DEFINES = -DTHREADS
 # environment
-VSCODE_CODE_CACHE_PATH = /home/wissam/.config/Code/CachedData/c13f1abb110fc756f9b3a6f16670df9cd9d4cf63
+VSCODE_CODE_CACHE_PATH = /home/wissam/.config/Code/CachedData/6cba118ac49a1b88332f312a8f67186f7f3c1643
 # environment
 LOGNAME = wissam
 # environment
@@ -192,7 +192,7 @@ APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
 # environment
 SNAP_LIBRARY_PATH = /var/lib/snapd/lib/gl:/var/lib/snapd/lib/gl32:/var/lib/snapd/void
 # environment
-SNAP_CONTEXT = qzrpTfTg-7wJinGajkLNYECfXx3VQ7nPu7NEIpgfCbsk0gNzlKGa
+SNAP_CONTEXT = aXdH_E_T7-6hDc4T-SKdQIqCPkIx0D3lxTmr3a7DuDs3Q8LynY1q
 # environment
 ELECTRON_NO_ATTACH_CONSOLE = 1
 # environment
@@ -208,7 +208,7 @@ MAKELEVEL := 1
 # environment
 SNAP_REAL_HOME = /home/wissam
 # environment
-PLATFORMIO_PATH = /home/wissam/.platformio/penv/bin:/home/wissam/.platformio/penv:/home/wissam/.platformio/python3/bin:/home/wissam/.local/bin:/home/wissam/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+PLATFORMIO_PATH = /home/wissam/.platformio/python3/bin:/home/wissam/.local/bin:/home/wissam/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
 # default
 MAKE = $(MAKE_COMMAND)
 # default
@@ -216,7 +216,7 @@ MAKECMDGOALS := nachos
 # environment
 PATH = /home/wissam/.local/bin:/home/wissam/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
 # environment
-SNAP_USER_DATA = /home/wissam/snap/code/77
+SNAP_USER_DATA = /home/wissam/snap/code/78
 # environment
 SHLVL = 0
 # makefile (from '../Makefile.common', line 54)
@@ -224,7 +224,7 @@ CC = g++
 # environment
 GNOME_SHELL_SESSION_MODE = ubuntu
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-5374298f-99cd-4407-bb73-e3071cb685b0.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-b611370d-73f9-4dd9-a315-e29f3fae97af.sock
 # makefile (from '../Makefile.common', line 49)
 ASFLAGS = -g
 # default
@@ -232,7 +232,7 @@ MAKE_VERSION := 4.2.1
 # environment
 USER = wissam
 # environment
-SNAP_REVISION = 77
+SNAP_REVISION = 78
 # makefile
 .DEFAULT_GOAL := default
 # environment
@@ -246,7 +246,8 @@ MAKE_COMMAND := make
 # automatic
 *F = $(notdir $*)
 # environment
-VSCODE_IPC_HOOK = /run/user/1000/vscode-8b6dde90-1.61.1-main.sock
+VSCODE_IPC_HOOK = /run/user/1000/vscode-8b6dde90-1.61.2-main.sock
+ 
 # makefile (from '../Makefile.common', line 58)
 PROGRAM := nachos
 # environment
@@ -276,7 +277,7 @@ QT_ACCESSIBILITY = 1
 # makefile (from '../Makefile.common', line 60)
 MAKEFILES := Makefile ../Makefile.common ../Makefile.dep
 # environment
-SNAP_COOKIE = qzrpTfTg-7wJinGajkLNYECfXx3VQ7nPu7NEIpgfCbsk0gNzlKGa
+SNAP_COOKIE = aXdH_E_T7-6hDc4T-SKdQIqCPkIx0D3lxTmr3a7DuDs3Q8LynY1q
 # automatic
 <F = $(notdir $<)
 # environment
@@ -312,12 +313,11 @@ C_OFILES = $(THREAD_O)
 # environment
 GJS_DEBUG_OUTPUT = stderr
 # default
- 
 .RECIPEPREFIX := 
 # environment
 LANG = C
 # environment
-VSCODE_PID = 100722
+VSCODE_PID = 11625
 # makefile (from '../Makefile.dep', line 39)
 HOST = -DHOST_x86_64 $(NACHOS_VALGRIND) -DLINUX
 # variable set hash-table stats:
@@ -331,14 +331,14 @@ HOST = -DHOST_x86_64 $(NACHOS_VALGRIND) -DLINUX
 
 # ../machine (device 66309, inode 680214): No files, no impossibilities so far.
 # ../vm (device 66309, inode 818277): No files, no impossibilities so far.
-# . (device 66309, inode 818167): 52 files, no impossibilities.
+# . (device 66309, inode 818167): 37 files, no impossibilities.
 # ../network (device 66309, inode 680238): No files, no impossibilities so far.
-# ../threads (device 66309, inode 818167): 52 files, no impossibilities.
+# ../threads (device 66309, inode 818167): 37 files, no impossibilities.
 # ../userprog (device 66309, inode 818218): No files, no impossibilities so far.
 # ../filesys (device 66309, inode 549858): No files, no impossibilities so far.
 # .. (device 66309, inode 549836): No files, no impossibilities so far.
 
-# 104 files, no impossibilities in 8 directories.
+# 74 files, no impossibilities in 8 directories.
 
 # Implicit Rules
 
@@ -356,7 +356,7 @@ HOST = -DHOST_x86_64 $(NACHOS_VALGRIND) -DLINUX
 .system.d: system.cc Makefile ../Makefile.common ../Makefile.dep system.cc copyright.h system.h utility.h ../threads/bool.h ../machine/sysdep.h ../threads/copyright.h thread.h list.h scheduler.h ../machine/interrupt.h ../threads/list.h ../machine/stats.h ../machine/timer.h ../threads/utility.h ../machine/consoledriver.h ../machine/console.h
 #  Implicit rule search has not been done.
 #  Implicit/static pattern stem: 'system'
-#  Last modified 2021-10-15 14:20:39.904745861
+#  Last modified 2021-11-03 15:06:09.436130486
 #  File has been updated.
 #  Successfully updated.
 #  recipe to execute (from '../Makefile.common', line 127):
@@ -397,7 +397,6 @@ system.cc:
 
 distclean: clean
 #  Phony target (prerequisite of .PHONY).
- 
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
@@ -407,7 +406,6 @@ distclean: clean
 # Not a target:
 ../threads/thread.h:
 #  Implicit rule search has been done.
- 
 #  Last modified 2021-10-05 19:36:21.63907438
 #  File has been updated.
 #  Successfully updated.
@@ -415,7 +413,8 @@ distclean: clean
 .thread.d: thread.cc Makefile ../Makefile.common ../Makefile.dep thread.cc copyright.h thread.h utility.h ../threads/bool.h ../machine/sysdep.h ../threads/copyright.h list.h switch.h synch.h system.h scheduler.h ../machine/interrupt.h ../threads/list.h ../machine/stats.h ../machine/timer.h ../threads/utility.h ../machine/consoledriver.h ../machine/console.h ../machine/valgrind.h
 #  Implicit rule search has not been done.
 #  Implicit/static pattern stem: 'thread'
-#  Last modified 2021-10-15 14:20:39.880745664
+ 
+#  Last modified 2021-11-03 15:06:09.356130364
 #  File has been updated.
 #  Successfully updated.
 #  recipe to execute (from '../Makefile.common', line 127):
@@ -475,7 +474,7 @@ thread.h:
 .synch.d: synch.cc Makefile ../Makefile.common ../Makefile.dep synch.cc copyright.h synch.h thread.h utility.h ../threads/bool.h ../machine/sysdep.h ../threads/copyright.h list.h system.h scheduler.h ../machine/interrupt.h ../threads/list.h ../machine/stats.h ../machine/timer.h ../threads/utility.h ../machine/consoledriver.h ../machine/console.h
 #  Implicit rule search has not been done.
 #  Implicit/static pattern stem: 'synch'
-#  Last modified 2021-10-15 14:20:40.016746778
+#  Last modified 2021-11-03 15:06:09.576130697
 #  File has been updated.
 #  Successfully updated.
 #  recipe to execute (from '../Makefile.common', line 127):
@@ -499,7 +498,7 @@ synchlist.h:
 .timer.d: ../machine/timer.cc Makefile ../Makefile.common ../Makefile.dep ../machine/timer.cc ../threads/copyright.h ../machine/timer.h ../threads/utility.h ../threads/copyright.h ../threads/bool.h ../machine/sysdep.h ../threads/system.h ../threads/utility.h ../threads/thread.h ../threads/list.h ../threads/scheduler.h ../machine/interrupt.h ../threads/list.h ../machine/stats.h ../machine/timer.h ../machine/consoledriver.h ../machine/console.h
 #  Implicit rule search has not been done.
 #  Implicit/static pattern stem: 'timer'
-#  Last modified 2021-10-15 14:20:39.692744124
+#  Last modified 2021-11-03 15:06:08.868129626
 #  File has been updated.
 #  Successfully updated.
 #  recipe to execute (from '../Makefile.common', line 127):
@@ -516,7 +515,7 @@ synch.cc:
 .switch.d: switch.S Makefile ../Makefile.common ../Makefile.dep switch.S copyright.h switch.h
 #  Implicit rule search has not been done.
 #  Implicit/static pattern stem: 'switch'
-#  Last modified 2021-10-15 14:20:39.624743567
+#  Last modified 2021-11-03 15:06:08.720129403
 #  File has been updated.
 #  Successfully updated.
 #  recipe to execute (from '../Makefile.common', line 131):
@@ -533,6 +532,7 @@ synch.cc:
 # Not a target:
 ../threads/list.h:
 #  Implicit rule search has been done.
+ 
 #  Last modified 2021-10-05 19:36:21.635074339
 #  File has been updated.
 #  Successfully updated.
@@ -540,7 +540,7 @@ synch.cc:
 .interrupt.d: ../machine/interrupt.cc Makefile ../Makefile.common ../Makefile.dep ../machine/interrupt.cc ../threads/copyright.h ../machine/interrupt.h ../threads/list.h ../threads/copyright.h ../threads/utility.h ../threads/bool.h ../machine/sysdep.h ../threads/system.h ../threads/thread.h ../threads/list.h ../threads/scheduler.h ../machine/interrupt.h ../machine/stats.h ../machine/timer.h ../threads/utility.h ../machine/consoledriver.h ../machine/console.h ../machine/sysdep.h
 #  Implicit rule search has not been done.
 #  Implicit/static pattern stem: 'interrupt'
-#  Last modified 2021-10-15 14:20:39.796744976
+#  Last modified 2021-11-03 15:06:09.116130001
 #  File has been updated.
 #  Successfully updated.
 #  recipe to execute (from '../Makefile.common', line 127):
@@ -550,7 +550,7 @@ synch.cc:
 .list.d: list.cc Makefile ../Makefile.common ../Makefile.dep list.cc copyright.h list.h utility.h ../threads/bool.h ../machine/sysdep.h ../threads/copyright.h
 #  Implicit rule search has not been done.
 #  Implicit/static pattern stem: 'list'
-#  Last modified 2021-10-15 14:20:40.116747597
+#  Last modified 2021-11-03 15:06:09.724130921
 #  File has been updated.
 #  Successfully updated.
 #  recipe to execute (from '../Makefile.common', line 127):
@@ -570,7 +570,6 @@ scheduler.o: scheduler.cc Makefile ../Makefile.common ../Makefile.dep scheduler.
 #  File has not been updated.
 #  recipe to execute (from '../Makefile.common', line 109):
 	$(CC) $(CFLAGS) -c $< -o $@
- 
 
 # Not a target:
 ../machine/interrupt.cc:
@@ -582,7 +581,7 @@ scheduler.o: scheduler.cc Makefile ../Makefile.common ../Makefile.dep scheduler.
 .main.d: main.cc Makefile ../Makefile.common ../Makefile.dep main.cc copyright.h utility.h ../threads/bool.h ../machine/sysdep.h ../threads/copyright.h system.h thread.h list.h scheduler.h ../machine/interrupt.h ../threads/list.h ../machine/stats.h ../machine/timer.h ../threads/utility.h ../machine/consoledriver.h ../machine/console.h
 #  Implicit rule search has not been done.
 #  Implicit/static pattern stem: 'main'
-#  Last modified 2021-10-15 14:20:40.212748384
+#  Last modified 2021-11-03 15:06:09.792131024
 #  File has been updated.
 #  Successfully updated.
 #  recipe to execute (from '../Makefile.common', line 127):
@@ -605,7 +604,7 @@ depend: .main.d .list.d .scheduler.d .synch.d .synchlist.d .system.d .thread.d .
 .scheduler.d: scheduler.cc Makefile ../Makefile.common ../Makefile.dep scheduler.cc copyright.h scheduler.h list.h utility.h ../threads/bool.h ../machine/sysdep.h ../threads/copyright.h thread.h system.h ../machine/interrupt.h ../threads/list.h ../machine/stats.h ../machine/timer.h ../threads/utility.h ../machine/consoledriver.h ../machine/console.h
 #  Implicit rule search has not been done.
 #  Implicit/static pattern stem: 'scheduler'
-#  Last modified 2021-10-15 14:20:40.068747205
+#  Last modified 2021-11-03 15:06:09.620130763
 #  File has been updated.
 #  Successfully updated.
 #  recipe to execute (from '../Makefile.common', line 127):
@@ -638,6 +637,7 @@ threadtest.o: threadtest.cc Makefile ../Makefile.common ../Makefile.dep threadte
 # Not a target:
 ../machine/stats.h:
 #  Implicit rule search has been done.
+ 
 #  Last modified 2021-10-05 19:36:21.631074297
 #  File has been updated.
 #  Successfully updated.
@@ -675,7 +675,6 @@ utility.o: utility.cc Makefile ../Makefile.common ../Makefile.dep utility.cc cop
 scheduler.cc:
 #  Implicit rule search has been done.
 #  Last modified 2021-10-05 19:36:21.635074339
- 
 #  File has been updated.
 #  Successfully updated.
 
@@ -689,7 +688,7 @@ switch.S:
 .stats.d: ../machine/stats.cc Makefile ../Makefile.common ../Makefile.dep ../machine/stats.cc ../threads/copyright.h ../threads/utility.h ../threads/copyright.h ../threads/bool.h ../machine/sysdep.h ../machine/stats.h
 #  Implicit rule search has not been done.
 #  Implicit/static pattern stem: 'stats'
-#  Last modified 2021-10-15 14:20:39.764744714
+#  Last modified 2021-11-03 15:06:09.072129935
 #  File has been updated.
 #  Successfully updated.
 #  recipe to execute (from '../Makefile.common', line 127):
@@ -699,7 +698,7 @@ switch.S:
 .sysdep.d: ../machine/sysdep.cc Makefile ../Makefile.common ../Makefile.dep ../machine/sysdep.cc ../threads/copyright.h ../machine/interrupt.h ../threads/list.h ../threads/copyright.h ../threads/utility.h ../threads/bool.h ../machine/sysdep.h ../threads/system.h ../threads/thread.h ../threads/list.h ../threads/scheduler.h ../machine/interrupt.h ../machine/stats.h ../machine/timer.h ../threads/utility.h ../machine/consoledriver.h ../machine/console.h
 #  Implicit rule search has not been done.
 #  Implicit/static pattern stem: 'sysdep'
-#  Last modified 2021-10-15 14:20:39.740744518
+#  Last modified 2021-11-03 15:06:09.000129826
 #  File has been updated.
 #  Successfully updated.
 #  recipe to execute (from '../Makefile.common', line 127):
@@ -745,7 +744,7 @@ utility.cc:
 nachos: main.o list.o scheduler.o synch.o synchlist.o system.o thread.o utility.o threadtest.o interrupt.o stats.o sysdep.o timer.o switch.o
 #  Command line target.
 #  Implicit rule search has not been done.
-#  Last modified 2021-10-14 11:52:54.804741608
+#  File does not exist.
 #  File has been updated.
 #  Needs to be updated (-q is set).
 # variable set hash-table stats:
@@ -771,7 +770,7 @@ interrupt.o: interrupt.cc Makefile ../Makefile.common ../Makefile.dep ../machine
 .utility.d: utility.cc Makefile ../Makefile.common ../Makefile.dep utility.cc copyright.h utility.h ../threads/bool.h ../machine/sysdep.h ../threads/copyright.h
 #  Implicit rule search has not been done.
 #  Implicit/static pattern stem: 'utility'
-#  Last modified 2021-10-15 14:20:39.852745435
+#  Last modified 2021-11-03 15:06:09.252130207
 #  File has been updated.
 #  Successfully updated.
 #  recipe to execute (from '../Makefile.common', line 127):
@@ -789,7 +788,6 @@ list.o: list.cc Makefile ../Makefile.common ../Makefile.dep list.cc copyright.h 
 # Not a target:
 ../threads/utility.h:
 #  Implicit rule search has been done.
- 
 #  Last modified 2021-10-05 19:36:21.63907438
 #  File has been updated.
 #  Successfully updated.
@@ -812,7 +810,7 @@ thread.o: thread.cc Makefile ../Makefile.common ../Makefile.dep thread.cc copyri
 main.o: main.cc Makefile ../Makefile.common ../Makefile.dep main.cc copyright.h utility.h ../threads/bool.h ../machine/sysdep.h ../threads/copyright.h system.h thread.h list.h scheduler.h ../machine/interrupt.h ../threads/list.h ../machine/stats.h ../machine/timer.h ../threads/utility.h ../machine/consoledriver.h ../machine/console.h
 #  Implicit rule search has not been done.
 #  Implicit/static pattern stem: 'main'
-#  Last modified 2021-10-14 11:52:53.408725195
+#  File does not exist.
 #  File has been updated.
 #  Needs to be updated (-q is set).
 # automatic
@@ -830,7 +828,7 @@ main.o: main.cc Makefile ../Makefile.common ../Makefile.dep main.cc copyright.h 
 # automatic
 # ^ := main.cc Makefile ../Makefile.common ../Makefile.dep copyright.h utility.h ../threads/bool.h ../machine/sysdep.h ../threads/copyright.h system.h thread.h list.h scheduler.h ../machine/interrupt.h ../threads/list.h ../machine/stats.h ../machine/timer.h ../threads/utility.h ../machine/consoledriver.h ../machine/console.h
 # automatic
-# ? := system.h
+# ? := main.cc Makefile ../Makefile.common ../Makefile.dep copyright.h utility.h ../threads/bool.h ../machine/sysdep.h ../threads/copyright.h system.h thread.h list.h scheduler.h ../machine/interrupt.h ../threads/list.h ../machine/stats.h ../machine/timer.h ../threads/utility.h ../machine/consoledriver.h ../machine/console.h
 # variable set hash-table stats:
 # Load=8/32=25%, Rehash=0, Collisions=5/19=26%
 #  recipe to execute (from '../Makefile.common', line 109):
@@ -877,12 +875,11 @@ switch.o: ../threads/switch.S Makefile ../Makefile.common ../Makefile.dep switch
 .synchlist.d: synchlist.cc Makefile ../Makefile.common ../Makefile.dep synchlist.cc copyright.h synchlist.h list.h utility.h ../threads/bool.h ../machine/sysdep.h ../threads/copyright.h synch.h thread.h
 #  Implicit rule search has not been done.
 #  Implicit/static pattern stem: 'synchlist'
-#  Last modified 2021-10-15 14:20:39.93274609
+#  Last modified 2021-11-03 15:06:09.524130618
 #  File has been updated.
 #  Successfully updated.
 #  recipe to execute (from '../Makefile.common', line 127):
 	$(CC) $(CFLAGS) -MM $< | \
- 
 		sed -e 's|\(.*\)\.o:|.\1.d \1.o:|g' > $@
 
 timer.o: timer.cc Makefile ../Makefile.common ../Makefile.dep ../machine/timer.cc ../threads/copyright.h ../machine/timer.h ../threads/utility.h ../threads/copyright.h ../threads/bool.h ../machine/sysdep.h ../threads/system.h ../threads/utility.h ../threads/thread.h ../threads/list.h ../threads/scheduler.h ../machine/interrupt.h ../threads/list.h ../machine/stats.h ../machine/timer.h ../machine/consoledriver.h ../machine/console.h
@@ -914,6 +911,7 @@ main.cc:
 #  File has been updated.
 #  Successfully updated.
 
+ 
 # Not a target:
 synchlist.cc:
 #  Implicit rule search has been done.
@@ -953,7 +951,7 @@ system.o: system.cc Makefile ../Makefile.common ../Makefile.dep system.cc copyri
 .threadtest.d: threadtest.cc Makefile ../Makefile.common ../Makefile.dep threadtest.cc copyright.h system.h utility.h ../threads/bool.h ../machine/sysdep.h ../threads/copyright.h thread.h list.h scheduler.h ../machine/interrupt.h ../threads/list.h ../machine/stats.h ../machine/timer.h ../threads/utility.h ../machine/consoledriver.h ../machine/console.h
 #  Implicit rule search has not been done.
 #  Implicit/static pattern stem: 'threadtest'
-#  Last modified 2021-10-15 14:20:39.820745173
+#  Last modified 2021-11-03 15:06:09.164130075
 #  File has been updated.
 #  Successfully updated.
 #  recipe to execute (from '../Makefile.common', line 127):
@@ -974,10 +972,10 @@ vpath %.S ../machine:../threads:../userprog:../filesys:../network:../vm:..
 # strcache buffers: 1 (0) / strings = 111 / storage = 1258 B / avg = 11 B
 # current buf: size = 8162 B / used = 1258 B / count = 111 / avg = 11 B
 
-# strcache performance: lookups = 602 / hit rate = 81%
+# strcache performance: lookups = 587 / hit rate = 81%
 # hash-table stats:
-# Load=111/8192=1%, Rehash=0, Collisions=4/602=1%
-# Finished Make data base on Fri Oct 15 14:20:42 2021
+# Load=111/8192=1%, Rehash=0, Collisions=4/587=1%
+# Finished Make data base on Wed Nov  3 15:06:14 2021
 
 # make[1]: Leaving directory '/home/wissam/Documents/projetNachos/code/threads'
  
@@ -988,7 +986,7 @@ vpath %.S ../machine:../threads:../userprog:../filesys:../network:../vm:..
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Fri Oct 15 14:20:42 2021
+# Make data base, printed on Wed Nov  3 15:06:14 2021
 
 # Variables
 
@@ -1017,7 +1015,7 @@ VSCODE_LOG_NATIVE = false
 # environment
 IM_CONFIG_PHASE = 1
 # environment
-PLATFORMIO_IDE = 2.3.3
+PLATFORMIO_IDE = 2.3.4
 # automatic
 @D = $(patsubst %/,%,$(dir $@))
 # environment
@@ -1032,12 +1030,13 @@ DIRS_INDENT := threads userprog test
 CURDIR := /home/wissam/Documents/projetNachos/code
 # makefile
 SHELL = /bin/sh
+ 
 # environment
-SNAP_DATA = /var/snap/code/77
+SNAP_DATA = /var/snap/code/78
 # environment
-VSCODE_NLS_CONFIG = {"locale":"fr","availableLanguages":{"*":"fr"},"_languagePackId":"726f0529a8f06dbc748431c91e26ad5e.fr","_translationsConfigFile":"/home/wissam/.config/Code/clp/726f0529a8f06dbc748431c91e26ad5e.fr/tcf.json","_cacheRoot":"/home/wissam/.config/Code/clp/726f0529a8f06dbc748431c91e26ad5e.fr","_resolvedLanguagePackCoreLocation":"/home/wissam/.config/Code/clp/726f0529a8f06dbc748431c91e26ad5e.fr/c13f1abb110fc756f9b3a6f16670df9cd9d4cf63","_corruptedFile":"/home/wissam/.config/Code/clp/726f0529a8f06dbc748431c91e26ad5e.fr/corrupted.info","_languagePackSupport":true}
+VSCODE_NLS_CONFIG = {"locale":"fr","availableLanguages":{"*":"fr"},"_languagePackId":"726f0529a8f06dbc748431c91e26ad5e.fr","_translationsConfigFile":"/home/wissam/.config/Code/clp/726f0529a8f06dbc748431c91e26ad5e.fr/tcf.json","_cacheRoot":"/home/wissam/.config/Code/clp/726f0529a8f06dbc748431c91e26ad5e.fr","_resolvedLanguagePackCoreLocation":"/home/wissam/.config/Code/clp/726f0529a8f06dbc748431c91e26ad5e.fr/6cba118ac49a1b88332f312a8f67186f7f3c1643","_corruptedFile":"/home/wissam/.config/Code/clp/726f0529a8f06dbc748431c91e26ad5e.fr/corrupted.info","_languagePackSupport":true}
 # environment
-JOURNAL_STREAM = 8:47463
+JOURNAL_STREAM = 8:47808
 # environment
 XDG_CONFIG_DIRS = /etc/xdg/xdg-ubuntu:/etc/xdg
 # environment
@@ -1063,15 +1062,15 @@ DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/1000/bus
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-_ = /snap/code/77/usr/share/code/code
+_ = /snap/code/78/usr/share/code/code
 # environment
-MANAGERPID = 1334
+MANAGERPID = 1520
 # environment
 LESSOPEN = | /usr/bin/lesspipe %s
 # environment
 VSCODE_CWD = /home/wissam
 # environment
-GSETTINGS_SCHEMA_DIR = /snap/code/77/usr/share/glib-2.0/schemas
+GSETTINGS_SCHEMA_DIR = /snap/code/78/usr/share/glib-2.0/schemas
 # default
 MAKE_HOST := x86_64-pc-linux-gnu
 # environment
@@ -1079,15 +1078,15 @@ NO_PROXY = 127.0.0.1
 # environment
 GPG_AGENT_INFO = /run/user/1000/gnupg/S.gpg-agent:0:1
 # environment
-SESSION_MANAGER = local/wissam-VivoBook-ASUSLaptop-X512FAC-X512FA:@/tmp/.ICE-unix/1573,unix/wissam-VivoBook-ASUSLaptop-X512FAC-X512FA:/tmp/.ICE-unix/1573
+SESSION_MANAGER = local/wissam-VivoBook-ASUSLaptop-X512FAC-X512FA:@/tmp/.ICE-unix/1758,unix/wissam-VivoBook-ASUSLaptop-X512FAC-X512FA:/tmp/.ICE-unix/1758
 # environment
 XDG_RUNTIME_DIR = /run/user/1000
 # environment
 GDK_PIXBUF_MODULE_FILE = /home/wissam/snap/code/common/.cache/gdk-pixbuf-loaders.cache
 # environment
-SNAP = /snap/code/77
+SNAP = /snap/code/78
 # environment
-SNAP_VERSION = c13f1abb
+SNAP_VERSION = 6cba118a
 # environment
 XDG_MENU_PREFIX = gnome-
 # environment
@@ -1097,9 +1096,9 @@ DISABLE_WAYLAND = 1
 # environment
 VSCODE_CRASH_REPORTER_START_OPTIONS = {"companyName":"Microsoft","productName":"VSCode","submitURL":"appcenter://code?aid=fba07a4d-84bd-4fc8-a125-9640fc8ce171&uid=f0bfaa38-c1a6-4dca-9363-94313c87cba5&iid=f0bfaa38-c1a6-4dca-9363-94313c87cba5&sid=f0bfaa38-c1a6-4dca-9363-94313c87cba5","uploadToServer":true}
 # environment
-INVOCATION_ID = f054229f060a4263aa8db70cb569e163
+INVOCATION_ID = 06b7d155fec94462a5c0d109a0877454
 # environment
-GDK_PIXBUF_MODULEDIR = /snap/code/77/usr/lib/x86_64-linux-gnu/gdk-pixbuf-2.0/2.10.0/loaders
+GDK_PIXBUF_MODULEDIR = /snap/code/78/usr/lib/x86_64-linux-gnu/gdk-pixbuf-2.0/2.10.0/loaders
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # environment
@@ -1109,7 +1108,7 @@ XDG_SESSION_DESKTOP = ubuntu
 # environment
 SSH_AUTH_SOCK = /run/user/1000/keyring/ssh
 # environment
-GIO_LAUNCHED_DESKTOP_FILE_PID = 100675
+GIO_LAUNCHED_DESKTOP_FILE_PID = 11576
 # automatic
 %F = $(notdir $%)
 # environment
@@ -1123,7 +1122,7 @@ PWD = /home/wissam/Documents/projetNachos/code
 # default
 .LOADED := 
 # environment
-SSH_AGENT_PID = 1530
+SSH_AGENT_PID = 1714
 # environment
 ORIGINAL_XDG_CURRENT_DESKTOP = ubuntu:GNOME
 # environment
@@ -1135,11 +1134,12 @@ VSCODE_AMD_ENTRYPOINT = vs/workbench/services/extensions/node/extensionHostProce
 # environment
 HOME = /home/wissam
 # environment
+ 
 LESSCLOSE = /usr/bin/lesspipe %s %s
 # environment
 VSCODE_CLI = 1
 # environment
-VSCODE_CODE_CACHE_PATH = /home/wissam/.config/Code/CachedData/c13f1abb110fc756f9b3a6f16670df9cd9d4cf63
+VSCODE_CODE_CACHE_PATH = /home/wissam/.config/Code/CachedData/6cba118ac49a1b88332f312a8f67186f7f3c1643
 # environment
 LOGNAME = wissam
 # environment
@@ -1147,7 +1147,7 @@ APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
 # environment
 SNAP_LIBRARY_PATH = /var/lib/snapd/lib/gl:/var/lib/snapd/lib/gl32:/var/lib/snapd/void
 # environment
-SNAP_CONTEXT = qzrpTfTg-7wJinGajkLNYECfXx3VQ7nPu7NEIpgfCbsk0gNzlKGa
+SNAP_CONTEXT = aXdH_E_T7-6hDc4T-SKdQIqCPkIx0D3lxTmr3a7DuDs3Q8LynY1q
 # environment
 ELECTRON_NO_ATTACH_CONSOLE = 1
 # environment
@@ -1163,7 +1163,7 @@ MAKELEVEL := 0
 # environment
 SNAP_REAL_HOME = /home/wissam
 # environment
-PLATFORMIO_PATH = /home/wissam/.platformio/penv/bin:/home/wissam/.platformio/penv:/home/wissam/.platformio/python3/bin:/home/wissam/.local/bin:/home/wissam/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+PLATFORMIO_PATH = /home/wissam/.platformio/python3/bin:/home/wissam/.local/bin:/home/wissam/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
 # makefile (from 'Makefile', line 5)
 MAKE := make
 # default
@@ -1171,20 +1171,19 @@ MAKECMDGOALS := all
 # environment
 PATH = /home/wissam/.local/bin:/home/wissam/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
 # environment
-SNAP_USER_DATA = /home/wissam/snap/code/77
+SNAP_USER_DATA = /home/wissam/snap/code/78
 # environment
 SHLVL = 0
- 
 # environment
 GNOME_SHELL_SESSION_MODE = ubuntu
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-5374298f-99cd-4407-bb73-e3071cb685b0.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-b611370d-73f9-4dd9-a315-e29f3fae97af.sock
 # default
 MAKE_VERSION := 4.2.1
 # environment
 USER = wissam
 # environment
-SNAP_REVISION = 77
+SNAP_REVISION = 78
 # makefile
 .DEFAULT_GOAL := all
 # environment
@@ -1198,14 +1197,13 @@ MAKE_COMMAND := make
 # automatic
 *F = $(notdir $*)
 # environment
-VSCODE_IPC_HOOK = /run/user/1000/vscode-8b6dde90-1.61.1-main.sock
+VSCODE_IPC_HOOK = /run/user/1000/vscode-8b6dde90-1.61.2-main.sock
 # environment
 BAMF_DESKTOP_FILE_HINT = /var/lib/snapd/desktop/applications/code_code.desktop
 # makefile
 MAKEFLAGS = pqrR
 # environment
 MFLAGS = -pqrR
- 
 # automatic
 *D = $(patsubst %/,%,$(dir $*))
 # environment
@@ -1213,7 +1211,6 @@ BREAKPAD_DUMP_LOCATION = /home/wissam/.config/Code/exthost Crash Reports
 # automatic
 +D = $(patsubst %/,%,$(dir $+))
 # environment
- 
 GDK_BACKEND = x11
 # automatic
 +F = $(notdir $+)
@@ -1222,7 +1219,7 @@ QT_ACCESSIBILITY = 1
 # default
 MAKEFILES := 
 # environment
-SNAP_COOKIE = qzrpTfTg-7wJinGajkLNYECfXx3VQ7nPu7NEIpgfCbsk0gNzlKGa
+SNAP_COOKIE = aXdH_E_T7-6hDc4T-SKdQIqCPkIx0D3lxTmr3a7DuDs3Q8LynY1q
 # automatic
 <F = $(notdir $<)
 # environment
@@ -1254,7 +1251,7 @@ GJS_DEBUG_OUTPUT = stderr
 # environment
 LANG = C
 # environment
-VSCODE_PID = 100722
+VSCODE_PID = 11625
 # variable set hash-table stats:
 # Load=130/1024=13%, Rehash=0, Collisions=22/162=14%
 
@@ -1274,6 +1271,7 @@ VSCODE_PID = 100722
 
 # Files
 
+ 
 all:
 #  Phony target (prerequisite of .PHONY).
 #  Command line target.
@@ -1283,7 +1281,6 @@ all:
 #  File has been updated.
 #  Needs to be updated (-q is set).
 # automatic
- 
 # @ := all
 # automatic
 # % := 
@@ -1334,15 +1331,12 @@ print:
 		$${dir}/*.h \
 		$${dir}/*.cc $${dir}/*.S \
 		$${dir}/*.c; \
- 
 	done > list
- 
 	$(LPR) `cat list` 
 
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
- 
 #  Last modified 2021-10-05 19:36:21.627074256
 #  File has been updated.
 #  Successfully updated.
@@ -1399,11 +1393,12 @@ clean:
 # No general ('VPATH' variable) search path.
 
 # strcache buffers: 1 (0) / strings = 47 / storage = 450 B / avg = 9 B
+ 
 # current buf: size = 8162 B / used = 450 B / count = 47 / avg = 9 B
 
 # strcache performance: lookups = 63 / hit rate = 25%
 # hash-table stats:
 # Load=47/8192=1%, Rehash=0, Collisions=2/63=3%
-# Finished Make data base on Fri Oct 15 14:20:42 2021
+# Finished Make data base on Wed Nov  3 15:06:14 2021
 
  
