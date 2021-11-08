@@ -15,18 +15,10 @@ struct Shmurtz { //structure à passer en parametre
 
 
 
-int do_ThreadCreate(int f,int arg){
-    Shmurtz *shm = new Shmurtz;
-    shm->f=f;
-    shm->arg=arg;
-    Thread newThread = new Thread;
-    newThread->Start(StartUserThread,shm)
-    return 0;
-}
-
-static void StartUserThread(void* shmurtz){
+static void StartUserThread(void* shm){
     int i;
-
+    Shmurtz *shmurtz;
+    shmurtz = (Shmurtz *) shm;
     for (i = 0; i < NumTotalRegs; i++){
         machine->WriteRegister (i, 0); // on met tout les registres à 0
     }
@@ -38,11 +30,26 @@ static void StartUserThread(void* shmurtz){
     // Need to also tell MIPS where next instruction is, because
     // of branch delay possibility
     machine->WriteRegister (NextPCReg, shmurtz->f + 4); //on initialise la prochaine instruction 
-
+    
     // Set the stack register to the end of the address space, where we
     // allocated the stack; but subtract off a bit, to make sure we don't
     // accidentally reference off the end!
-    machine->WriteRegister (StackReg, numPages * PageSize - 256);
+    
 
-    machine->run();
+    machine->WriteRegister (StackReg, currentThread->space->AllocateUserStack() );
+
+    DEBUG ('a', "Initializing stack register to 0x%x\n",
+	   currentThread->space->AllocateUserStack() * PageSize - 16);
+
+    machine->Run();
+}
+
+int do_ThreadCreate(int f,int arg){
+    Shmurtz *shm = new Shmurtz;
+    shm->f=f;
+    shm->arg=arg;
+    Thread *newThread = new Thread ("fonction");
+    newThread->Start(StartUserThread,shm);
+    return 0;
+    
 }

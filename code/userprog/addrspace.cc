@@ -177,6 +177,11 @@ AddrSpace::InitRegisters ()
 	   numPages * PageSize - 16);
 }
 
+int 
+AddrSpace::AllocateUserStack() {
+    return numPages *PageSize - 256;
+}
+
 //----------------------------------------------------------------------
 // AddrSpace::Dump
 //      Dump program layout as SVG

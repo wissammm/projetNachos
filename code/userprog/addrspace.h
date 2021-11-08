@@ -40,10 +40,11 @@ class AddrSpace:public dontcopythis
 		    unsigned blocksize);
 				// Dump program layout as SVG
     unsigned NumPages() { return numPages; }
+    int AllocateUserStack();
 
   private:
     NoffHeader noffH;		// Program layout
-
+    
     TranslationEntry * pageTable; // Page table
     unsigned int numPages;	// Number of pages in the page table
 };
