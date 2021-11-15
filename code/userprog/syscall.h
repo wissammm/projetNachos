@@ -162,11 +162,11 @@ int GetString();
 
 
 #ifdef CHANGED
-int ThreadCreate(void f(void *arg), void *arg);
+int UserThreadCreate(void f(void *arg), void *arg);
 #endif CHANGED
 
 #ifdef CHANGED
-int ThreadExit(void);
+void UserThreadExit();
 #endif CHANGED
 
 #endif // IN_USER_MODE

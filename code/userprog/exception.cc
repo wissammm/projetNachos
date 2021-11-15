@@ -25,6 +25,8 @@
 #include "system.h"
 #include "syscall.h"
 
+#include "userthread.h"
+
 //----------------------------------------------------------------------
 // UpdatePC : Increments the Program Counter register in order to resume
 // the user program immediately after the "syscall" instruction.
@@ -71,8 +73,10 @@ void ExceptionHandler (ExceptionType which)
 
     switch (which)
       {
+		  
 	case SyscallException:
           {
+			  DEBUG('s',"type :%d \n",type);
 	    switch (type)
 	      {
 		case SC_Halt:
@@ -135,12 +139,17 @@ void ExceptionHandler (ExceptionType which)
 
 		  case SC_ThreadCreate:
 		  {
-			  //do_ThreadCreate(int f, void *arg);
+			int func = machine->ReadRegister(4);
+            int args = machine->ReadRegister(5);
+            int res = do_ThreadCreate(func, args);
+            machine->WriteRegister(2,res);
+            break;
 		  }
 		  
 		  case SC_ThreadExit:
 		  {
-			  
+			  do_ThreadExit();
+			  break;
 		  }
 
 		  #endif CHANGED

@@ -1,10 +1,6 @@
-#include "copyright.h"
-#include "utility.h"
-#include "console.h"
-#include <exception.h>
+#include "thread.h"
+#include "synch.h"
 
-class UserThread {
-    public:// initialize the hardware console device3
-        int do_ThreadCreate(int f,int arg);
-        static void StartUserThread(void* shmurtz);
-};
+int do_ThreadCreate(int f,int arg);
+int do_ThreadExit();
+
