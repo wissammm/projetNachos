@@ -44,6 +44,7 @@ int do_ThreadCreate(int f,int arg){
     shm->f=f;
     shm->arg=arg;
     Thread *newThread = new Thread ("fonction");
+    newThread->space = currentThread->space;
     newThread->Start(StartUserThread,shm);
     DEBUG('f'," %d", f);
     DEBUG('f',"do thread create fin");
