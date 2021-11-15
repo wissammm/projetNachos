@@ -9,11 +9,16 @@ static Semaphore *readAvail;
 static Semaphore *writeDone;
 static void ReadAvailHandler(void *arg) { (void) arg; readAvail->V(); }
 static void WriteDoneHandler(void *arg) { (void) arg; writeDone->V(); }
+static Semaphore *sPut ;
+static Semaphore *sGet ;
+
 char ch;
 
 ConsoleDriver::ConsoleDriver(const char*in,const char*out){
     readAvail = new Semaphore("read avail", 0);
     writeDone = new Semaphore("write done", 0);
+    sPut= new Semaphore("sémaphore Put",1);
+    sGet = new Semaphore("sémaphore Get",1);
     console = new Console (in, out, ReadAvailHandler, WriteDoneHandler, NULL);
 }
 ConsoleDriver::~ConsoleDriver(){
@@ -22,13 +27,17 @@ ConsoleDriver::~ConsoleDriver(){
     delete readAvail;
 }
 void ConsoleDriver::PutChar(int ch){
+    sPut->P();
     console->TX (ch);
     writeDone->P ();
+    sPut->V();
 }
 int ConsoleDriver::GetChar(){
+    sGet->P();
     readAvail->P ();	// wait for character to arrive
     ch = console->RX ();
     return ch;
+    sGet->V();
 }
 void ConsoleDriver::PutString(const char s[]){
     
