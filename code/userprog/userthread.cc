@@ -27,6 +27,7 @@ static void StartUserThread(void* shm){
     // Set the stack register to the end of the address space, where we
     // allocated the stack; but subtract off a bit, to make sure we don't
     // accidentally reference off the end!
+
     machine->WriteRegister (StackReg, currentThread->space->AllocateUserStack() );
 
     DEBUG ('a', "Initializing stack register to 0x%x\n",
