@@ -104,61 +104,86 @@ Semaphore::V ()
     (void) interrupt->SetLevel (oldLevel);
 }
 
+bool 
+Lock::isHeldByCurrentThread () {
+    return(currentThread == holderLock);
+}
+
 // Dummy functions -- so we can compile our later assignments 
 // Note -- without a correct implementation of Condition::Wait(), 
 // the test case in the network assignment won't work!
 Lock::Lock (const char *debugName)
 {
-    (void) debugName;
-    /* TODO */
-    ASSERT(FALSE);
+    name = debugName;
+    holderLock = NULL;
+    mutex = new Semaphore("mutex", 1);
 }
 
 Lock::~Lock ()
 {
+    delete mutex;
 }
+
 void
 Lock::Acquire ()
 {
-    /* TODO */
-    ASSERT(FALSE);
+    ASSERT(!isHeldByCurrentThread());
+    mutex -> P();
+    holderLock = currentThread;
 }
+
 void
 Lock::Release ()
 {
-    /* TODO */
-    ASSERT(FALSE);
+    ASSERT(isHeldByCurrentThread ());
+    holderLock = NULL;
+    mutex -> V();
+    
 }
 
 Condition::Condition (const char *debugName)
 {
-    (void) debugName;
-    /* TODO */
-    ASSERT(FALSE);
+    name = debugName;
+    queue = new List;
 }
 
 Condition::~Condition ()
 {
+    delete queue;
 }
+
 void
 Condition::Wait (Lock * conditionLock)
 {
-    (void) conditionLock;
-    /* TODO */
-    ASSERT (FALSE);
+    Semaphore * wait = new Semaphore("wait", 0);
+
+    ASSERT(conditionLock->isHeldByCurrentThread ());
+    queue->Append(wait);
+
+    conditionLock-> Release();
+    wait->P();
+
+    conditionLock-> Acquire();
+    delete wait;
 }
 
 void
 Condition::Signal (Lock * conditionLock)
 {
-    (void) conditionLock;
-    /* TODO */
-    ASSERT(FALSE);
+    Semaphore * wait;
+
+    ASSERT(conditionLock->isHeldByCurrentThread());
+
+    if(!queue->IsEmpty()){
+        wait = (Semaphore *) queue->Remove();
+        wait->V();
+    }
 }
+
 void
 Condition::Broadcast (Lock * conditionLock)
 {
-    (void) conditionLock;
-    /* TODO */
-    ASSERT(FALSE);
+    while(! queue->IsEmpty()){
+        Signal(conditionLock);
+    }
 }
