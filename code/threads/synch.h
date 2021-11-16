@@ -87,6 +87,8 @@ class Lock:public dontcopythis
 
   private:
     const char *name;		// for debugging
+    Thread *holderLock;    
+    Semaphore *mutex;
     // plus some other stuff you'll need to define
 };
 
@@ -143,6 +145,7 @@ class Condition:public dontcopythis
 
   private:
     const char *name;
+    List *queue;
     // plus some other stuff you'll need to define
 };
 #endif // SYNCH_H
