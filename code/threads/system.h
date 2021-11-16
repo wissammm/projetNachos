@@ -20,7 +20,7 @@
 #ifdef CHANGED
 #define MAX_STRING_SIZE 32 // un string peut avoir 2^32 charactères, mais ca fait beaucoup de mémoire utilisé donc je me contente juste d'en utiliser 32 pour eviter de manger trop de mémoire
 // Initialization and cleanup routines
-#endif CHANGED
+#endif 
 
 extern void Initialize (int argc, char **argv);	// Initialization,
 						// called before anything else

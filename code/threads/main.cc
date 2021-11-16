@@ -139,7 +139,7 @@ main (int argc, char **argv)
 	    {			// performance test
 		ConsoleDriverTest (NULL,NULL);
 	    }
-		#endif CHANGED
+		#endif 
 #endif // USER_PROGRAM
 #ifdef FILESYS
 	  if (!strcmp (*argv, "-cp"))

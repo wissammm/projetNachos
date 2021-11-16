@@ -1,5 +1,9 @@
 #include "userthread.h"
 #include "system.h"
+
+
+
+
 struct Shmurtz { //structure à passer en parametre 
     int f;
     int arg;
@@ -16,7 +20,7 @@ static void StartUserThread(void* shm){
         machine->WriteRegister (i, 0); // on met tout les registres à 0
     }
 	
-
+    currentThread->space->AddThread();
     // Initial program counter -- must be location of "Start"
     machine->WriteRegister (PCReg , shmurtz->f); //on donne notre fonction 
 
@@ -30,9 +34,8 @@ static void StartUserThread(void* shm){
 
     machine->WriteRegister (StackReg, currentThread->space->AllocateUserStack() );
 
-    DEBUG ('a', "Initializing stack register to 0x%x\n",
-	   currentThread->space->AllocateUserStack() * PageSize - 16);
-
+    machine->WriteRegister(4, shmurtz->arg);
+    
     machine->Run();
     DEBUG('f',"Start user thread fin");
 }
@@ -48,11 +51,15 @@ int do_ThreadCreate(int f,int arg){
     DEBUG('f'," %d", f);
     DEBUG('f',"do thread create fin");
     return 0;
-    
-    
 }
 
 int do_ThreadExit(){
+    currentThread->space->RemoveThread();
+    
+    if(currentThread->space->GetNumberThread()==0){
+        interrupt->Powerdown();
+        return 0;
+    }
     currentThread->Finish();
     return 0;
 }

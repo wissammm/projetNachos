@@ -152,7 +152,7 @@ void ExceptionHandler (ExceptionType which)
 			  break;
 		  }
 
-		  #endif CHANGED
+		  #endif 
 		default:
 		  {
 		    printf("Unimplemented system call %d\n", type);

@@ -22,6 +22,11 @@
 #include "syscall.h"
 #include "new"
 
+#ifdef CHANGED
+#include "synch.h"
+class Semaphore;
+
+#endif 
 //----------------------------------------------------------------------
 // SwapHeader
 //      Do little endian to big endian conversion on the bytes in the 
@@ -69,7 +74,7 @@ List AddrSpaceList;
 AddrSpace::AddrSpace (OpenFile * executable)
 {
     unsigned int i, size;
-
+    
     executable->ReadAt (&noffH, sizeof (noffH), 0);
     if ((noffH.noffMagic != NOFFMAGIC) &&
 	(WordToHost (noffH.noffMagic) == NOFFMAGIC))
@@ -177,10 +182,32 @@ AddrSpace::InitRegisters ()
 	   numPages * PageSize - 16);
 }
 
+
+
+#ifdef CHANGED
+
+
 int 
 AddrSpace::AllocateUserStack() {
     return numPages *PageSize - 256;
 }
+
+void
+AddrSpace::AddThread() {
+    nbThread++;
+}
+
+void
+AddrSpace::RemoveThread() {
+    nbThread--;
+}
+
+int
+AddrSpace::GetNumberThread() {
+    return nbThread;
+}
+
+#endif
 
 //----------------------------------------------------------------------
 // AddrSpace::Dump

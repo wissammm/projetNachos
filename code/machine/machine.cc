@@ -479,4 +479,4 @@ void Machine::copyStringToMachine(char *from, int to, unsigned size){
 	machine->WriteMem(to+i,1,'\0'); //fin de chaine 
 }
 
-#endif CHANGED
+#endif 

@@ -28,7 +28,7 @@ class AddrSpace:public dontcopythis
     // initializing it with the program
     // stored in the file "executable"
     ~AddrSpace ();		// De-allocate an address space
-
+    int nbThread = 1;
     void InitRegisters ();	// Initialize user-level CPU registers,
     // before jumping to user code
 
@@ -41,6 +41,9 @@ class AddrSpace:public dontcopythis
 				// Dump program layout as SVG
     unsigned NumPages() { return numPages; }
     int AllocateUserStack();
+    int GetNumberThread();
+    void AddThread();
+    void RemoveThread();
 
   private:
     NoffHeader noffH;		// Program layout

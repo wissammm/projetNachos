@@ -108,7 +108,7 @@ ConsoleTest (const char *in, const char *out)
         }else{
           console->TX ('<');
           writeDone->P ();
-          #endif CHANGED
+          #endif 
           console->TX (ch);	// echo it!
           writeDone->P ();	// wait for write to finish
           #ifdef CHANGED
@@ -116,7 +116,7 @@ ConsoleTest (const char *in, const char *out)
           writeDone->P();
         }
         
-        #endif CHANGED //
+        #endif 
       }
     delete console;
     delete readAvail;
