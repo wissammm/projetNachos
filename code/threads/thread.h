@@ -90,7 +90,9 @@ class Thread:public dontcopythis
     // NOTE -- thread being deleted
     // must not be running when delete 
     // is called
-
+    
+    
+    
     // basic thread operations
 
     void Start (VoidFunctionPtr func, void *arg);	// Make thread run (*func)(arg)
@@ -110,6 +112,18 @@ class Thread:public dontcopythis
     {
 	return (name);
     }
+
+    #ifdef CHANGED
+    void SetId(int i){
+        id = i;
+    }
+
+    int GetId(){
+        return id;
+    }
+    #endif
+
+
     void Print ()
     {
 	printf ("%s, ", name);
@@ -134,6 +148,10 @@ class Thread:public dontcopythis
     int main_stack;		// Whether this is the main stack provided by OS
     ThreadStatus status;	// ready, running or blocked
     const char *name;
+
+    #ifdef CHANGED
+    int id;
+    #endif
 
     void StackAllocate (VoidFunctionPtr func, void *arg);
     // Allocate a stack for thread.

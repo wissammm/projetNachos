@@ -65,3 +65,4 @@ void ConsoleDriver::GetString(char*s,int n){
         s[i]=(char)ch;
     }
 }
+

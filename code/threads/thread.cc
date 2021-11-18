@@ -52,9 +52,9 @@ Thread::Thread (const char *threadName)
     name = threadName;
     stackTop = NULL;
     stack = NULL;
-
+    
     valgrind_id = 0;
-
+    id=0;
 #ifdef __SANITIZE_ADDRESS__
     fake_stack = NULL;
 #endif
@@ -308,6 +308,7 @@ Thread::Sleep ()
 //      (which we can pass a pointer to), that then simply calls the 
 //      member function.
 //----------------------------------------------------------------------
+
 
 static void
 ThreadFinish ()

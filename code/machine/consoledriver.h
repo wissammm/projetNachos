@@ -13,7 +13,7 @@ class ConsoleDriver:dontcopythis {
         int GetChar();                  // Behaves like getchar(3S)
         void PutString(const  char*s);  // Behaves like fputs(3S)
         void GetString(char*s,int n); // Behaves like fgets(3S)
-        
+        void PutInt(int n);
     private:
         Console* console;
 };

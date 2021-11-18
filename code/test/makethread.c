@@ -1,16 +1,21 @@
 #include "syscall.h"
 
-void Putchar(char c){
-    
-    PutString("baba au rhum");
+void print(char arg){
+    volatile int x ;
+    for(x= 0; x<3; x++){
+        PutChar('a');
+        PutString("\n");
+    }
     ThreadExit();
 }
 
-int main(){
-    
-    ThreadCreate(Putchar,'b'); 
-    PutChar('c');
+int main (){
+    char arg = 'k';
+    void *f = print;
+    int i;
+    for ( i= 0; i<5; i++){
+        ThreadCreate(f, arg);
+    }
+    PutString("Retour au main \n");
     ThreadExit();
-    Exit(0); //les deux ne termine pas nachos
-
 }

@@ -25,7 +25,9 @@
 #ifdef CHANGED
 #include "synch.h"
 class Semaphore;
+Semaphore *p;
 
+#include <bitmap.h>
 #endif 
 //----------------------------------------------------------------------
 // SwapHeader
@@ -74,7 +76,14 @@ List AddrSpaceList;
 AddrSpace::AddrSpace (OpenFile * executable)
 {
     unsigned int i, size;
-    
+    int nbThread = 1;
+    #ifdef CHANGED
+    p= new Semaphore("sémaphore",1);
+    map = new BitMap(UserStacksAreaSize/256);
+    map->Mark(0);
+    sem = new Semaphore("map",(UserStacksAreaSize/256)-1);
+    #endif
+
     executable->ReadAt (&noffH, sizeof (noffH), 0);
     if ((noffH.noffMagic != NOFFMAGIC) &&
 	(WordToHost (noffH.noffMagic) == NOFFMAGIC))
@@ -186,21 +195,41 @@ AddrSpace::InitRegisters ()
 
 #ifdef CHANGED
 
+void
+AddrSpace::ClearMap(int id){
+    map->Clear(id);
+}
+
+int
+AddrSpace::MapFind(){
+    return map->Find();
+}
+
+
 
 int 
-AddrSpace::AllocateUserStack() {
-    return numPages *PageSize - 256;
+AddrSpace::AllocateUserStack(int i) {
+    DEBUG('f',"debut de la pile %d \n",(numPages *PageSize -256*i));
+    DEBUG('f',"fin de la pile %d \n",(numPages *PageSize -256*(i+1)));
+    return (numPages *PageSize -256*i) ;
 }
 
 void
 AddrSpace::AddThread() {
+    p->P();
     nbThread++;
+    DEBUG('f',"Add Thread %d \n", nbThread);
+    p->V();
 }
 
 void
 AddrSpace::RemoveThread() {
+    p->P();
     nbThread--;
+    DEBUG('f',"Remove Thread %d \n", nbThread);
+    p->V();
 }
+
 
 int
 AddrSpace::GetNumberThread() {

@@ -18,6 +18,8 @@
 #include "translate.h"
 #include "noff.h"
 #include "list.h"
+#include "bitmap.h"
+class Semaphore;
 
 #define UserStacksAreaSize		1024	// increase this as necessary!
 
@@ -28,7 +30,7 @@ class AddrSpace:public dontcopythis
     // initializing it with the program
     // stored in the file "executable"
     ~AddrSpace ();		// De-allocate an address space
-    int nbThread = 1;
+    int nbThread =1;
     void InitRegisters ();	// Initialize user-level CPU registers,
     // before jumping to user code
 
@@ -40,10 +42,14 @@ class AddrSpace:public dontcopythis
 		    unsigned blocksize);
 				// Dump program layout as SVG
     unsigned NumPages() { return numPages; }
-    int AllocateUserStack();
+    int AllocateUserStack(int i);
     int GetNumberThread();
     void AddThread();
     void RemoveThread();
+    BitMap* map;
+    int MapFind();
+    void ClearMap(int id);
+    Semaphore *sem;
 
   private:
     NoffHeader noffH;		// Program layout
