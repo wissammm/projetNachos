@@ -16,8 +16,11 @@ static void StartUserThread(void* shm){
     
     int i;
     Shmurtz *shmurtz;
+    
     shmurtz = (Shmurtz *) shm;
+    currentThread->space->p->P(); //on protège la recherche de place dans bitmap
     currentThread->SetId(currentThread->space->MapFind());
+    currentThread->space->p->V();
     for (i = 0; i < NumTotalRegs; i++){
         machine->WriteRegister (i, 0); // on met tout les registres à 0
     }
@@ -35,36 +38,46 @@ static void StartUserThread(void* shm){
 
     machine->WriteRegister (StackReg, currentThread->space->AllocateUserStack(currentThread->GetId()) );
 
-    machine->WriteRegister(4, shmurtz->arg);
+    machine->WriteRegister(4, shmurtz->arg); //on met les argument dans le registre 4
+    delete(shmurtz);
     currentThread->Yield();
+    machine->DumpMem("threads.svg");
+    
     machine->Run();
     
 }
 
 int do_ThreadCreate(int f,int arg){
-    //DEBUG('f',"Do Thread Create\n");
-    currentThread->space->sem->P();
+
+    currentThread->space->sem->P(); //enleve une place
     Shmurtz *shm = new Shmurtz;
     shm->f=f;
     shm->arg=arg;
     Thread *newThread = new Thread ("fonction");
-    newThread->space = currentThread->space;
-    currentThread->space->AddThread();
-    newThread->Start(StartUserThread,shm);
+    if(newThread == NULL) {
+		DEBUG('f',"thread null");
+		return -1;
+	}
+    newThread->space = currentThread->space; //le thread et le processus qui l'appelle on le même espace d'adressage
+    currentThread->space->AddThread(); //incrémente le nombre de thread
+    newThread->Start(StartUserThread,shm); //lance le nouveau thread
     
     currentThread->Yield();
     return 0;
 }
 
 int do_ThreadExit(){
-    fprintf(stderr, "Exit Thread %s\n", currentThread->getName());
-    currentThread->space->ClearMap(currentThread->GetId());
-    currentThread->space->RemoveThread();
+    
+    currentThread->space->ClearMap(currentThread->GetId()); //supprime le thread du bitmap
+    currentThread->space->RemoveThread(); //enleve un thread au compteur
     if(currentThread->space->GetNumberThread()==0){
+        delete(currentThread->space->p);
+        delete(currentThread->space->map);
+        delete(currentThread->space->sem);
         interrupt->Powerdown();
         return 0;
     }
-    currentThread->space->sem->V();
+    currentThread->space->sem->V(); //ouvre une place pour un thread en attente 
     currentThread->Finish();
     return 0;
 }

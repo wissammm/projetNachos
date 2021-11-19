@@ -42,14 +42,18 @@ class AddrSpace:public dontcopythis
 		    unsigned blocksize);
 				// Dump program layout as SVG
     unsigned NumPages() { return numPages; }
-    int AllocateUserStack(int i);
+
+    #ifdef CHANGED
+    int AllocateUserStack(int i); 
     int GetNumberThread();
     void AddThread();
     void RemoveThread();
     BitMap* map;
+    Semaphore *p; 
     int MapFind();
     void ClearMap(int id);
     Semaphore *sem;
+    #endif 
 
   private:
     NoffHeader noffH;		// Program layout

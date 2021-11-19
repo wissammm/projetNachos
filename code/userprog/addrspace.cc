@@ -25,7 +25,7 @@
 #ifdef CHANGED
 #include "synch.h"
 class Semaphore;
-Semaphore *p;
+
 
 #include <bitmap.h>
 #endif 
@@ -76,12 +76,14 @@ List AddrSpaceList;
 AddrSpace::AddrSpace (OpenFile * executable)
 {
     unsigned int i, size;
-    int nbThread = 1;
+    
+
     #ifdef CHANGED
-    p= new Semaphore("sémaphore",1);
-    map = new BitMap(UserStacksAreaSize/256);
-    map->Mark(0);
-    sem = new Semaphore("map",(UserStacksAreaSize/256)-1);
+    int nbThread = 1;//nb thread initialisé à 1 car on à deja le main qui tourne
+    p= new Semaphore("sémaphore",1); // crée une nouvelle sémaphore qui permet de proteger add/removeThread
+    map = new BitMap(UserStacksAreaSize/256);//je divise la pile par 256 pour chaques threads
+    map->Mark(0);//le 0 est utilisé par le main
+    sem = new Semaphore("map",(UserStacksAreaSize/256)-1);//semaphore pour protéger les instruction de map 
     #endif
 
     executable->ReadAt (&noffH, sizeof (noffH), 0);
@@ -152,6 +154,7 @@ AddrSpace::AddrSpace (OpenFile * executable)
 
 AddrSpace::~AddrSpace ()
 {
+  
   delete [] pageTable;
   pageTable = NULL;
 

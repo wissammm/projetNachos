@@ -98,13 +98,13 @@ void ExceptionHandler (ExceptionType which)
 			int c = machine->ReadRegister (4); // recupération de la chaine de caractère
             char* to = new char[MAX_STRING_SIZE]; // buffer le +1 permet d'ajouter le caractere de fin de chaine
 			
-            int i = machine->copyStringFromMachine(c, to, MAX_STRING_SIZE-1); // copie chaine mips vers chaine Linux
+            int i = consoledriver->copyStringFromMachine(c, to, MAX_STRING_SIZE-1); // copie chaine mips vers chaine Linux
 			consoledriver->PutString(to);
 			
 			
 			int cpt=1; //compteur à 1 car on à déja écrit une fois
 			while(i==-1){ // si il reste encore des charactères à lire
-				i = machine->copyStringFromMachine(c+((MAX_STRING_SIZE)*cpt), to, MAX_STRING_SIZE); //écrit MAX_STRING_SIZE plus loin à chaque tour de boucle
+				i = consoledriver->copyStringFromMachine(c+((MAX_STRING_SIZE)*cpt), to, MAX_STRING_SIZE); //écrit MAX_STRING_SIZE plus loin à chaque tour de boucle
 				consoledriver->PutString(to);
 				cpt++;
 			}
@@ -123,10 +123,10 @@ void ExceptionHandler (ExceptionType which)
 		  {
 		    DEBUG ('s',"GetChar\n ");
 		    int to = machine->ReadRegister(4);
-            int size= machine->ReadRegister(5); //recuperation du 2eme param de la fonction SynchGetString
+            int size= machine->ReadRegister(5); 
             char *from = new char[size];
             consoledriver->GetString(from,size-1); 
-            machine->copyStringToMachine(from,to,size); //copie de chaine linux vers chaine mips 
+            consoledriver->copyStringToMachine(from,to,size); 
             free(from);
             break;
 		  }
@@ -142,6 +142,10 @@ void ExceptionHandler (ExceptionType which)
 			int func = machine->ReadRegister(4);
             int args = machine->ReadRegister(5);
             int res = do_ThreadCreate(func, args);
+			if(res==-1){
+				printf("Thread non créé");
+		    	ASSERT(FALSE);
+			}
             machine->WriteRegister(2,res);
             break;
 		  }

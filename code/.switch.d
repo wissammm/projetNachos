@@ -4,4 +4,4 @@
 -Wshadow
 -fsanitize=undefined
 -MM
-switch.S
+../threads/switch.S
