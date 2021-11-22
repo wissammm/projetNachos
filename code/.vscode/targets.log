@@ -7,8 +7,9 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
+ 
 
-# Make data base, printed on Fri Nov 19 17:52:10 2021
+# Make data base, printed on Mon Nov 22 14:07:44 2021
 
 # Variables
 
@@ -223,7 +224,7 @@ CC = g++
 # environment
 GNOME_SHELL_SESSION_MODE = ubuntu
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-2e57542f-f11a-4dc4-8489-0d59c0b1af2c.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-bd076c85-7ed2-44fd-8d2e-734efa94f422.sock
 # makefile (from '../Makefile.common', line 49)
 ASFLAGS = -g
 # default
@@ -251,6 +252,7 @@ PROGRAM := nachos
 # environment
 BAMF_DESKTOP_FILE_HINT = /var/lib/snapd/desktop/applications/code_code.desktop
 # makefile (from '../Makefile.dep', line 10)
+ 
 NACHOS_ROOT = ../../
 # makefile
 MAKEFLAGS = pqrRw
@@ -319,7 +321,7 @@ VSCODE_PID = 2320
 # makefile (from '../Makefile.dep', line 39)
 HOST = -DHOST_x86_64 $(NACHOS_VALGRIND) -DLINUX
 # variable set hash-table stats:
-# Load=153/1024=15%, Rehash=0, Collisions=32/264=12%
+# Load=153/1024=15%, Rehash=0, Collisions=32/273=12%
 
 # Pattern-specific Variable Values
 
@@ -329,15 +331,14 @@ HOST = -DHOST_x86_64 $(NACHOS_VALGRIND) -DLINUX
 
 # ../machine (device 66309, inode 680214): No files, no impossibilities so far.
 # ../vm (device 66309, inode 818277): No files, no impossibilities so far.
-# . (device 66309, inode 818167): 52 files, no impossibilities.
+# . (device 66309, inode 818167): 37 files, no impossibilities.
 # ../network (device 66309, inode 680238): No files, no impossibilities so far.
-# ../threads (device 66309, inode 818167): 52 files, no impossibilities.
- 
+# ../threads (device 66309, inode 818167): 37 files, no impossibilities.
 # ../userprog (device 66309, inode 818218): No files, no impossibilities so far.
 # ../filesys (device 66309, inode 549858): No files, no impossibilities so far.
 # .. (device 66309, inode 549836): No files, no impossibilities so far.
 
-# 104 files, no impossibilities in 8 directories.
+# 74 files, no impossibilities in 8 directories.
 
 # Implicit Rules
 
@@ -355,7 +356,7 @@ HOST = -DHOST_x86_64 $(NACHOS_VALGRIND) -DLINUX
 .system.d: system.cc Makefile ../Makefile.common ../Makefile.dep system.cc copyright.h system.h utility.h ../threads/bool.h ../machine/sysdep.h ../threads/copyright.h thread.h list.h scheduler.h ../machine/interrupt.h ../threads/list.h ../machine/stats.h ../machine/timer.h ../threads/utility.h ../machine/consoledriver.h ../machine/console.h
 #  Implicit rule search has not been done.
 #  Implicit/static pattern stem: 'system'
-#  Last modified 2021-11-19 17:52:06.472236781
+#  Last modified 2021-11-22 14:07:33.603996532
 #  File has been updated.
 #  Successfully updated.
 #  recipe to execute (from '../Makefile.common', line 127):
@@ -383,10 +384,9 @@ system.cc:
 
 # Not a target:
 ../threads/switch.S:
-#  Implicit rule search has been done.
-#  Last modified 2021-11-15 14:31:12.604821124
-#  File has been updated.
-#  Successfully updated.
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 ../machine/stats.cc:
@@ -406,6 +406,7 @@ distclean: clean
 # Not a target:
 ../threads/thread.h:
 #  Implicit rule search has been done.
+ 
 #  Last modified 2021-11-18 17:44:47.174492307
 #  File has been updated.
 #  Successfully updated.
@@ -413,7 +414,7 @@ distclean: clean
 .thread.d: thread.cc Makefile ../Makefile.common ../Makefile.dep thread.cc copyright.h thread.h utility.h ../threads/bool.h ../machine/sysdep.h ../threads/copyright.h list.h switch.h synch.h system.h scheduler.h ../machine/interrupt.h ../threads/list.h ../machine/stats.h ../machine/timer.h ../threads/utility.h ../machine/consoledriver.h ../machine/console.h ../machine/valgrind.h
 #  Implicit rule search has not been done.
 #  Implicit/static pattern stem: 'thread'
-#  Last modified 2021-11-19 17:52:06.424236779
+#  Last modified 2021-11-22 14:07:33.119996555
 #  File has been updated.
 #  Successfully updated.
 #  recipe to execute (from '../Makefile.common', line 127):
@@ -423,9 +424,8 @@ distclean: clean
 synch.o: synch.cc Makefile ../Makefile.common ../Makefile.dep synch.cc copyright.h synch.h thread.h utility.h ../threads/bool.h ../machine/sysdep.h ../threads/copyright.h list.h system.h scheduler.h ../machine/interrupt.h ../threads/list.h ../machine/stats.h ../machine/timer.h ../threads/utility.h ../machine/consoledriver.h ../machine/console.h
 #  Implicit rule search has not been done.
 #  Implicit/static pattern stem: 'synch'
-#  Last modified 2021-11-18 22:09:28.424051719
-#  File has been updated.
-#  Successfully updated.
+#  Modification time never checked.
+#  File has not been updated.
 #  recipe to execute (from '../Makefile.common', line 109):
 	$(CC) $(CFLAGS) -c $< -o $@
 
@@ -474,7 +474,7 @@ thread.h:
 .synch.d: synch.cc Makefile ../Makefile.common ../Makefile.dep synch.cc copyright.h synch.h thread.h utility.h ../threads/bool.h ../machine/sysdep.h ../threads/copyright.h list.h system.h scheduler.h ../machine/interrupt.h ../threads/list.h ../machine/stats.h ../machine/timer.h ../threads/utility.h ../machine/consoledriver.h ../machine/console.h
 #  Implicit rule search has not been done.
 #  Implicit/static pattern stem: 'synch'
-#  Last modified 2021-11-19 17:52:06.540236783
+#  Last modified 2021-11-22 14:07:34.531996486
 #  File has been updated.
 #  Successfully updated.
 #  recipe to execute (from '../Makefile.common', line 127):
@@ -498,7 +498,8 @@ synchlist.h:
 .timer.d: ../machine/timer.cc Makefile ../Makefile.common ../Makefile.dep ../machine/timer.cc ../threads/copyright.h ../machine/timer.h ../threads/utility.h ../threads/copyright.h ../threads/bool.h ../machine/sysdep.h ../threads/system.h ../threads/utility.h ../threads/thread.h ../threads/list.h ../threads/scheduler.h ../machine/interrupt.h ../threads/list.h ../machine/stats.h ../machine/timer.h ../machine/consoledriver.h ../machine/console.h
 #  Implicit rule search has not been done.
 #  Implicit/static pattern stem: 'timer'
-#  Last modified 2021-11-19 17:52:06.18823677
+ 
+#  Last modified 2021-11-22 14:07:29.787996716
 #  File has been updated.
 #  Successfully updated.
 #  recipe to execute (from '../Makefile.common', line 127):
@@ -515,7 +516,7 @@ synch.cc:
 .switch.d: switch.S Makefile ../Makefile.common ../Makefile.dep switch.S copyright.h switch.h
 #  Implicit rule search has not been done.
 #  Implicit/static pattern stem: 'switch'
-#  Last modified 2021-11-19 17:52:06.120236767
+#  Last modified 2021-11-22 14:07:29.471996731
 #  File has been updated.
 #  Successfully updated.
 #  recipe to execute (from '../Makefile.common', line 131):
@@ -539,7 +540,7 @@ synch.cc:
 .interrupt.d: ../machine/interrupt.cc Makefile ../Makefile.common ../Makefile.dep ../machine/interrupt.cc ../threads/copyright.h ../machine/interrupt.h ../threads/list.h ../threads/copyright.h ../threads/utility.h ../threads/bool.h ../machine/sysdep.h ../threads/system.h ../threads/thread.h ../threads/list.h ../threads/scheduler.h ../machine/interrupt.h ../machine/stats.h ../machine/timer.h ../threads/utility.h ../machine/consoledriver.h ../machine/console.h ../machine/sysdep.h
 #  Implicit rule search has not been done.
 #  Implicit/static pattern stem: 'interrupt'
-#  Last modified 2021-11-19 17:52:06.328236775
+#  Last modified 2021-11-22 14:07:32.055996607
 #  File has been updated.
 #  Successfully updated.
 #  recipe to execute (from '../Makefile.common', line 127):
@@ -549,7 +550,7 @@ synch.cc:
 .list.d: list.cc Makefile ../Makefile.common ../Makefile.dep list.cc copyright.h list.h utility.h ../threads/bool.h ../machine/sysdep.h ../threads/copyright.h
 #  Implicit rule search has not been done.
 #  Implicit/static pattern stem: 'list'
-#  Last modified 2021-11-19 17:52:06.624236787
+#  Last modified 2021-11-22 14:07:34.643996481
 #  File has been updated.
 #  Successfully updated.
 #  recipe to execute (from '../Makefile.common', line 127):
@@ -565,9 +566,8 @@ default: nachos
 scheduler.o: scheduler.cc Makefile ../Makefile.common ../Makefile.dep scheduler.cc copyright.h scheduler.h list.h utility.h ../threads/bool.h ../machine/sysdep.h ../threads/copyright.h thread.h system.h ../machine/interrupt.h ../threads/list.h ../machine/stats.h ../machine/timer.h ../threads/utility.h ../machine/consoledriver.h ../machine/console.h
 #  Implicit rule search has not been done.
 #  Implicit/static pattern stem: 'scheduler'
-#  Last modified 2021-11-18 22:09:28.208052617
-#  File has been updated.
-#  Successfully updated.
+#  Modification time never checked.
+#  File has not been updated.
 #  recipe to execute (from '../Makefile.common', line 109):
 	$(CC) $(CFLAGS) -c $< -o $@
 
@@ -581,7 +581,7 @@ scheduler.o: scheduler.cc Makefile ../Makefile.common ../Makefile.dep scheduler.
 .main.d: main.cc Makefile ../Makefile.common ../Makefile.dep main.cc copyright.h utility.h ../threads/bool.h ../machine/sysdep.h ../threads/copyright.h system.h thread.h list.h scheduler.h ../machine/interrupt.h ../threads/list.h ../machine/stats.h ../machine/timer.h ../threads/utility.h ../machine/consoledriver.h ../machine/console.h
 #  Implicit rule search has not been done.
 #  Implicit/static pattern stem: 'main'
-#  Last modified 2021-11-19 17:52:06.660236788
+#  Last modified 2021-11-22 14:07:34.719996477
 #  File has been updated.
 #  Successfully updated.
 #  recipe to execute (from '../Makefile.common', line 127):
@@ -589,6 +589,7 @@ scheduler.o: scheduler.cc Makefile ../Makefile.common ../Makefile.dep scheduler.
 		sed -e 's|\(.*\)\.o:|.\1.d \1.o:|g' > $@
 
 # Not a target:
+ 
 ../threads/scheduler.h:
 #  Implicit rule search has been done.
 #  Last modified 2021-10-05 19:36:21.635074339
@@ -604,7 +605,7 @@ depend: .main.d .list.d .scheduler.d .synch.d .synchlist.d .system.d .thread.d .
 .scheduler.d: scheduler.cc Makefile ../Makefile.common ../Makefile.dep scheduler.cc copyright.h scheduler.h list.h utility.h ../threads/bool.h ../machine/sysdep.h ../threads/copyright.h thread.h system.h ../machine/interrupt.h ../threads/list.h ../machine/stats.h ../machine/timer.h ../threads/utility.h ../machine/consoledriver.h ../machine/console.h
 #  Implicit rule search has not been done.
 #  Implicit/static pattern stem: 'scheduler'
-#  Last modified 2021-11-19 17:52:06.596236786
+#  Last modified 2021-11-22 14:07:34.611996482
 #  File has been updated.
 #  Successfully updated.
 #  recipe to execute (from '../Makefile.common', line 127):
@@ -618,22 +619,19 @@ depend: .main.d .list.d .scheduler.d .synch.d .synchlist.d .system.d .thread.d .
 #  File has been updated.
 #  Successfully updated.
 
-stats.o: ../machine/stats.cc Makefile ../Makefile.common ../Makefile.dep ../machine/stats.cc ../threads/copyright.h ../threads/utility.h ../threads/copyright.h ../threads/bool.h ../machine/sysdep.h ../machine/stats.h
+stats.o: stats.cc Makefile ../Makefile.common ../Makefile.dep ../machine/stats.cc ../threads/copyright.h ../threads/utility.h ../threads/copyright.h ../threads/bool.h ../machine/sysdep.h ../machine/stats.h
 #  Implicit rule search has not been done.
 #  Implicit/static pattern stem: 'stats'
-#  Last modified 2021-11-18 22:09:29.784046063
-#  File has been updated.
-#  Successfully updated.
+#  Modification time never checked.
+#  File has not been updated.
 #  recipe to execute (from '../Makefile.common', line 109):
 	$(CC) $(CFLAGS) -c $< -o $@
 
 threadtest.o: threadtest.cc Makefile ../Makefile.common ../Makefile.dep threadtest.cc copyright.h system.h utility.h ../threads/bool.h ../machine/sysdep.h ../threads/copyright.h thread.h list.h scheduler.h ../machine/interrupt.h ../threads/list.h ../machine/stats.h ../machine/timer.h ../threads/utility.h ../machine/consoledriver.h ../machine/console.h
 #  Implicit rule search has not been done.
 #  Implicit/static pattern stem: 'threadtest'
- 
-#  Last modified 2021-11-18 22:09:29.384047726
-#  File has been updated.
-#  Successfully updated.
+#  Modification time never checked.
+#  File has not been updated.
 #  recipe to execute (from '../Makefile.common', line 109):
 	$(CC) $(CFLAGS) -c $< -o $@
 
@@ -644,21 +642,19 @@ threadtest.o: threadtest.cc Makefile ../Makefile.common ../Makefile.dep threadte
 #  File has been updated.
 #  Successfully updated.
 
-sysdep.o: ../machine/sysdep.cc Makefile ../Makefile.common ../Makefile.dep ../machine/sysdep.cc ../threads/copyright.h ../machine/interrupt.h ../threads/list.h ../threads/copyright.h ../threads/utility.h ../threads/bool.h ../machine/sysdep.h ../threads/system.h ../threads/thread.h ../threads/list.h ../threads/scheduler.h ../machine/interrupt.h ../machine/stats.h ../machine/timer.h ../threads/utility.h ../machine/consoledriver.h ../machine/console.h
+sysdep.o: sysdep.cc Makefile ../Makefile.common ../Makefile.dep ../machine/sysdep.cc ../threads/copyright.h ../machine/interrupt.h ../threads/list.h ../threads/copyright.h ../threads/utility.h ../threads/bool.h ../machine/sysdep.h ../threads/system.h ../threads/thread.h ../threads/list.h ../threads/scheduler.h ../machine/interrupt.h ../machine/stats.h ../machine/timer.h ../threads/utility.h ../machine/consoledriver.h ../machine/console.h
 #  Implicit rule search has not been done.
 #  Implicit/static pattern stem: 'sysdep'
-#  Last modified 2021-11-18 22:09:29.980045248
-#  File has been updated.
-#  Successfully updated.
+#  Modification time never checked.
+#  File has not been updated.
 #  recipe to execute (from '../Makefile.common', line 109):
 	$(CC) $(CFLAGS) -c $< -o $@
 
 utility.o: utility.cc Makefile ../Makefile.common ../Makefile.dep utility.cc copyright.h utility.h ../threads/bool.h ../machine/sysdep.h ../threads/copyright.h
 #  Implicit rule search has not been done.
 #  Implicit/static pattern stem: 'utility'
-#  Last modified 2021-11-18 22:09:29.224048392
-#  File has been updated.
-#  Successfully updated.
+#  Modification time never checked.
+#  File has not been updated.
 #  recipe to execute (from '../Makefile.common', line 109):
 	$(CC) $(CFLAGS) -c $< -o $@
 
@@ -685,6 +681,7 @@ scheduler.cc:
 # Not a target:
 switch.S:
 #  Implicit rule search has been done.
+ 
 #  Last modified 2021-11-15 14:31:12.604821124
 #  File has been updated.
 #  Successfully updated.
@@ -692,7 +689,7 @@ switch.S:
 .stats.d: ../machine/stats.cc Makefile ../Makefile.common ../Makefile.dep ../machine/stats.cc ../threads/copyright.h ../threads/utility.h ../threads/copyright.h ../threads/bool.h ../machine/sysdep.h ../machine/stats.h
 #  Implicit rule search has not been done.
 #  Implicit/static pattern stem: 'stats'
-#  Last modified 2021-11-19 17:52:06.304236774
+#  Last modified 2021-11-22 14:07:31.699996624
 #  File has been updated.
 #  Successfully updated.
 #  recipe to execute (from '../Makefile.common', line 127):
@@ -702,7 +699,7 @@ switch.S:
 .sysdep.d: ../machine/sysdep.cc Makefile ../Makefile.common ../Makefile.dep ../machine/sysdep.cc ../threads/copyright.h ../machine/interrupt.h ../threads/list.h ../threads/copyright.h ../threads/utility.h ../threads/bool.h ../machine/sysdep.h ../threads/system.h ../threads/thread.h ../threads/list.h ../threads/scheduler.h ../machine/interrupt.h ../machine/stats.h ../machine/timer.h ../threads/utility.h ../machine/consoledriver.h ../machine/console.h
 #  Implicit rule search has not been done.
 #  Implicit/static pattern stem: 'sysdep'
-#  Last modified 2021-11-19 17:52:06.272236773
+#  Last modified 2021-11-22 14:07:31.095996653
 #  File has been updated.
 #  Successfully updated.
 #  recipe to execute (from '../Makefile.common', line 127):
@@ -748,9 +745,11 @@ utility.cc:
 nachos: main.o list.o scheduler.o synch.o synchlist.o system.o thread.o utility.o threadtest.o interrupt.o stats.o sysdep.o timer.o switch.o
 #  Command line target.
 #  Implicit rule search has not been done.
-#  Last modified 2021-11-18 22:09:30.304043901
+#  File does not exist.
 #  File has been updated.
-#  Successfully updated.
+#  Needs to be updated (-q is set).
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/9=0%
 #  recipe to execute (from '../Makefile.common', line 106):
 	$(LD) $(OFILES) $(LDFLAGS) -o $(PROGRAM)
 
@@ -761,19 +760,19 @@ synch.h:
 #  File has been updated.
 #  Successfully updated.
 
-interrupt.o: ../machine/interrupt.cc Makefile ../Makefile.common ../Makefile.dep ../machine/interrupt.cc ../threads/copyright.h ../machine/interrupt.h ../threads/list.h ../threads/copyright.h ../threads/utility.h ../threads/bool.h ../machine/sysdep.h ../threads/system.h ../threads/thread.h ../threads/list.h ../threads/scheduler.h ../machine/interrupt.h ../machine/stats.h ../machine/timer.h ../threads/utility.h ../machine/consoledriver.h ../machine/console.h ../machine/sysdep.h
+interrupt.o: interrupt.cc Makefile ../Makefile.common ../Makefile.dep ../machine/interrupt.cc ../threads/copyright.h ../machine/interrupt.h ../threads/list.h ../threads/copyright.h ../threads/utility.h ../threads/bool.h ../machine/sysdep.h ../threads/system.h ../threads/thread.h ../threads/list.h ../threads/scheduler.h ../machine/interrupt.h ../machine/stats.h ../machine/timer.h ../threads/utility.h ../machine/consoledriver.h ../machine/console.h ../machine/sysdep.h
 #  Implicit rule search has not been done.
 #  Implicit/static pattern stem: 'interrupt'
-#  Last modified 2021-11-18 22:09:29.608046795
-#  File has been updated.
-#  Successfully updated.
+#  Modification time never checked.
+#  File has not been updated.
 #  recipe to execute (from '../Makefile.common', line 109):
 	$(CC) $(CFLAGS) -c $< -o $@
 
+ 
 .utility.d: utility.cc Makefile ../Makefile.common ../Makefile.dep utility.cc copyright.h utility.h ../threads/bool.h ../machine/sysdep.h ../threads/copyright.h
 #  Implicit rule search has not been done.
 #  Implicit/static pattern stem: 'utility'
-#  Last modified 2021-11-19 17:52:06.392236778
+#  Last modified 2021-11-22 14:07:32.775996572
 #  File has been updated.
 #  Successfully updated.
 #  recipe to execute (from '../Makefile.common', line 127):
@@ -783,9 +782,8 @@ interrupt.o: ../machine/interrupt.cc Makefile ../Makefile.common ../Makefile.dep
 list.o: list.cc Makefile ../Makefile.common ../Makefile.dep list.cc copyright.h list.h utility.h ../threads/bool.h ../machine/sysdep.h ../threads/copyright.h
 #  Implicit rule search has not been done.
 #  Implicit/static pattern stem: 'list'
-#  Last modified 2021-11-18 22:09:28.012053432
-#  File has been updated.
-#  Successfully updated.
+#  Modification time never checked.
+#  File has not been updated.
 #  recipe to execute (from '../Makefile.common', line 109):
 	$(CC) $(CFLAGS) -c $< -o $@
 
@@ -806,27 +804,44 @@ switch.h:
 thread.o: thread.cc Makefile ../Makefile.common ../Makefile.dep thread.cc copyright.h thread.h utility.h ../threads/bool.h ../machine/sysdep.h ../threads/copyright.h list.h switch.h synch.h system.h scheduler.h ../machine/interrupt.h ../threads/list.h ../machine/stats.h ../machine/timer.h ../threads/utility.h ../machine/consoledriver.h ../machine/console.h ../machine/valgrind.h
 #  Implicit rule search has not been done.
 #  Implicit/static pattern stem: 'thread'
-#  Last modified 2021-11-18 22:09:29.068049041
-#  File has been updated.
-#  Successfully updated.
+#  Modification time never checked.
+#  File has not been updated.
 #  recipe to execute (from '../Makefile.common', line 109):
 	$(CC) $(CFLAGS) -c $< -o $@
 
 main.o: main.cc Makefile ../Makefile.common ../Makefile.dep main.cc copyright.h utility.h ../threads/bool.h ../machine/sysdep.h ../threads/copyright.h system.h thread.h list.h scheduler.h ../machine/interrupt.h ../threads/list.h ../machine/stats.h ../machine/timer.h ../threads/utility.h ../machine/consoledriver.h ../machine/console.h
 #  Implicit rule search has not been done.
 #  Implicit/static pattern stem: 'main'
-#  Last modified 2021-11-18 22:09:27.816054247
+#  File does not exist.
 #  File has been updated.
-#  Successfully updated.
+#  Needs to be updated (-q is set).
+# automatic
+# @ := main.o
+# automatic
+# % := 
+# automatic
+# * := main
+# automatic
+# + := main.cc Makefile ../Makefile.common ../Makefile.dep main.cc copyright.h utility.h ../threads/bool.h ../machine/sysdep.h ../threads/copyright.h system.h thread.h list.h scheduler.h ../machine/interrupt.h ../threads/list.h ../machine/stats.h ../machine/timer.h ../threads/utility.h ../machine/consoledriver.h ../machine/console.h
+# automatic
+# | := 
+# automatic
+# < := main.cc
+# automatic
+# ^ := main.cc Makefile ../Makefile.common ../Makefile.dep copyright.h utility.h ../threads/bool.h ../machine/sysdep.h ../threads/copyright.h system.h thread.h list.h scheduler.h ../machine/interrupt.h ../threads/list.h ../machine/stats.h ../machine/timer.h ../threads/utility.h ../machine/consoledriver.h ../machine/console.h
+# automatic
+# ? := main.cc Makefile ../Makefile.common ../Makefile.dep copyright.h utility.h ../threads/bool.h ../machine/sysdep.h ../threads/copyright.h system.h thread.h list.h scheduler.h ../machine/interrupt.h ../threads/list.h ../machine/stats.h ../machine/timer.h ../threads/utility.h ../machine/consoledriver.h ../machine/console.h
+# variable set hash-table stats:
+# Load=8/32=25%, Rehash=0, Collisions=5/19=26%
 #  recipe to execute (from '../Makefile.common', line 109):
 	$(CC) $(CFLAGS) -c $< -o $@
 
 synchlist.o: synchlist.cc Makefile ../Makefile.common ../Makefile.dep synchlist.cc copyright.h synchlist.h list.h utility.h ../threads/bool.h ../machine/sysdep.h ../threads/copyright.h synch.h thread.h
 #  Implicit rule search has not been done.
 #  Implicit/static pattern stem: 'synchlist'
-#  Last modified 2021-11-18 22:09:28.61605092
-#  File has been updated.
-#  Successfully updated.
+#  Modification time never checked.
+ 
+#  File has not been updated.
 #  recipe to execute (from '../Makefile.common', line 109):
 	$(CC) $(CFLAGS) -c $< -o $@
 
@@ -853,9 +868,8 @@ system.h:
 
 switch.o: ../threads/switch.S Makefile ../Makefile.common ../Makefile.dep switch.S copyright.h switch.h
 #  Implicit rule search has not been done.
-#  Last modified 2021-11-18 22:09:30.1840444
-#  File has been updated.
-#  Successfully updated.
+#  Modification time never checked.
+#  File has not been updated.
 #  recipe to execute (from '../Makefile.common', line 112):
 	$(CPP) $(INCPATH) $(HOST) ../threads/switch.S > swtch.s
 	$(AS) $(ASFLAGS) -o switch.o swtch.s
@@ -864,19 +878,19 @@ switch.o: ../threads/switch.S Makefile ../Makefile.common ../Makefile.dep switch
 .synchlist.d: synchlist.cc Makefile ../Makefile.common ../Makefile.dep synchlist.cc copyright.h synchlist.h list.h utility.h ../threads/bool.h ../machine/sysdep.h ../threads/copyright.h synch.h thread.h
 #  Implicit rule search has not been done.
 #  Implicit/static pattern stem: 'synchlist'
-#  Last modified 2021-11-19 17:52:06.512236782
+#  Last modified 2021-11-22 14:07:34.135996506
+ 
 #  File has been updated.
 #  Successfully updated.
 #  recipe to execute (from '../Makefile.common', line 127):
 	$(CC) $(CFLAGS) -MM $< | \
 		sed -e 's|\(.*\)\.o:|.\1.d \1.o:|g' > $@
 
-timer.o: ../machine/timer.cc Makefile ../Makefile.common ../Makefile.dep ../machine/timer.cc ../threads/copyright.h ../machine/timer.h ../threads/utility.h ../threads/copyright.h ../threads/bool.h ../machine/sysdep.h ../threads/system.h ../threads/utility.h ../threads/thread.h ../threads/list.h ../threads/scheduler.h ../machine/interrupt.h ../threads/list.h ../machine/stats.h ../machine/timer.h ../machine/consoledriver.h ../machine/console.h
+timer.o: timer.cc Makefile ../Makefile.common ../Makefile.dep ../machine/timer.cc ../threads/copyright.h ../machine/timer.h ../threads/utility.h ../threads/copyright.h ../threads/bool.h ../machine/sysdep.h ../threads/system.h ../threads/utility.h ../threads/thread.h ../threads/list.h ../threads/scheduler.h ../machine/interrupt.h ../threads/list.h ../machine/stats.h ../machine/timer.h ../machine/consoledriver.h ../machine/console.h
 #  Implicit rule search has not been done.
 #  Implicit/static pattern stem: 'timer'
-#  Last modified 2021-11-18 22:09:30.152044533
-#  File has been updated.
-#  Successfully updated.
+#  Modification time never checked.
+#  File has not been updated.
 #  recipe to execute (from '../Makefile.common', line 109):
 	$(CC) $(CFLAGS) -c $< -o $@
 
@@ -907,7 +921,6 @@ synchlist.cc:
 #  Last modified 2021-10-05 19:36:21.63907438
 #  File has been updated.
 #  Successfully updated.
- 
 
 # Not a target:
 scheduler.h:
@@ -919,16 +932,15 @@ scheduler.h:
 # Not a target:
 ../machine/consoledriver.h:
 #  Implicit rule search has been done.
-#  Last modified 2021-11-18 20:41:41.708127608
+#  Last modified 2021-11-19 20:52:45.681700717
 #  File has been updated.
 #  Successfully updated.
 
 system.o: system.cc Makefile ../Makefile.common ../Makefile.dep system.cc copyright.h system.h utility.h ../threads/bool.h ../machine/sysdep.h ../threads/copyright.h thread.h list.h scheduler.h ../machine/interrupt.h ../threads/list.h ../machine/stats.h ../machine/timer.h ../threads/utility.h ../machine/consoledriver.h ../machine/console.h
 #  Implicit rule search has not been done.
 #  Implicit/static pattern stem: 'system'
-#  Last modified 2021-11-18 22:09:28.796050172
-#  File has been updated.
-#  Successfully updated.
+#  Modification time never checked.
+#  File has not been updated.
 #  recipe to execute (from '../Makefile.common', line 109):
 	$(CC) $(CFLAGS) -c $< -o $@
 
@@ -942,7 +954,7 @@ system.o: system.cc Makefile ../Makefile.common ../Makefile.dep system.cc copyri
 .threadtest.d: threadtest.cc Makefile ../Makefile.common ../Makefile.dep threadtest.cc copyright.h system.h utility.h ../threads/bool.h ../machine/sysdep.h ../threads/copyright.h thread.h list.h scheduler.h ../machine/interrupt.h ../threads/list.h ../machine/stats.h ../machine/timer.h ../threads/utility.h ../machine/consoledriver.h ../machine/console.h
 #  Implicit rule search has not been done.
 #  Implicit/static pattern stem: 'threadtest'
-#  Last modified 2021-11-19 17:52:06.360236777
+#  Last modified 2021-11-22 14:07:32.447996588
 #  File has been updated.
 #  Successfully updated.
 #  recipe to execute (from '../Makefile.common', line 127):
@@ -963,1305 +975,12 @@ vpath %.S ../machine:../threads:../userprog:../filesys:../network:../vm:..
 # strcache buffers: 1 (0) / strings = 111 / storage = 1258 B / avg = 11 B
 # current buf: size = 8162 B / used = 1258 B / count = 111 / avg = 11 B
 
-# strcache performance: lookups = 602 / hit rate = 81%
+# strcache performance: lookups = 587 / hit rate = 81%
 # hash-table stats:
-# Load=111/8192=1%, Rehash=0, Collisions=4/602=1%
-# Finished Make data base on Fri Nov 19 17:52:10 2021
+# Load=111/8192=1%, Rehash=0, Collisions=4/587=1%
+# Finished Make data base on Mon Nov 22 14:07:44 2021
 
 # make[1]: Leaving directory '/home/wissam/Documents/projetNachos/code/threads'
- 
-# make[1]: Entering directory '/home/wissam/Documents/projetNachos/code/userprog'
- 
-# GNU Make 4.2.1
-# Built for x86_64-pc-linux-gnu
-# Copyright (C) 1988-2016 Free Software Foundation, Inc.
-# License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
-# This is free software: you are free to change and redistribute it.
-# There is NO WARRANTY, to the extent permitted by law.
- 
-
-# Make data base, printed on Fri Nov 19 17:52:10 2021
-
-# Variables
-
-# 'override' directive
-GNUMAKEFLAGS := 
-# automatic
-<D = $(patsubst %/,%,$(dir $<))
-# automatic
-?F = $(notdir $?)
-# environment
-DESKTOP_SESSION = ubuntu
-# default
-.SHELLFLAGS := -c
-# environment
-XDG_SESSION_CLASS = user
-# environment
-SNAP_COMMON = /var/snap/code/common
-# environment
-XDG_SESSION_TYPE = x11
-# environment
-VSCODE_LOG_NATIVE = false
-# makefile (from '../Makefile.dep', line 11)
-NACHOS_SYS := LINUX_SYS
-# automatic
-?D = $(patsubst %/,%,$(dir $?))
-# environment
-IM_CONFIG_PHASE = 1
-# environment
-PLATFORMIO_IDE = 2.4.0
-# automatic
-@D = $(patsubst %/,%,$(dir $@))
-# environment
-XAUTHORITY = /run/user/1000/gdm/Xauthority
-# environment
-GDMSESSION = ubuntu
-# environment
-XMODIFIERS = @im=ibus
-# makefile (from '../Makefile.common', line 29)
-THREAD_O := main.o list.o scheduler.o synch.o synchlist.o system.o thread.o utility.o threadtest.o interrupt.o stats.o sysdep.o timer.o
-# makefile
-CURDIR := /home/wissam/Documents/projetNachos/code/userprog
-# makefile
-SHELL = /bin/sh
-# environment
-SNAP_DATA = /var/snap/code/82
-# makefile (from '../Makefile.common', line 36)
-VM_O := 
-# environment
-VSCODE_NLS_CONFIG = {"locale":"fr","availableLanguages":{"*":"fr"},"_languagePackId":"2e2aa82e8d01527e087108cb63eee9b1.fr","_translationsConfigFile":"/home/wissam/.config/Code/clp/2e2aa82e8d01527e087108cb63eee9b1.fr/tcf.json","_cacheRoot":"/home/wissam/.config/Code/clp/2e2aa82e8d01527e087108cb63eee9b1.fr","_resolvedLanguagePackCoreLocation":"/home/wissam/.config/Code/clp/2e2aa82e8d01527e087108cb63eee9b1.fr/ccbaa2d27e38e5afa3e5c21c1c7bef4657064247","_corruptedFile":"/home/wissam/.config/Code/clp/2e2aa82e8d01527e087108cb63eee9b1.fr/corrupted.info","_languagePackSupport":true}
-# environment
-JOURNAL_STREAM = 8:47305
-# makefile (from '../Makefile.dep', line 40)
-CFLAGS = -g -Wall -Wextra -Wshadow $(INCPATH) $(DEFINES) $(HOST) -DCHANGED  -fsanitize=undefined
-# environment
-XDG_CONFIG_DIRS = /etc/xdg/xdg-ubuntu:/etc/xdg
-# makefile (from '../Makefile.common', line 70)
-S_DFILES := .switch.d
-# environment
-SNAP_INSTANCE_NAME = code
-# environment
-SNAP_ARCH = amd64
-# makefile (from '../Makefile.dep', line 1)
-MAKEFILE_LIST :=  Makefile ../Makefile.common .main.d .list.d .scheduler.d .synch.d .synchlist.d .system.d .thread.d .utility.d .threadtest.d .interrupt.d .stats.d .sysdep.d .timer.d .addrspace.d .bitmap.d .exception.d .progtest.d .console.d .machine.d .mipssim.d .translate.d .consoledriver.d .userthread.d .switch.d ../Makefile.dep
-# automatic
-@F = $(notdir $@)
-# makefile (from '../Makefile.common', line 64)
- 
-OFILES := main.o list.o scheduler.o synch.o synchlist.o system.o thread.o utility.o threadtest.o interrupt.o stats.o sysdep.o timer.o addrspace.o bitmap.o exception.o progtest.o console.o machine.o mipssim.o translate.o consoledriver.o userthread.o switch.o
-# environment
-GIO_LAUNCHED_DESKTOP_FILE = /var/lib/snapd/desktop/applications/code_code.desktop
-# environment
-QT_IM_MODULE = ibus
-# environment
-USERNAME = wissam
-# environment
-XDG_DATA_DIRS = /usr/share/ubuntu:/home/wissam/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop
-# environment
-DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/1000/bus
-# environment
-VSCODE_VERBOSE_LOGGING = true
-# makefile (from '../Makefile.common', line 56)
-AS = gcc -c
-# environment
-_ = /snap/code/82/usr/share/code/code
-# makefile (from '../Makefile.common', line 38)
-FILESYS_O := directory.o filehdr.o filesys.o fstest.o openfile.o synchdisk.o disk.o
-# makefile (from '../Makefile.dep', line 13)
-NACHOS_VALGRIND := -DHAVE_VALGRIND
-# environment
-MANAGERPID = 1329
-# environment
-LESSOPEN = | /usr/bin/lesspipe %s
-# makefile (from '../Makefile.common', line 53)
-CPP = gcc -E -P
-# environment
-VSCODE_CWD = /home/wissam
-# environment
-GSETTINGS_SCHEMA_DIR = /snap/code/82/usr/share/glib-2.0/schemas
-# default
-MAKE_HOST := x86_64-pc-linux-gnu
-# environment
-NO_PROXY = 127.0.0.1
-# makefile (from '../Makefile.common', line 71)
-DFILES := .main.d .list.d .scheduler.d .synch.d .synchlist.d .system.d .thread.d .utility.d .threadtest.d .interrupt.d .stats.d .sysdep.d .timer.d .addrspace.d .bitmap.d .exception.d .progtest.d .console.d .machine.d .mipssim.d .translate.d .consoledriver.d .userthread.d .switch.d
-# makefile (from '../Makefile.common', line 55)
-LD = g++
-# environment
-GPG_AGENT_INFO = /run/user/1000/gnupg/S.gpg-agent:0:1
-# environment
-SESSION_MANAGER = local/wissam-VivoBook-ASUSLaptop-X512FAC-X512FA:@/tmp/.ICE-unix/1569,unix/wissam-VivoBook-ASUSLaptop-X512FAC-X512FA:/tmp/.ICE-unix/1569
-# environment
-XDG_RUNTIME_DIR = /run/user/1000
-# environment
-GDK_PIXBUF_MODULE_FILE = /home/wissam/snap/code/common/.cache/gdk-pixbuf-loaders.cache
-# environment
-SNAP = /snap/code/82
-# environment
-SNAP_VERSION = ccbaa2d2
-# environment
-XDG_MENU_PREFIX = gnome-
-# environment
-VSCODE_LOG_STACK = false
-# environment
-DISABLE_WAYLAND = 1
-# environment
-VSCODE_CRASH_REPORTER_START_OPTIONS = {"companyName":"Microsoft","productName":"VSCode","submitURL":"appcenter://code?aid=fba07a4d-84bd-4fc8-a125-9640fc8ce171&uid=f0bfaa38-c1a6-4dca-9363-94313c87cba5&iid=f0bfaa38-c1a6-4dca-9363-94313c87cba5&sid=f0bfaa38-c1a6-4dca-9363-94313c87cba5","uploadToServer":true}
-# environment
-INVOCATION_ID = 246cbe9ffb7c476588de486fdddd7f59
-# makefile (from '../Makefile.dep', line 41)
-LDFLAGS = -g -fsanitize=undefined
-# environment
-GDK_PIXBUF_MODULEDIR = /snap/code/82/usr/lib/x86_64-linux-gnu/gdk-pixbuf-2.0/2.10.0/loaders
-# default
-.FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
-# environment
-LS_COLORS = 
-# environment
-XDG_SESSION_DESKTOP = ubuntu
-# environment
-SSH_AUTH_SOCK = /run/user/1000/keyring/ssh
-# environment
-GIO_LAUNCHED_DESKTOP_FILE_PID = 2142
-# automatic
-%F = $(notdir $%)
-# environment
-DISPLAY = :0
-# makefile (from '../Makefile.common', line 45)
-S_OFILES := switch.o
-# makefile (from '../Makefile.common', line 41)
-NETWORK_O := nettest.o post.o network.o
-# environment
-VSCODE_PIPE_LOGGING = true
-# environment
-SNAP_INSTANCE_KEY = 
-# environment
-PWD = /home/wissam/Documents/projetNachos/code
-# default
-.LOADED := 
-# environment
-SSH_AGENT_PID = 1526
-# environment
-ORIGINAL_XDG_CURRENT_DESKTOP = ubuntu:GNOME
-# environment
-GTK_MODULES = gail:atk-bridge
-# environment
-VSCODE_AMD_ENTRYPOINT = vs/workbench/services/extensions/node/extensionHostProcess
-# environment
-HOME = /home/wissam
-# environment
-LESSCLOSE = /usr/bin/lesspipe %s %s
-# environment
-VSCODE_CLI = 1
-# makefile (from 'Makefile', line 12)
-DEFINES = -DUSER_PROGRAM -DFILESYS_NEEDED -DFILESYS_STUB
-# environment
-VSCODE_CODE_CACHE_PATH = /home/wissam/.config/Code/CachedData/ccbaa2d27e38e5afa3e5c21c1c7bef4657064247
-# environment
-LOGNAME = wissam
-# environment
-APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
-# environment
-SNAP_LIBRARY_PATH = /var/lib/snapd/lib/gl:/var/lib/snapd/lib/gl32:/var/lib/snapd/void
-# environment
-SNAP_CONTEXT = aXdH_E_T7-6hDc4T-SKdQIqCPkIx0D3lxTmr3a7DuDs3Q8LynY1q
-# environment
-ELECTRON_NO_ATTACH_CONSOLE = 1
-# environment
-SNAP_USER_COMMON = /home/wissam/snap/code/common
-# environment
-VSCODE_HANDLES_UNCAUGHT_ERRORS = true
-# environment
-GNOME_DESKTOP_SESSION_ID = this-is-deprecated
-# automatic
-^D = $(patsubst %/,%,$(dir $^))
-# environment
-MAKELEVEL := 1
-# environment
-SNAP_REAL_HOME = /home/wissam
-# environment
-PLATFORMIO_PATH = /home/wissam/.platformio/penv/bin:/home/wissam/.platformio/penv:/home/wissam/.platformio/python3/bin:/home/wissam/.local/bin:/home/wissam/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
-# default
-MAKE = $(MAKE_COMMAND)
-# default
-MAKECMDGOALS := nachos
-# environment
-PATH = /home/wissam/.local/bin:/home/wissam/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
-# environment
-SNAP_USER_DATA = /home/wissam/snap/code/82
-# environment
-SHLVL = 0
-# makefile (from '../Makefile.common', line 54)
-CC = g++
-# environment
-GNOME_SHELL_SESSION_MODE = ubuntu
-# environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-2e57542f-f11a-4dc4-8489-0d59c0b1af2c.sock
-# makefile (from '../Makefile.common', line 49)
-ASFLAGS = -g
-# default
-MAKE_VERSION := 4.2.1
-# environment
-USER = wissam
-# environment
-SNAP_REVISION = 82
-# makefile
-.DEFAULT_GOAL := default
-# environment
-XDG_CURRENT_DESKTOP = Unity
-# automatic
-%D = $(patsubst %/,%,$(dir $%))
-# default
-MAKE_COMMAND := make
-# default
-.VARIABLES := 
-# automatic
-*F = $(notdir $*)
-# environment
-VSCODE_IPC_HOOK = /run/user/1000/vscode-8b6dde90-1.62.3-main.sock
-# makefile (from '../Makefile.common', line 58)
-PROGRAM := nachos
-# environment
-BAMF_DESKTOP_FILE_HINT = /var/lib/snapd/desktop/applications/code_code.desktop
-# makefile (from '../Makefile.dep', line 10)
-NACHOS_ROOT = ../../
-# makefile
-MAKEFLAGS = pqrRw
-# environment
-MFLAGS = -pqrRw
-# automatic
-*D = $(patsubst %/,%,$(dir $*))
-# environment
-BREAKPAD_DUMP_LOCATION = /home/wissam/.config/Code/exthost Crash Reports
-# makefile (from '../Makefile.common', line 69)
-C_DFILES := .main.d .list.d .scheduler.d .synch.d .synchlist.d .system.d .thread.d .utility.d .threadtest.d .interrupt.d .stats.d .sysdep.d .timer.d .addrspace.d .bitmap.d .exception.d .progtest.d .console.d .machine.d .mipssim.d .translate.d .consoledriver.d .userthread.d
-# automatic
-+D = $(patsubst %/,%,$(dir $+))
-# environment
-GDK_BACKEND = x11
-# automatic
-+F = $(notdir $+)
-# environment
-QT_ACCESSIBILITY = 1
-# 'override' directive
-.SHELLSTATUS := 0
-# makefile (from '../Makefile.common', line 60)
-MAKEFILES := Makefile ../Makefile.common ../Makefile.dep
-# environment
-SNAP_COOKIE = aXdH_E_T7-6hDc4T-SKdQIqCPkIx0D3lxTmr3a7DuDs3Q8LynY1q
-# automatic
-<F = $(notdir $<)
-# environment
-PLATFORMIO_CALLER = vscode
-# environment
-ELECTRON_RUN_AS_NODE = 1
-# environment
-SNAP_NAME = code
-# environment
-LC_ALL = C
-# makefile (from '../Makefile.common', line 33)
-USERPROG_O := addrspace.o bitmap.o exception.o progtest.o console.o machine.o mipssim.o translate.o consoledriver.o userthread.o
-# environment
-GJS_DEBUG_TOPICS = JS ERROR;JS LOG
-# automatic
-^F = $(notdir $^)
-# default
-SUFFIXES := 
-# environment
-SNAP_REEXEC = 
-# environment
-CHROME_DESKTOP = code-url-handler.desktop
-# makefile (from 'Makefile', line 13)
-INCPATH = -I../bin -I../filesys -I../userprog -I../threads -I../machine
-# environment
-WINDOWPATH = 2
-# makefile (from '../Makefile.dep', line 12)
-NACHOS_ARCH := X86_64_ARCH
-# default
-.INCLUDE_DIRS = /usr/include /usr/local/include /usr/include
-# makefile (from 'Makefile', line 14)
-C_OFILES = $(THREAD_O) $(USERPROG_O)
-# environment
-GJS_DEBUG_OUTPUT = stderr
-# default
-.RECIPEPREFIX := 
-# environment
-LANG = C
-# environment
-VSCODE_PID = 2320
-# makefile (from '../Makefile.dep', line 39)
-HOST = -DHOST_x86_64 $(NACHOS_VALGRIND) -DLINUX
-# variable set hash-table stats:
-# Load=153/1024=15%, Rehash=0, Collisions=32/296=11%
-
-# Pattern-specific Variable Values
-
-# No pattern-specific variable values.
-
-# Directories
-
-# ../machine (device 66309, inode 680214): 25 files, no impossibilities.
-# ../vm (device 66309, inode 818277): No files, no impossibilities so far.
-# . (device 66309, inode 818218): 65 files, no impossibilities.
-# ../network (device 66309, inode 680238): No files, no impossibilities so far.
-# ../threads (device 66309, inode 818167): No files, no impossibilities so far.
-# ../userprog (device 66309, inode 818218): 65 files, no impossibilities.
-# ../filesys (device 66309, inode 549858): No files, no impossibilities so far.
-# .. (device 66309, inode 549836): No files, no impossibilities so far.
-
-# 155 files, no impossibilities in 8 directories.
-
-# Implicit Rules
-
-# No implicit rules.
-
-# Files
-
-# Not a target:
-../filesys/openfile.h:
-#  Implicit rule search has been done.
-#  Last modified 2021-10-05 19:36:21.631074297
-#  File has been updated.
-#  Successfully updated.
-
-# Not a target:
-../machine/translate.cc:
-#  Implicit rule search has been done.
-#  Last modified 2021-10-05 19:36:21.631074297
-#  File has been updated.
-#  Successfully updated.
-
-.consoledriver.d: ../machine/consoledriver.cc Makefile ../Makefile.common ../Makefile.dep ../machine/consoledriver.cc ../threads/copyright.h ../threads/system.h ../threads/copyright.h ../threads/utility.h ../threads/bool.h ../machine/sysdep.h ../threads/thread.h ../threads/list.h ../machine/machine.h ../threads/utility.h ../machine/translate.h ../machine/disk.h ../userprog/addrspace.h ../filesys/filesys.h ../filesys/openfile.h ../machine/translate.h ../bin/noff.h ../threads/list.h ../userprog/bitmap.h ../filesys/openfile.h ../threads/scheduler.h ../machine/interrupt.h ../machine/stats.h ../machine/timer.h ../machine/consoledriver.h ../machine/console.h ../machine/consoledriver.h ../threads/synch.h
-#  Implicit rule search has not been done.
-#  Implicit/static pattern stem: 'consoledriver'
- 
-#  Last modified 2021-11-19 17:52:06.792236793
-#  File has been updated.
-#  Successfully updated.
-#  recipe to execute (from '../Makefile.common', line 127):
-	$(CC) $(CFLAGS) -MM $< | \
-		sed -e 's|\(.*\)\.o:|.\1.d \1.o:|g' > $@
-
-# Not a target:
-../threads/system.h:
-#  Implicit rule search has been done.
-#  Last modified 2021-11-16 18:53:43.120130307
-#  File has been updated.
-#  Successfully updated.
-
-.system.d: ../threads/system.cc Makefile ../Makefile.common ../Makefile.dep ../threads/system.cc ../threads/copyright.h ../threads/system.h ../threads/utility.h ../threads/bool.h ../machine/sysdep.h ../threads/copyright.h ../threads/thread.h ../threads/list.h ../machine/machine.h ../threads/utility.h ../machine/translate.h ../machine/disk.h ../userprog/addrspace.h ../filesys/filesys.h ../filesys/openfile.h ../machine/translate.h ../bin/noff.h ../threads/list.h ../userprog/bitmap.h ../filesys/openfile.h ../threads/scheduler.h ../machine/interrupt.h ../machine/stats.h ../machine/timer.h ../machine/consoledriver.h ../machine/console.h
-#  Implicit rule search has not been done.
-#  Implicit/static pattern stem: 'system'
-#  Last modified 2021-11-19 17:52:07.396236816
-#  File has been updated.
-#  Successfully updated.
-#  recipe to execute (from '../Makefile.common', line 127):
-	$(CC) $(CFLAGS) -MM $< | \
-		sed -e 's|\(.*\)\.o:|.\1.d \1.o:|g' > $@
-
-# Not a target:
-../threads/list.cc:
-#  Implicit rule search has been done.
-#  Last modified 2021-10-05 19:36:21.635074339
-#  File has been updated.
-#  Successfully updated.
-
-bitmap.o: bitmap.cc Makefile ../Makefile.common ../Makefile.dep bitmap.cc ../threads/copyright.h bitmap.h ../threads/utility.h ../threads/copyright.h ../threads/bool.h ../machine/sysdep.h ../filesys/openfile.h
-#  Implicit rule search has not been done.
-#  Implicit/static pattern stem: 'bitmap'
-#  Modification time never checked.
-#  File has not been updated.
-#  recipe to execute (from '../Makefile.common', line 109):
-	$(CC) $(CFLAGS) -c $< -o $@
-
-# Not a target:
-../machine/consoledriver.h:
-#  Implicit rule search has been done.
-#  Last modified 2021-11-18 20:41:41.708127608
-#  File has been updated.
-#  Successfully updated.
-
-# Not a target:
-../bin/noff.h:
-#  Implicit rule search has been done.
-#  Last modified 2021-10-05 19:36:21.631074297
-#  File has been updated.
-#  Successfully updated.
-
-.PHONY: default depend clean distclean
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
-syscall.h:
-#  Implicit rule search has been done.
-#  Last modified 2021-11-16 18:53:32.994484222
-#  File has been updated.
-#  Successfully updated.
-
-# Not a target:
-../threads/main.cc:
-#  Implicit rule search has been done.
-#  Last modified 2021-11-16 18:53:40.12364318
-#  File has been updated.
-#  Successfully updated.
-
-# Not a target:
-addrspace.h:
-#  Implicit rule search has been done.
-#  Last modified 2021-11-19 15:38:48.165415548
-#  File has been updated.
-#  Successfully updated.
-
-# Not a target:
-../threads/scheduler.cc:
-#  Implicit rule search has been done.
-#  Last modified 2021-10-05 19:36:21.635074339
-#  File has been updated.
-#  Successfully updated.
-
-# Not a target:
-../threads/switch.S:
-#  Implicit rule search has been done.
-#  Last modified 2021-11-15 14:31:12.604821124
-#  File has been updated.
-#  Successfully updated.
-
-# Not a target:
-bitmap.cc:
-#  Implicit rule search has been done.
-#  Last modified 2021-11-18 20:58:37.508322756
-#  File has been updated.
-#  Successfully updated.
-
-# Not a target:
-../machine/stats.cc:
-#  Implicit rule search has been done.
-#  Last modified 2021-10-05 19:36:21.631074297
-#  File has been updated.
-#  Successfully updated.
-
-distclean: clean
-#  Phony target (prerequisite of .PHONY).
-#  Implicit rule search has not been done.
-#  File does not exist.
-#  File has not been updated.
-#  recipe to execute (from '../Makefile.common', line 145):
-	rm -f *\~ \#*\#
-
-# Not a target:
-../threads/thread.h:
-#  Implicit rule search has been done.
-#  Last modified 2021-11-18 17:44:47.174492307
-#  File has been updated.
-#  Successfully updated.
-
-.thread.d: ../threads/thread.cc Makefile ../Makefile.common ../Makefile.dep ../threads/thread.cc ../threads/copyright.h ../threads/thread.h ../threads/utility.h ../threads/bool.h ../machine/sysdep.h ../threads/copyright.h ../threads/list.h ../machine/machine.h ../threads/utility.h ../machine/translate.h ../machine/disk.h ../userprog/addrspace.h ../filesys/filesys.h ../filesys/openfile.h ../machine/translate.h ../bin/noff.h ../threads/list.h ../userprog/bitmap.h ../filesys/openfile.h ../threads/switch.h ../threads/synch.h ../threads/system.h ../threads/scheduler.h ../machine/interrupt.h ../machine/stats.h ../machine/timer.h ../machine/consoledriver.h ../machine/console.h ../machine/valgrind.h
-#  Implicit rule search has not been done.
-#  Implicit/static pattern stem: 'thread'
-#  Last modified 2021-11-19 17:52:07.368236815
-#  File has been updated.
-#  Successfully updated.
-#  recipe to execute (from '../Makefile.common', line 127):
-	$(CC) $(CFLAGS) -MM $< | \
-		sed -e 's|\(.*\)\.o:|.\1.d \1.o:|g' > $@
-
-synch.o: ../threads/synch.cc Makefile ../Makefile.common ../Makefile.dep ../threads/synch.cc ../threads/copyright.h ../threads/synch.h ../threads/thread.h ../threads/utility.h ../threads/bool.h ../machine/sysdep.h ../threads/copyright.h ../threads/list.h ../machine/machine.h ../threads/utility.h ../machine/translate.h ../machine/disk.h ../userprog/addrspace.h ../filesys/filesys.h ../filesys/openfile.h ../machine/translate.h ../bin/noff.h ../threads/list.h ../userprog/bitmap.h ../filesys/openfile.h ../threads/system.h ../threads/scheduler.h ../machine/interrupt.h ../machine/stats.h ../machine/timer.h ../machine/consoledriver.h ../machine/console.h
-#  Implicit rule search has not been done.
-#  Implicit/static pattern stem: 'synch'
-#  Last modified 2021-11-19 15:38:53.425427645
-#  File has been updated.
-#  Successfully updated.
-#  recipe to execute (from '../Makefile.common', line 109):
-	$(CC) $(CFLAGS) -c $< -o $@
-
-# Not a target:
-../machine/sysdep.cc:
-#  Implicit rule search has been done.
-#  Last modified 2021-10-05 19:36:21.631074297
-#  File has been updated.
-#  Successfully updated.
-
-# Not a target:
-../Makefile.dep:
-#  Implicit rule search has been done.
-#  Last modified 2021-10-06 18:14:10.818646859
-#  File has been updated.
-#  Successfully updated.
-
-exception.o: exception.cc Makefile ../Makefile.common ../Makefile.dep exception.cc ../threads/copyright.h ../threads/system.h ../threads/copyright.h ../threads/utility.h ../threads/bool.h ../machine/sysdep.h ../threads/thread.h ../threads/list.h ../machine/machine.h ../threads/utility.h ../machine/translate.h ../machine/disk.h ../userprog/addrspace.h ../filesys/filesys.h ../filesys/openfile.h ../machine/translate.h ../bin/noff.h ../threads/list.h ../userprog/bitmap.h ../filesys/openfile.h ../threads/scheduler.h ../machine/interrupt.h ../machine/stats.h ../machine/timer.h ../machine/consoledriver.h ../machine/console.h syscall.h userthread.h ../threads/thread.h ../threads/synch.h
-#  Implicit rule search has not been done.
-#  Implicit/static pattern stem: 'exception'
-#  Modification time never checked.
-#  File has not been updated.
-#  recipe to execute (from '../Makefile.common', line 109):
-	$(CC) $(CFLAGS) -c $< -o $@
-
-progtest.o: progtest.cc Makefile ../Makefile.common ../Makefile.dep progtest.cc ../threads/copyright.h ../threads/system.h ../threads/copyright.h ../threads/utility.h ../threads/bool.h ../machine/sysdep.h ../threads/thread.h ../threads/list.h ../machine/machine.h ../threads/utility.h ../machine/translate.h ../machine/disk.h ../userprog/addrspace.h ../filesys/filesys.h ../filesys/openfile.h ../machine/translate.h ../bin/noff.h ../threads/list.h ../userprog/bitmap.h ../filesys/openfile.h ../threads/scheduler.h ../machine/interrupt.h ../machine/stats.h ../machine/timer.h ../machine/consoledriver.h ../machine/console.h ../machine/console.h addrspace.h ../threads/synch.h
-#  Implicit rule search has not been done.
-#  Implicit/static pattern stem: 'progtest'
-#  Modification time never checked.
-#  File has not been updated.
-#  recipe to execute (from '../Makefile.common', line 109):
-	$(CC) $(CFLAGS) -c $< -o $@
-
-# Not a target:
-../threads/copyright.h:
-#  Implicit rule search has been done.
-#  Last modified 2021-10-05 19:36:21.635074339
-#  File has been updated.
-#  Successfully updated.
-
-# Not a target:
-../filesys/filesys.h:
-#  Implicit rule search has been done.
-#  Last modified 2021-10-05 19:36:21.631074297
-#  File has been updated.
-#  Successfully updated.
-
-# Not a target:
-../machine/mipssim.cc:
-#  Implicit rule search has been done.
-#  Last modified 2021-10-05 19:36:21.631074297
-#  File has been updated.
-#  Successfully updated.
-
-machine.o: machine.cc Makefile ../Makefile.common ../Makefile.dep ../machine/machine.cc ../threads/copyright.h ../machine/machine.h ../threads/utility.h ../threads/copyright.h ../threads/bool.h ../machine/sysdep.h ../machine/translate.h ../machine/disk.h ../threads/system.h ../threads/utility.h ../threads/thread.h ../threads/list.h ../machine/machine.h ../userprog/addrspace.h ../filesys/filesys.h ../filesys/openfile.h ../machine/translate.h ../bin/noff.h ../threads/list.h ../userprog/bitmap.h ../filesys/openfile.h ../threads/scheduler.h ../machine/interrupt.h ../machine/stats.h ../machine/timer.h ../machine/consoledriver.h ../machine/console.h
-#  Implicit rule search has not been done.
-#  Implicit/static pattern stem: 'machine'
-#  Modification time never checked.
-#  File has not been updated.
-#  recipe to execute (from '../Makefile.common', line 109):
-	$(CC) $(CFLAGS) -c $< -o $@
-
-# Not a target:
-../threads/synch.h:
-#  Implicit rule search has been done.
-#  Last modified 2021-11-16 19:48:58.394297326
-#  File has been updated.
-#  Successfully updated.
-
-# Not a target:
-Makefile:
-#  Implicit rule search has been done.
-#  Last modified 2021-10-05 19:36:21.63907438
-#  File has been updated.
-#  Successfully updated.
-
-.synch.d: ../threads/synch.cc Makefile ../Makefile.common ../Makefile.dep ../threads/synch.cc ../threads/copyright.h ../threads/synch.h ../threads/thread.h ../threads/utility.h ../threads/bool.h ../machine/sysdep.h ../threads/copyright.h ../threads/list.h ../machine/machine.h ../threads/utility.h ../machine/translate.h ../machine/disk.h ../userprog/addrspace.h ../filesys/filesys.h ../filesys/openfile.h ../machine/translate.h ../bin/noff.h ../threads/list.h ../userprog/bitmap.h ../filesys/openfile.h ../threads/system.h ../threads/scheduler.h ../machine/interrupt.h ../machine/stats.h ../machine/timer.h ../machine/consoledriver.h ../machine/console.h
-#  Implicit rule search has not been done.
-#  Implicit/static pattern stem: 'synch'
-#  Last modified 2021-11-19 17:52:07.452236819
-#  File has been updated.
-#  Successfully updated.
-#  recipe to execute (from '../Makefile.common', line 127):
-	$(CC) $(CFLAGS) -MM $< | \
-		sed -e 's|\(.*\)\.o:|.\1.d \1.o:|g' > $@
-
-# Not a target:
-../machine/timer.h:
-#  Implicit rule search has been done.
-#  Last modified 2021-10-05 19:36:21.631074297
-#  File has been updated.
-#  Successfully updated.
-
-# Not a target:
-../machine/disk.h:
-#  Implicit rule search has been done.
-#  Last modified 2021-10-05 19:36:21.631074297
-#  File has been updated.
-#  Successfully updated.
-
-.timer.d: ../machine/timer.cc Makefile ../Makefile.common ../Makefile.dep ../machine/timer.cc ../threads/copyright.h ../machine/timer.h ../threads/utility.h ../threads/copyright.h ../threads/bool.h ../machine/sysdep.h ../threads/system.h ../threads/utility.h ../threads/thread.h ../threads/list.h ../machine/machine.h ../machine/translate.h ../machine/disk.h ../userprog/addrspace.h ../filesys/filesys.h ../filesys/openfile.h ../machine/translate.h ../bin/noff.h ../threads/list.h ../userprog/bitmap.h ../filesys/openfile.h ../threads/scheduler.h ../machine/interrupt.h ../machine/stats.h ../machine/timer.h ../machine/consoledriver.h ../machine/console.h
-#  Implicit rule search has not been done.
-#  Implicit/static pattern stem: 'timer'
-#  Last modified 2021-11-19 17:52:07.168236808
-#  File has been updated.
-#  Successfully updated.
-#  recipe to execute (from '../Makefile.common', line 127):
-	$(CC) $(CFLAGS) -MM $< | \
-		sed -e 's|\(.*\)\.o:|.\1.d \1.o:|g' > $@
-
-# Not a target:
-../threads/switch.h:
-#  Implicit rule search has been done.
-#  Last modified 2021-10-05 19:36:21.635074339
-#  File has been updated.
-#  Successfully updated.
-
-console.o: console.cc Makefile ../Makefile.common ../Makefile.dep ../machine/console.cc ../threads/copyright.h ../machine/console.h ../threads/utility.h ../threads/copyright.h ../threads/bool.h ../machine/sysdep.h ../threads/system.h ../threads/utility.h ../threads/thread.h ../threads/list.h ../machine/machine.h ../machine/translate.h ../machine/disk.h ../userprog/addrspace.h ../filesys/filesys.h ../filesys/openfile.h ../machine/translate.h ../bin/noff.h ../threads/list.h ../userprog/bitmap.h ../filesys/openfile.h ../threads/scheduler.h ../machine/interrupt.h ../machine/stats.h ../machine/timer.h ../machine/consoledriver.h
-#  Implicit rule search has not been done.
-#  Implicit/static pattern stem: 'console'
-#  Modification time never checked.
-#  File has not been updated.
-#  recipe to execute (from '../Makefile.common', line 109):
-	$(CC) $(CFLAGS) -c $< -o $@
-
-.switch.d: ../threads/switch.S Makefile ../Makefile.common ../Makefile.dep ../threads/switch.S ../threads/copyright.h ../threads/switch.h
-#  Implicit rule search has not been done.
-#  Implicit/static pattern stem: 'switch'
-#  Last modified 2021-11-19 17:52:06.70023679
-#  File has been updated.
-#  Successfully updated.
-#  recipe to execute (from '../Makefile.common', line 131):
-	$(CC) $(CFLAGS) -MM $< | \
- 
-		sed -e 's|\(.*\)\.o:|.\1.d \1.o:|g' > $@
-
-# Not a target:
-exception.cc:
-#  Implicit rule search has been done.
-#  Last modified 2021-11-19 14:45:04.561140978
-#  File has been updated.
-#  Successfully updated.
-
-# Not a target:
-../machine/console.h:
-#  Implicit rule search has been done.
-#  Last modified 2021-10-05 19:36:21.631074297
-#  File has been updated.
-#  Successfully updated.
-
-# Not a target:
-progtest.cc:
-#  Implicit rule search has been done.
-#  Last modified 2021-11-16 18:53:44.436344278
-#  File has been updated.
-#  Successfully updated.
-
-# Not a target:
-../threads/utility.cc:
-#  Implicit rule search has been done.
-#  Last modified 2021-10-05 19:36:21.63907438
-#  File has been updated.
-#  Successfully updated.
-
-# Not a target:
-../machine/translate.h:
-#  Implicit rule search has been done.
-#  Last modified 2021-10-05 19:36:21.631074297
-#  File has been updated.
-#  Successfully updated.
-
-.exception.d: exception.cc Makefile ../Makefile.common ../Makefile.dep exception.cc ../threads/copyright.h ../threads/system.h ../threads/copyright.h ../threads/utility.h ../threads/bool.h ../machine/sysdep.h ../threads/thread.h ../threads/list.h ../machine/machine.h ../threads/utility.h ../machine/translate.h ../machine/disk.h ../userprog/addrspace.h ../filesys/filesys.h ../filesys/openfile.h ../machine/translate.h ../bin/noff.h ../threads/list.h ../userprog/bitmap.h ../filesys/openfile.h ../threads/scheduler.h ../machine/interrupt.h ../machine/stats.h ../machine/timer.h ../machine/consoledriver.h ../machine/console.h syscall.h userthread.h ../threads/thread.h ../threads/synch.h
-#  Implicit rule search has not been done.
-#  Implicit/static pattern stem: 'exception'
-#  Last modified 2021-11-19 17:52:07.032236802
-#  File has been updated.
-#  Successfully updated.
-#  recipe to execute (from '../Makefile.common', line 127):
-	$(CC) $(CFLAGS) -MM $< | \
-		sed -e 's|\(.*\)\.o:|.\1.d \1.o:|g' > $@
-
-.console.d: ../machine/console.cc Makefile ../Makefile.common ../Makefile.dep ../machine/console.cc ../threads/copyright.h ../machine/console.h ../threads/utility.h ../threads/copyright.h ../threads/bool.h ../machine/sysdep.h ../threads/system.h ../threads/utility.h ../threads/thread.h ../threads/list.h ../machine/machine.h ../machine/translate.h ../machine/disk.h ../userprog/addrspace.h ../filesys/filesys.h ../filesys/openfile.h ../machine/translate.h ../bin/noff.h ../threads/list.h ../userprog/bitmap.h ../filesys/openfile.h ../threads/scheduler.h ../machine/interrupt.h ../machine/stats.h ../machine/timer.h ../machine/consoledriver.h
-#  Implicit rule search has not been done.
-#  Implicit/static pattern stem: 'console'
-#  Last modified 2021-11-19 17:52:06.9762368
-#  File has been updated.
-#  Successfully updated.
-#  recipe to execute (from '../Makefile.common', line 127):
-	$(CC) $(CFLAGS) -MM $< | \
-		sed -e 's|\(.*\)\.o:|.\1.d \1.o:|g' > $@
-
-# Not a target:
-../threads/list.h:
-#  Implicit rule search has been done.
-#  Last modified 2021-10-05 19:36:21.635074339
-#  File has been updated.
-#  Successfully updated.
-
-.translate.d: ../machine/translate.cc Makefile ../Makefile.common ../Makefile.dep ../machine/translate.cc ../threads/copyright.h ../machine/machine.h ../threads/utility.h ../threads/copyright.h ../threads/bool.h ../machine/sysdep.h ../machine/translate.h ../machine/disk.h ../userprog/addrspace.h ../filesys/filesys.h ../filesys/openfile.h ../machine/translate.h ../bin/noff.h ../threads/list.h ../threads/utility.h ../userprog/bitmap.h ../filesys/openfile.h ../threads/system.h ../threads/thread.h ../threads/list.h ../machine/machine.h ../threads/scheduler.h ../machine/interrupt.h ../machine/stats.h ../machine/timer.h ../machine/consoledriver.h ../machine/console.h
-#  Implicit rule search has not been done.
-#  Implicit/static pattern stem: 'translate'
-#  Last modified 2021-11-19 17:52:06.848236795
-#  File has been updated.
-#  Successfully updated.
-#  recipe to execute (from '../Makefile.common', line 127):
-	$(CC) $(CFLAGS) -MM $< | \
-		sed -e 's|\(.*\)\.o:|.\1.d \1.o:|g' > $@
-
-.interrupt.d: ../machine/interrupt.cc Makefile ../Makefile.common ../Makefile.dep ../machine/interrupt.cc ../threads/copyright.h ../machine/interrupt.h ../threads/list.h ../threads/copyright.h ../threads/utility.h ../threads/bool.h ../machine/sysdep.h ../threads/system.h ../threads/thread.h ../threads/list.h ../machine/machine.h ../threads/utility.h ../machine/translate.h ../machine/disk.h ../userprog/addrspace.h ../filesys/filesys.h ../filesys/openfile.h ../machine/translate.h ../bin/noff.h ../userprog/bitmap.h ../filesys/openfile.h ../threads/scheduler.h ../machine/interrupt.h ../machine/stats.h ../machine/timer.h ../machine/consoledriver.h ../machine/console.h ../machine/sysdep.h
-#  Implicit rule search has not been done.
-#  Implicit/static pattern stem: 'interrupt'
-#  Last modified 2021-11-19 17:52:07.264236811
-#  File has been updated.
-#  Successfully updated.
-#  recipe to execute (from '../Makefile.common', line 127):
-	$(CC) $(CFLAGS) -MM $< | \
-		sed -e 's|\(.*\)\.o:|.\1.d \1.o:|g' > $@
-
-.list.d: ../threads/list.cc Makefile ../Makefile.common ../Makefile.dep ../threads/list.cc ../threads/copyright.h ../threads/list.h ../threads/utility.h ../threads/bool.h ../machine/sysdep.h ../threads/copyright.h
-#  Implicit rule search has not been done.
-#  Implicit/static pattern stem: 'list'
-#  Last modified 2021-11-19 17:52:07.49623682
-#  File has been updated.
-#  Successfully updated.
-#  recipe to execute (from '../Makefile.common', line 127):
-	$(CC) $(CFLAGS) -MM $< | \
-		sed -e 's|\(.*\)\.o:|.\1.d \1.o:|g' > $@
-
-.addrspace.d: addrspace.cc Makefile ../Makefile.common ../Makefile.dep addrspace.cc ../threads/copyright.h ../threads/system.h ../threads/copyright.h ../threads/utility.h ../threads/bool.h ../machine/sysdep.h ../threads/thread.h ../threads/list.h ../machine/machine.h ../threads/utility.h ../machine/translate.h ../machine/disk.h ../userprog/addrspace.h ../filesys/filesys.h ../filesys/openfile.h ../machine/translate.h ../bin/noff.h ../threads/list.h ../userprog/bitmap.h ../filesys/openfile.h ../threads/scheduler.h ../machine/interrupt.h ../machine/stats.h ../machine/timer.h ../machine/consoledriver.h ../machine/console.h addrspace.h syscall.h ../threads/synch.h ../userprog/bitmap.h
-#  Implicit rule search has not been done.
-#  Implicit/static pattern stem: 'addrspace'
-#  Last modified 2021-11-19 17:52:07.136236806
-#  File has been updated.
-#  Successfully updated.
-#  recipe to execute (from '../Makefile.common', line 127):
-	$(CC) $(CFLAGS) -MM $< | \
-		sed -e 's|\(.*\)\.o:|.\1.d \1.o:|g' > $@
-
-default: nachos
-#  Phony target (prerequisite of .PHONY).
-#  Implicit rule search has not been done.
-#  File does not exist.
-#  File has not been updated.
-
-userthread.o: userthread.cc Makefile ../Makefile.common ../Makefile.dep userthread.cc userthread.h ../threads/thread.h ../threads/copyright.h ../threads/utility.h ../threads/bool.h ../machine/sysdep.h ../threads/copyright.h ../threads/list.h ../machine/machine.h ../threads/utility.h ../machine/translate.h ../machine/disk.h ../userprog/addrspace.h ../filesys/filesys.h ../filesys/openfile.h ../machine/translate.h ../bin/noff.h ../threads/list.h ../userprog/bitmap.h ../filesys/openfile.h ../threads/synch.h ../threads/thread.h ../threads/system.h ../threads/scheduler.h ../machine/interrupt.h ../machine/stats.h ../machine/timer.h ../machine/consoledriver.h ../machine/console.h
-#  Implicit rule search has not been done.
-#  Implicit/static pattern stem: 'userthread'
-#  Modification time never checked.
-#  File has not been updated.
-#  recipe to execute (from '../Makefile.common', line 109):
-	$(CC) $(CFLAGS) -c $< -o $@
-
-scheduler.o: ../threads/scheduler.cc Makefile ../Makefile.common ../Makefile.dep ../threads/scheduler.cc ../threads/copyright.h ../threads/scheduler.h ../threads/list.h ../threads/utility.h ../threads/bool.h ../machine/sysdep.h ../threads/copyright.h ../threads/thread.h ../machine/machine.h ../threads/utility.h ../machine/translate.h ../machine/disk.h ../userprog/addrspace.h ../filesys/filesys.h ../filesys/openfile.h ../machine/translate.h ../bin/noff.h ../threads/list.h ../userprog/bitmap.h ../filesys/openfile.h ../threads/system.h ../machine/interrupt.h ../machine/stats.h ../machine/timer.h ../machine/consoledriver.h ../machine/console.h
-#  Implicit rule search has not been done.
-#  Implicit/static pattern stem: 'scheduler'
-#  Last modified 2021-11-19 15:38:53.277427307
-#  File has been updated.
-#  Successfully updated.
-#  recipe to execute (from '../Makefile.common', line 109):
-	$(CC) $(CFLAGS) -c $< -o $@
-
-# Not a target:
-../machine/interrupt.cc:
-#  Implicit rule search has been done.
-#  Last modified 2021-10-05 19:36:21.631074297
-#  File has been updated.
-#  Successfully updated.
-
-# Not a target:
-../threads/synchlist.cc:
-#  Implicit rule search has been done.
-#  Last modified 2021-10-05 19:36:21.63907438
-#  File has been updated.
-#  Successfully updated.
-
-# Not a target:
-../userprog/bitmap.h:
-#  Implicit rule search has been done.
-#  Last modified 2021-10-05 19:36:21.643074422
-#  File has been updated.
-#  Successfully updated.
-
-.main.d: ../threads/main.cc Makefile ../Makefile.common ../Makefile.dep ../threads/main.cc ../threads/copyright.h ../threads/utility.h ../threads/bool.h ../machine/sysdep.h ../threads/copyright.h ../threads/system.h ../threads/thread.h ../threads/list.h ../machine/machine.h ../threads/utility.h ../machine/translate.h ../machine/disk.h ../userprog/addrspace.h ../filesys/filesys.h ../filesys/openfile.h ../machine/translate.h ../bin/noff.h ../threads/list.h ../userprog/bitmap.h ../filesys/openfile.h ../threads/scheduler.h ../machine/interrupt.h ../machine/stats.h ../machine/timer.h ../machine/consoledriver.h ../machine/console.h ../userprog/progtest.h
-#  Implicit rule search has not been done.
-#  Implicit/static pattern stem: 'main'
-#  Last modified 2021-11-19 17:52:07.524236821
-#  File has been updated.
-#  Successfully updated.
-#  recipe to execute (from '../Makefile.common', line 127):
-	$(CC) $(CFLAGS) -MM $< | \
-		sed -e 's|\(.*\)\.o:|.\1.d \1.o:|g' > $@
-
-# Not a target:
-../threads/scheduler.h:
-#  Implicit rule search has been done.
-#  Last modified 2021-10-05 19:36:21.635074339
-#  File has been updated.
-#  Successfully updated.
-
-depend: .main.d .list.d .scheduler.d .synch.d .synchlist.d .system.d .thread.d .utility.d .threadtest.d .interrupt.d .stats.d .sysdep.d .timer.d .addrspace.d .bitmap.d .exception.d .progtest.d .console.d .machine.d .mipssim.d .translate.d .consoledriver.d .userthread.d .switch.d
-#  Phony target (prerequisite of .PHONY).
-#  Implicit rule search has not been done.
-#  File does not exist.
-#  File has not been updated.
-
-# Not a target:
-../machine/machine.cc:
-#  Implicit rule search has been done.
-#  Last modified 2021-11-18 20:42:18.984126875
-#  File has been updated.
-#  Successfully updated.
-
-.scheduler.d: ../threads/scheduler.cc Makefile ../Makefile.common ../Makefile.dep ../threads/scheduler.cc ../threads/copyright.h ../threads/scheduler.h ../threads/list.h ../threads/utility.h ../threads/bool.h ../machine/sysdep.h ../threads/copyright.h ../threads/thread.h ../machine/machine.h ../threads/utility.h ../machine/translate.h ../machine/disk.h ../userprog/addrspace.h ../filesys/filesys.h ../filesys/openfile.h ../machine/translate.h ../bin/noff.h ../threads/list.h ../userprog/bitmap.h ../filesys/openfile.h ../threads/system.h ../machine/interrupt.h ../machine/stats.h ../machine/timer.h ../machine/consoledriver.h ../machine/console.h
-#  Implicit rule search has not been done.
-#  Implicit/static pattern stem: 'scheduler'
-#  Last modified 2021-11-19 17:52:07.472236819
-#  File has been updated.
-#  Successfully updated.
-#  recipe to execute (from '../Makefile.common', line 127):
-	$(CC) $(CFLAGS) -MM $< | \
-		sed -e 's|\(.*\)\.o:|.\1.d \1.o:|g' > $@
-
-# Not a target:
-../machine/valgrind.h:
-#  Implicit rule search has been done.
-#  Last modified 2021-10-05 19:36:21.631074297
-#  File has been updated.
-#  Successfully updated.
-
-# Not a target:
-bitmap.h:
-#  Implicit rule search has been done.
-#  Last modified 2021-10-05 19:36:21.643074422
-#  File has been updated.
-#  Successfully updated.
-
-stats.o: ../machine/stats.cc Makefile ../Makefile.common ../Makefile.dep ../machine/stats.cc ../threads/copyright.h ../threads/utility.h ../threads/copyright.h ../threads/bool.h ../machine/sysdep.h ../machine/stats.h
-#  Implicit rule search has not been done.
-#  Implicit/static pattern stem: 'stats'
-#  Last modified 2021-11-18 22:09:33.496030628
-#  File has been updated.
-#  Successfully updated.
-#  recipe to execute (from '../Makefile.common', line 109):
-	$(CC) $(CFLAGS) -c $< -o $@
-
-threadtest.o: ../threads/threadtest.cc Makefile ../Makefile.common ../Makefile.dep ../threads/threadtest.cc ../threads/copyright.h ../threads/system.h ../threads/utility.h ../threads/bool.h ../machine/sysdep.h ../threads/copyright.h ../threads/thread.h ../threads/list.h ../machine/machine.h ../threads/utility.h ../machine/translate.h ../machine/disk.h ../userprog/addrspace.h ../filesys/filesys.h ../filesys/openfile.h ../machine/translate.h ../bin/noff.h ../threads/list.h ../userprog/bitmap.h ../filesys/openfile.h ../threads/scheduler.h ../machine/interrupt.h ../machine/stats.h ../machine/timer.h ../machine/consoledriver.h ../machine/console.h
-#  Implicit rule search has not been done.
-#  Implicit/static pattern stem: 'threadtest'
-#  Last modified 2021-11-19 15:38:54.009428983
-#  File has been updated.
-#  Successfully updated.
-#  recipe to execute (from '../Makefile.common', line 109):
-	$(CC) $(CFLAGS) -c $< -o $@
-
-# Not a target:
-../machine/stats.h:
-#  Implicit rule search has been done.
-#  Last modified 2021-10-05 19:36:21.631074297
-#  File has been updated.
-#  Successfully updated.
-
-sysdep.o: ../machine/sysdep.cc Makefile ../Makefile.common ../Makefile.dep ../machine/sysdep.cc ../threads/copyright.h ../machine/interrupt.h ../threads/list.h ../threads/copyright.h ../threads/utility.h ../threads/bool.h ../machine/sysdep.h ../threads/system.h ../threads/thread.h ../threads/list.h ../machine/machine.h ../threads/utility.h ../machine/translate.h ../machine/disk.h ../userprog/addrspace.h ../filesys/filesys.h ../filesys/openfile.h ../machine/translate.h ../bin/noff.h ../userprog/bitmap.h ../filesys/openfile.h ../threads/scheduler.h ../machine/interrupt.h ../machine/stats.h ../machine/timer.h ../machine/consoledriver.h ../machine/console.h
-#  Implicit rule search has not been done.
-#  Implicit/static pattern stem: 'sysdep'
-#  Last modified 2021-11-19 15:38:54.325429704
-#  File has been updated.
-#  Successfully updated.
-#  recipe to execute (from '../Makefile.common', line 109):
-	$(CC) $(CFLAGS) -c $< -o $@
-
-# Not a target:
-../userprog/progtest.h:
-#  Implicit rule search has been done.
-#  Last modified 2021-10-05 19:36:21.647074463
-#  File has been updated.
-#  Successfully updated.
-
-utility.o: ../threads/utility.cc Makefile ../Makefile.common ../Makefile.dep ../threads/utility.cc ../threads/copyright.h ../threads/utility.h ../threads/bool.h ../machine/sysdep.h ../threads/copyright.h
-#  Implicit rule search has not been done.
-#  Implicit/static pattern stem: 'utility'
-#  Last modified 2021-11-18 22:09:32.888033156
-#  File has been updated.
-#  Successfully updated.
-#  recipe to execute (from '../Makefile.common', line 109):
-	$(CC) $(CFLAGS) -c $< -o $@
-
-# Not a target:
-../machine/sysdep.h:
-#  Implicit rule search has been done.
-#  Last modified 2021-10-05 19:36:21.631074297
-#  File has been updated.
-#  Successfully updated.
-
-# Not a target:
-.DEFAULT:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
-userthread.cc:
-#  Implicit rule search has been done.
-#  Last modified 2021-11-19 15:37:25.557210095
-#  File has been updated.
-#  Successfully updated.
-
-# Not a target:
-../machine/consoledriver.cc:
-#  Implicit rule search has been done.
-#  Last modified 2021-11-18 20:43:23.228123792
-#  File has been updated.
-#  Successfully updated.
-
-# Not a target:
-../threads/threadtest.cc:
-#  Implicit rule search has been done.
-#  Last modified 2021-10-05 19:36:21.63907438
-#  File has been updated.
-#  Successfully updated.
-
- 
-.userthread.d: userthread.cc Makefile ../Makefile.common ../Makefile.dep userthread.cc userthread.h ../threads/thread.h ../threads/copyright.h ../threads/utility.h ../threads/bool.h ../machine/sysdep.h ../threads/copyright.h ../threads/list.h ../machine/machine.h ../threads/utility.h ../machine/translate.h ../machine/disk.h ../userprog/addrspace.h ../filesys/filesys.h ../filesys/openfile.h ../machine/translate.h ../bin/noff.h ../threads/list.h ../userprog/bitmap.h ../filesys/openfile.h ../threads/synch.h ../threads/thread.h ../threads/system.h ../threads/scheduler.h ../machine/interrupt.h ../machine/stats.h ../machine/timer.h ../machine/consoledriver.h ../machine/console.h
-#  Implicit rule search has not been done.
-#  Implicit/static pattern stem: 'userthread'
-#  Last modified 2021-11-19 17:52:06.732236791
-#  File has been updated.
-#  Successfully updated.
-#  recipe to execute (from '../Makefile.common', line 127):
-	$(CC) $(CFLAGS) -MM $< | \
-		sed -e 's|\(.*\)\.o:|.\1.d \1.o:|g' > $@
-
-.stats.d: ../machine/stats.cc Makefile ../Makefile.common ../Makefile.dep ../machine/stats.cc ../threads/copyright.h ../threads/utility.h ../threads/copyright.h ../threads/bool.h ../machine/sysdep.h ../machine/stats.h
-#  Implicit rule search has not been done.
-#  Implicit/static pattern stem: 'stats'
-#  Last modified 2021-11-19 17:52:07.24023681
-#  File has been updated.
-#  Successfully updated.
-#  recipe to execute (from '../Makefile.common', line 127):
-	$(CC) $(CFLAGS) -MM $< | \
-		sed -e 's|\(.*\)\.o:|.\1.d \1.o:|g' > $@
-
-# Not a target:
-../machine/mipssim.h:
-#  Implicit rule search has been done.
-#  Last modified 2021-10-05 19:36:21.631074297
-#  File has been updated.
-#  Successfully updated.
-
-.sysdep.d: ../machine/sysdep.cc Makefile ../Makefile.common ../Makefile.dep ../machine/sysdep.cc ../threads/copyright.h ../machine/interrupt.h ../threads/list.h ../threads/copyright.h ../threads/utility.h ../threads/bool.h ../machine/sysdep.h ../threads/system.h ../threads/thread.h ../threads/list.h ../machine/machine.h ../threads/utility.h ../machine/translate.h ../machine/disk.h ../userprog/addrspace.h ../filesys/filesys.h ../filesys/openfile.h ../machine/translate.h ../bin/noff.h ../userprog/bitmap.h ../filesys/openfile.h ../threads/scheduler.h ../machine/interrupt.h ../machine/stats.h ../machine/timer.h ../machine/consoledriver.h ../machine/console.h
-#  Implicit rule search has not been done.
-#  Implicit/static pattern stem: 'sysdep'
-#  Last modified 2021-11-19 17:52:07.212236809
-#  File has been updated.
-#  Successfully updated.
-#  recipe to execute (from '../Makefile.common', line 127):
-	$(CC) $(CFLAGS) -MM $< | \
-		sed -e 's|\(.*\)\.o:|.\1.d \1.o:|g' > $@
-
-# Not a target:
-../Makefile.common:
-#  Implicit rule search has been done.
-#  Last modified 2021-11-08 14:29:12.713708096
-#  File has been updated.
-#  Successfully updated.
-
-addrspace.o: addrspace.cc Makefile ../Makefile.common ../Makefile.dep addrspace.cc ../threads/copyright.h ../threads/system.h ../threads/copyright.h ../threads/utility.h ../threads/bool.h ../machine/sysdep.h ../threads/thread.h ../threads/list.h ../machine/machine.h ../threads/utility.h ../machine/translate.h ../machine/disk.h ../userprog/addrspace.h ../filesys/filesys.h ../filesys/openfile.h ../machine/translate.h ../bin/noff.h ../threads/list.h ../userprog/bitmap.h ../filesys/openfile.h ../threads/scheduler.h ../machine/interrupt.h ../machine/stats.h ../machine/timer.h ../machine/consoledriver.h ../machine/console.h addrspace.h syscall.h ../threads/synch.h ../userprog/bitmap.h
-#  Implicit rule search has not been done.
-#  Implicit/static pattern stem: 'addrspace'
-#  Last modified 2021-11-19 15:38:54.637430418
-#  File has been updated.
-#  Needs to be updated (-q is set).
-# automatic
-# @ := addrspace.o
-# automatic
-# % := 
-# automatic
-# * := addrspace
-# automatic
-# + := addrspace.cc Makefile ../Makefile.common ../Makefile.dep addrspace.cc ../threads/copyright.h ../threads/system.h ../threads/copyright.h ../threads/utility.h ../threads/bool.h ../machine/sysdep.h ../threads/thread.h ../threads/list.h ../machine/machine.h ../threads/utility.h ../machine/translate.h ../machine/disk.h ../userprog/addrspace.h ../filesys/filesys.h ../filesys/openfile.h ../machine/translate.h ../bin/noff.h ../threads/list.h ../userprog/bitmap.h ../filesys/openfile.h ../threads/scheduler.h ../machine/interrupt.h ../machine/stats.h ../machine/timer.h ../machine/consoledriver.h ../machine/console.h addrspace.h syscall.h ../threads/synch.h ../userprog/bitmap.h
-# automatic
-# | := 
-# automatic
-# < := addrspace.cc
-# automatic
-# ^ := addrspace.cc Makefile ../Makefile.common ../Makefile.dep ../threads/copyright.h ../threads/system.h ../threads/utility.h ../threads/bool.h ../machine/sysdep.h ../threads/thread.h ../threads/list.h ../machine/machine.h ../machine/translate.h ../machine/disk.h ../userprog/addrspace.h ../filesys/filesys.h ../filesys/openfile.h ../bin/noff.h ../userprog/bitmap.h ../threads/scheduler.h ../machine/interrupt.h ../machine/stats.h ../machine/timer.h ../machine/consoledriver.h ../machine/console.h addrspace.h syscall.h ../threads/synch.h
-# automatic
-# ? := addrspace.cc
-# variable set hash-table stats:
-# Load=8/32=25%, Rehash=0, Collisions=5/19=26%
-#  recipe to execute (from '../Makefile.common', line 109):
-	$(CC) $(CFLAGS) -c $< -o $@
-
-# Not a target:
-../threads/system.cc:
-#  Implicit rule search has been done.
-#  Last modified 2021-10-05 19:36:21.63907438
-#  File has been updated.
-#  Successfully updated.
-
-# Not a target:
-../userprog/addrspace.h:
-#  Implicit rule search has been done.
-#  Last modified 2021-11-19 15:38:48.165415548
-#  File has been updated.
-#  Successfully updated.
-
-clean:
-#  Phony target (prerequisite of .PHONY).
-#  Implicit rule search has not been done.
-#  File does not exist.
-#  File has not been updated.
-#  recipe to execute (from '../Makefile.common', line 141):
-	rm -f core nachos DISK *.o *.s .*.d coff2noff out disassemble
-
-.mipssim.d: ../machine/mipssim.cc Makefile ../Makefile.common ../Makefile.dep ../machine/mipssim.cc ../threads/copyright.h ../machine/machine.h ../threads/utility.h ../threads/copyright.h ../threads/bool.h ../machine/sysdep.h ../machine/translate.h ../machine/disk.h ../machine/mipssim.h ../threads/system.h ../threads/utility.h ../threads/thread.h ../threads/list.h ../machine/machine.h ../userprog/addrspace.h ../filesys/filesys.h ../filesys/openfile.h ../machine/translate.h ../bin/noff.h ../threads/list.h ../userprog/bitmap.h ../filesys/openfile.h ../threads/scheduler.h ../machine/interrupt.h ../machine/stats.h ../machine/timer.h ../machine/consoledriver.h ../machine/console.h
-#  Implicit rule search has not been done.
-#  Implicit/static pattern stem: 'mipssim'
-#  Last modified 2021-11-19 17:52:06.900236797
-#  File has been updated.
-#  Successfully updated.
-#  recipe to execute (from '../Makefile.common', line 127):
-	$(CC) $(CFLAGS) -MM $< | \
-		sed -e 's|\(.*\)\.o:|.\1.d \1.o:|g' > $@
-
-nachos: main.o list.o scheduler.o synch.o synchlist.o system.o thread.o utility.o threadtest.o interrupt.o stats.o sysdep.o timer.o addrspace.o bitmap.o exception.o progtest.o console.o machine.o mipssim.o translate.o consoledriver.o userthread.o switch.o
-#  Command line target.
-#  Implicit rule search has not been done.
-#  Last modified 2021-11-19 15:38:56.021433576
-#  File has been updated.
-#  Needs to be updated (-q is set).
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/9=0%
-#  recipe to execute (from '../Makefile.common', line 106):
-	$(LD) $(OFILES) $(LDFLAGS) -o $(PROGRAM)
-
-interrupt.o: ../machine/interrupt.cc Makefile ../Makefile.common ../Makefile.dep ../machine/interrupt.cc ../threads/copyright.h ../machine/interrupt.h ../threads/list.h ../threads/copyright.h ../threads/utility.h ../threads/bool.h ../machine/sysdep.h ../threads/system.h ../threads/thread.h ../threads/list.h ../machine/machine.h ../threads/utility.h ../machine/translate.h ../machine/disk.h ../userprog/addrspace.h ../filesys/filesys.h ../filesys/openfile.h ../machine/translate.h ../bin/noff.h ../userprog/bitmap.h ../filesys/openfile.h ../threads/scheduler.h ../machine/interrupt.h ../machine/stats.h ../machine/timer.h ../machine/consoledriver.h ../machine/console.h ../machine/sysdep.h
-#  Implicit rule search has not been done.
-#  Implicit/static pattern stem: 'interrupt'
-#  Last modified 2021-11-19 15:38:54.165429339
-#  File has been updated.
-#  Successfully updated.
-#  recipe to execute (from '../Makefile.common', line 109):
-	$(CC) $(CFLAGS) -c $< -o $@
-
-.utility.d: ../threads/utility.cc Makefile ../Makefile.common ../Makefile.dep ../threads/utility.cc ../threads/copyright.h ../threads/utility.h ../threads/bool.h ../machine/sysdep.h ../threads/copyright.h
-#  Implicit rule search has not been done.
-#  Implicit/static pattern stem: 'utility'
-#  Last modified 2021-11-19 17:52:07.328236814
-#  File has been updated.
-#  Successfully updated.
-#  recipe to execute (from '../Makefile.common', line 127):
-	$(CC) $(CFLAGS) -MM $< | \
-		sed -e 's|\(.*\)\.o:|.\1.d \1.o:|g' > $@
-
-list.o: ../threads/list.cc Makefile ../Makefile.common ../Makefile.dep ../threads/list.cc ../threads/copyright.h ../threads/list.h ../threads/utility.h ../threads/bool.h ../machine/sysdep.h ../threads/copyright.h
-#  Implicit rule search has not been done.
-#  Implicit/static pattern stem: 'list'
-#  Last modified 2021-11-18 22:09:31.588038562
-#  File has been updated.
-#  Successfully updated.
-#  recipe to execute (from '../Makefile.common', line 109):
-	$(CC) $(CFLAGS) -c $< -o $@
-
-# Not a target:
-../threads/utility.h:
-#  Implicit rule search has been done.
-#  Last modified 2021-10-05 19:36:21.63907438
-#  File has been updated.
-#  Successfully updated.
-
-# Not a target:
-addrspace.cc:
-#  Implicit rule search has been done.
-#  Last modified 2021-11-19 16:21:31.674726844
-#  File has been updated.
-#  Successfully updated.
-
-thread.o: ../threads/thread.cc Makefile ../Makefile.common ../Makefile.dep ../threads/thread.cc ../threads/copyright.h ../threads/thread.h ../threads/utility.h ../threads/bool.h ../machine/sysdep.h ../threads/copyright.h ../threads/list.h ../machine/machine.h ../threads/utility.h ../machine/translate.h ../machine/disk.h ../userprog/addrspace.h ../filesys/filesys.h ../filesys/openfile.h ../machine/translate.h ../bin/noff.h ../threads/list.h ../userprog/bitmap.h ../filesys/openfile.h ../threads/switch.h ../threads/synch.h ../threads/system.h ../threads/scheduler.h ../machine/interrupt.h ../machine/stats.h ../machine/timer.h ../machine/consoledriver.h ../machine/console.h ../machine/valgrind.h
-#  Implicit rule search has not been done.
-#  Implicit/static pattern stem: 'thread'
-#  Last modified 2021-11-19 15:38:53.889428708
-#  File has been updated.
-#  Successfully updated.
-#  recipe to execute (from '../Makefile.common', line 109):
-	$(CC) $(CFLAGS) -c $< -o $@
-
-main.o: ../threads/main.cc Makefile ../Makefile.common ../Makefile.dep ../threads/main.cc ../threads/copyright.h ../threads/utility.h ../threads/bool.h ../machine/sysdep.h ../threads/copyright.h ../threads/system.h ../threads/thread.h ../threads/list.h ../machine/machine.h ../threads/utility.h ../machine/translate.h ../machine/disk.h ../userprog/addrspace.h ../filesys/filesys.h ../filesys/openfile.h ../machine/translate.h ../bin/noff.h ../threads/list.h ../userprog/bitmap.h ../filesys/openfile.h ../threads/scheduler.h ../machine/interrupt.h ../machine/stats.h ../machine/timer.h ../machine/consoledriver.h ../machine/console.h ../userprog/progtest.h
-#  Implicit rule search has not been done.
-#  Implicit/static pattern stem: 'main'
-#  Last modified 2021-11-19 15:38:53.129426968
-#  File has been updated.
-#  Successfully updated.
-#  recipe to execute (from '../Makefile.common', line 109):
-	$(CC) $(CFLAGS) -c $< -o $@
-
-synchlist.o: ../threads/synchlist.cc Makefile ../Makefile.common ../Makefile.dep ../threads/synchlist.cc ../threads/copyright.h ../threads/synchlist.h ../threads/list.h ../threads/utility.h ../threads/bool.h ../machine/sysdep.h ../threads/copyright.h ../threads/synch.h ../threads/thread.h ../machine/machine.h ../threads/utility.h ../machine/translate.h ../machine/disk.h ../userprog/addrspace.h ../filesys/filesys.h ../filesys/openfile.h ../machine/translate.h ../bin/noff.h ../threads/list.h ../userprog/bitmap.h ../filesys/openfile.h
-#  Implicit rule search has not been done.
-#  Implicit/static pattern stem: 'synchlist'
-#  Last modified 2021-11-19 15:38:53.565427966
-#  File has been updated.
-#  Successfully updated.
-#  recipe to execute (from '../Makefile.common', line 109):
-	$(CC) $(CFLAGS) -c $< -o $@
-
-# Not a target:
-../threads/thread.cc:
-#  Implicit rule search has been done.
-#  Last modified 2021-11-18 21:00:31.706779117
-#  File has been updated.
-#  Successfully updated.
-
-# Not a target:
-../machine/interrupt.h:
-#  Implicit rule search has been done.
-#  Last modified 2021-10-05 19:36:21.631074297
-#  File has been updated.
-#  Successfully updated.
-
-switch.o: ../threads/switch.S Makefile ../Makefile.common ../Makefile.dep ../threads/switch.S ../threads/copyright.h ../threads/switch.h
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-#  recipe to execute (from '../Makefile.common', line 112):
-	$(CPP) $(INCPATH) $(HOST) ../threads/switch.S > swtch.s
-	$(AS) $(ASFLAGS) -o switch.o swtch.s
-	rm swtch.s
-
-# Not a target:
-../threads/synchlist.h:
-#  Implicit rule search has been done.
-#  Last modified 2021-10-05 19:36:21.63907438
-#  File has been updated.
-#  Successfully updated.
-
-.synchlist.d: ../threads/synchlist.cc Makefile ../Makefile.common ../Makefile.dep ../threads/synchlist.cc ../threads/copyright.h ../threads/synchlist.h ../threads/list.h ../threads/utility.h ../threads/bool.h ../machine/sysdep.h ../threads/copyright.h ../threads/synch.h ../threads/thread.h ../machine/machine.h ../threads/utility.h ../machine/translate.h ../machine/disk.h ../userprog/addrspace.h ../filesys/filesys.h ../filesys/openfile.h ../machine/translate.h ../bin/noff.h ../threads/list.h ../userprog/bitmap.h ../filesys/openfile.h
-#  Implicit rule search has not been done.
-#  Implicit/static pattern stem: 'synchlist'
-#  Last modified 2021-11-19 17:52:07.424236818
-#  File has been updated.
-#  Successfully updated.
-#  recipe to execute (from '../Makefile.common', line 127):
-	$(CC) $(CFLAGS) -MM $< | \
-		sed -e 's|\(.*\)\.o:|.\1.d \1.o:|g' > $@
-
-# Not a target:
-../threads/synch.cc:
-#  Implicit rule search has been done.
-#  Last modified 2021-11-16 19:48:58.394297326
-#  File has been updated.
-#  Successfully updated.
-
-timer.o: ../machine/timer.cc Makefile ../Makefile.common ../Makefile.dep ../machine/timer.cc ../threads/copyright.h ../machine/timer.h ../threads/utility.h ../threads/copyright.h ../threads/bool.h ../machine/sysdep.h ../threads/system.h ../threads/utility.h ../threads/thread.h ../threads/list.h ../machine/machine.h ../machine/translate.h ../machine/disk.h ../userprog/addrspace.h ../filesys/filesys.h ../filesys/openfile.h ../machine/translate.h ../bin/noff.h ../threads/list.h ../userprog/bitmap.h ../filesys/openfile.h ../threads/scheduler.h ../machine/interrupt.h ../machine/stats.h ../machine/timer.h ../machine/consoledriver.h ../machine/console.h
-#  Implicit rule search has not been done.
-#  Implicit/static pattern stem: 'timer'
-#  Last modified 2021-11-19 15:38:54.453429997
-#  File has been updated.
-#  Successfully updated.
-#  recipe to execute (from '../Makefile.common', line 109):
-	$(CC) $(CFLAGS) -c $< -o $@
-
-# Not a target:
-../machine/machine.h:
-#  Implicit rule search has been done.
-#  Last modified 2021-11-18 20:41:59.672127358
-#  File has been updated.
-#  Successfully updated.
-
-# Not a target:
-../machine/timer.cc:
-#  Implicit rule search has been done.
-#  Last modified 2021-10-05 19:36:21.631074297
-#  File has been updated.
-#  Successfully updated.
-
-.bitmap.d: bitmap.cc Makefile ../Makefile.common ../Makefile.dep bitmap.cc ../threads/copyright.h bitmap.h ../threads/utility.h ../threads/copyright.h ../threads/bool.h ../machine/sysdep.h ../filesys/openfile.h
-#  Implicit rule search has not been done.
-#  Implicit/static pattern stem: 'bitmap'
-#  Last modified 2021-11-19 17:52:07.100236805
-#  File has been updated.
-#  Successfully updated.
-#  recipe to execute (from '../Makefile.common', line 127):
-	$(CC) $(CFLAGS) -MM $< | \
-		sed -e 's|\(.*\)\.o:|.\1.d \1.o:|g' > $@
-
-consoledriver.o: consoledriver.cc Makefile ../Makefile.common ../Makefile.dep ../machine/consoledriver.cc ../threads/copyright.h ../threads/system.h ../threads/copyright.h ../threads/utility.h ../threads/bool.h ../machine/sysdep.h ../threads/thread.h ../threads/list.h ../machine/machine.h ../threads/utility.h ../machine/translate.h ../machine/disk.h ../userprog/addrspace.h ../filesys/filesys.h ../filesys/openfile.h ../machine/translate.h ../bin/noff.h ../threads/list.h ../userprog/bitmap.h ../filesys/openfile.h ../threads/scheduler.h ../machine/interrupt.h ../machine/stats.h ../machine/timer.h ../machine/consoledriver.h ../machine/console.h ../machine/consoledriver.h ../threads/synch.h
-#  Implicit rule search has not been done.
-#  Implicit/static pattern stem: 'consoledriver'
-#  Modification time never checked.
-#  File has not been updated.
-#  recipe to execute (from '../Makefile.common', line 109):
-	$(CC) $(CFLAGS) -c $< -o $@
-
-# Not a target:
-userthread.h:
-#  Implicit rule search has been done.
-#  Last modified 2021-11-15 14:18:10.706700332
-#  File has been updated.
-#  Successfully updated.
- 
-
-.machine.d: ../machine/machine.cc Makefile ../Makefile.common ../Makefile.dep ../machine/machine.cc ../threads/copyright.h ../machine/machine.h ../threads/utility.h ../threads/copyright.h ../threads/bool.h ../machine/sysdep.h ../machine/translate.h ../machine/disk.h ../threads/system.h ../threads/utility.h ../threads/thread.h ../threads/list.h ../machine/machine.h ../userprog/addrspace.h ../filesys/filesys.h ../filesys/openfile.h ../machine/translate.h ../bin/noff.h ../threads/list.h ../userprog/bitmap.h ../filesys/openfile.h ../threads/scheduler.h ../machine/interrupt.h ../machine/stats.h ../machine/timer.h ../machine/consoledriver.h ../machine/console.h
-#  Implicit rule search has not been done.
-#  Implicit/static pattern stem: 'machine'
-#  Last modified 2021-11-19 17:52:06.936236799
-#  File has been updated.
-#  Successfully updated.
-#  recipe to execute (from '../Makefile.common', line 127):
-	$(CC) $(CFLAGS) -MM $< | \
-		sed -e 's|\(.*\)\.o:|.\1.d \1.o:|g' > $@
-
-system.o: ../threads/system.cc Makefile ../Makefile.common ../Makefile.dep ../threads/system.cc ../threads/copyright.h ../threads/system.h ../threads/utility.h ../threads/bool.h ../machine/sysdep.h ../threads/copyright.h ../threads/thread.h ../threads/list.h ../machine/machine.h ../threads/utility.h ../machine/translate.h ../machine/disk.h ../userprog/addrspace.h ../filesys/filesys.h ../filesys/openfile.h ../machine/translate.h ../bin/noff.h ../threads/list.h ../userprog/bitmap.h ../filesys/openfile.h ../threads/scheduler.h ../machine/interrupt.h ../machine/stats.h ../machine/timer.h ../machine/consoledriver.h ../machine/console.h
-#  Implicit rule search has not been done.
-#  Implicit/static pattern stem: 'system'
-#  Last modified 2021-11-19 15:38:53.709428296
-#  File has been updated.
-#  Successfully updated.
-#  recipe to execute (from '../Makefile.common', line 109):
-	$(CC) $(CFLAGS) -c $< -o $@
-
-# Not a target:
-../threads/bool.h:
-#  Implicit rule search has been done.
-#  Last modified 2021-10-05 19:36:21.635074339
-#  File has been updated.
-#  Successfully updated.
-
-mipssim.o: mipssim.cc Makefile ../Makefile.common ../Makefile.dep ../machine/mipssim.cc ../threads/copyright.h ../machine/machine.h ../threads/utility.h ../threads/copyright.h ../threads/bool.h ../machine/sysdep.h ../machine/translate.h ../machine/disk.h ../machine/mipssim.h ../threads/system.h ../threads/utility.h ../threads/thread.h ../threads/list.h ../machine/machine.h ../userprog/addrspace.h ../filesys/filesys.h ../filesys/openfile.h ../machine/translate.h ../bin/noff.h ../threads/list.h ../userprog/bitmap.h ../filesys/openfile.h ../threads/scheduler.h ../machine/interrupt.h ../machine/stats.h ../machine/timer.h ../machine/consoledriver.h ../machine/console.h
-#  Implicit rule search has not been done.
-#  Implicit/static pattern stem: 'mipssim'
-#  Modification time never checked.
-#  File has not been updated.
-#  recipe to execute (from '../Makefile.common', line 109):
-	$(CC) $(CFLAGS) -c $< -o $@
-
-# Not a target:
-../machine/console.cc:
-#  Implicit rule search has been done.
-#  Last modified 2021-10-05 19:36:21.631074297
-#  File has been updated.
-#  Successfully updated.
-
-.threadtest.d: ../threads/threadtest.cc Makefile ../Makefile.common ../Makefile.dep ../threads/threadtest.cc ../threads/copyright.h ../threads/system.h ../threads/utility.h ../threads/bool.h ../machine/sysdep.h ../threads/copyright.h ../threads/thread.h ../threads/list.h ../machine/machine.h ../threads/utility.h ../machine/translate.h ../machine/disk.h ../userprog/addrspace.h ../filesys/filesys.h ../filesys/openfile.h ../machine/translate.h ../bin/noff.h ../threads/list.h ../userprog/bitmap.h ../filesys/openfile.h ../threads/scheduler.h ../machine/interrupt.h ../machine/stats.h ../machine/timer.h ../machine/consoledriver.h ../machine/console.h
-#  Implicit rule search has not been done.
-#  Implicit/static pattern stem: 'threadtest'
-#  Last modified 2021-11-19 17:52:07.296236813
-#  File has been updated.
-#  Successfully updated.
-#  recipe to execute (from '../Makefile.common', line 127):
-	$(CC) $(CFLAGS) -MM $< | \
-		sed -e 's|\(.*\)\.o:|.\1.d \1.o:|g' > $@
-
-.progtest.d: progtest.cc Makefile ../Makefile.common ../Makefile.dep progtest.cc ../threads/copyright.h ../threads/system.h ../threads/copyright.h ../threads/utility.h ../threads/bool.h ../machine/sysdep.h ../threads/thread.h ../threads/list.h ../machine/machine.h ../threads/utility.h ../machine/translate.h ../machine/disk.h ../userprog/addrspace.h ../filesys/filesys.h ../filesys/openfile.h ../machine/translate.h ../bin/noff.h ../threads/list.h ../userprog/bitmap.h ../filesys/openfile.h ../threads/scheduler.h ../machine/interrupt.h ../machine/stats.h ../machine/timer.h ../machine/consoledriver.h ../machine/console.h ../machine/console.h addrspace.h ../threads/synch.h
-#  Implicit rule search has not been done.
-#  Implicit/static pattern stem: 'progtest'
-#  Last modified 2021-11-19 17:52:07.000236801
-#  File has been updated.
-#  Successfully updated.
-#  recipe to execute (from '../Makefile.common', line 127):
-	$(CC) $(CFLAGS) -MM $< | \
-		sed -e 's|\(.*\)\.o:|.\1.d \1.o:|g' > $@
-
-translate.o: translate.cc Makefile ../Makefile.common ../Makefile.dep ../machine/translate.cc ../threads/copyright.h ../machine/machine.h ../threads/utility.h ../threads/copyright.h ../threads/bool.h ../machine/sysdep.h ../machine/translate.h ../machine/disk.h ../userprog/addrspace.h ../filesys/filesys.h ../filesys/openfile.h ../machine/translate.h ../bin/noff.h ../threads/list.h ../threads/utility.h ../userprog/bitmap.h ../filesys/openfile.h ../threads/system.h ../threads/thread.h ../threads/list.h ../machine/machine.h ../threads/scheduler.h ../machine/interrupt.h ../machine/stats.h ../machine/timer.h ../machine/consoledriver.h ../machine/console.h
-#  Implicit rule search has not been done.
-#  Implicit/static pattern stem: 'translate'
-#  Modification time never checked.
-#  File has not been updated.
-#  recipe to execute (from '../Makefile.common', line 109):
-	$(CC) $(CFLAGS) -c $< -o $@
-
-# files hash-table stats:
-# Load=114/1024=11%, Rehash=0, Collisions=73/1059=7%
-# VPATH Search Paths
-
-vpath %.cc ../machine:../threads:../userprog:../filesys:../network:../vm:..
-vpath %.S ../machine:../threads:../userprog:../filesys:../network:../vm:..
-
-# 2 'vpath' search paths.
-
-# No general ('VPATH' variable) search path.
-
-# strcache buffers: 1 (0) / strings = 190 / storage = 2437 B / avg = 12 B
-# current buf: size = 8162 B / used = 2437 B / count = 190 / avg = 12 B
-
-# strcache performance: lookups = 1229 / hit rate = 84%
-# hash-table stats:
-# Load=190/8192=2%, Rehash=0, Collisions=18/1229=1%
-# Finished Make data base on Fri Nov 19 17:52:10 2021
-
-# make[1]: Leaving directory '/home/wissam/Documents/projetNachos/code/userprog'
 # GNU Make 4.2.1
 # Built for x86_64-pc-linux-gnu
 # Copyright (C) 1988-2016 Free Software Foundation, Inc.
@@ -2269,7 +988,7 @@ vpath %.S ../machine:../threads:../userprog:../filesys:../network:../vm:..
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Fri Nov 19 17:52:10 2021
+# Make data base, printed on Mon Nov 22 14:07:44 2021
 
 # Variables
 
@@ -2458,7 +1177,7 @@ SHLVL = 0
 # environment
 GNOME_SHELL_SESSION_MODE = ubuntu
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-2e57542f-f11a-4dc4-8489-0d59c0b1af2c.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-bd076c85-7ed2-44fd-8d2e-734efa94f422.sock
 # default
 MAKE_VERSION := 4.2.1
 # environment
@@ -2510,7 +1229,6 @@ ELECTRON_RUN_AS_NODE = 1
 # environment
 SNAP_NAME = code
 # environment
- 
 LC_ALL = C
 # environment
 GJS_DEBUG_TOPICS = JS ERROR;JS LOG
@@ -2554,6 +1272,7 @@ VSCODE_PID = 2320
 # Files
 
 all:
+ 
 #  Phony target (prerequisite of .PHONY).
 #  Command line target.
 #  Implicit rule search has not been done.
@@ -2679,6 +1398,6 @@ clean:
 # strcache performance: lookups = 65 / hit rate = 24%
 # hash-table stats:
 # Load=49/8192=1%, Rehash=0, Collisions=2/65=3%
-# Finished Make data base on Fri Nov 19 17:52:10 2021
+# Finished Make data base on Mon Nov 22 14:07:44 2021
 
  

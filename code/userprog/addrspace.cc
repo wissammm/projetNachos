@@ -152,6 +152,32 @@ AddrSpace::AddrSpace (OpenFile * executable)
 //      Dealloate an address space.  Nothing for now!
 //----------------------------------------------------------------------
 
+#ifdef CHANGED
+static void ReadAtVirtual(OpenFile *executable, int virtualaddr, int numBytes, int position, TranslationEntry *pageTable, unsigned numPages)
+{  
+    
+    TranslationEntry *currentPageTableSave = machine->currentPageTable;
+    unsigned int currentPageTableSizeSave = machine->currentPageTableSize;
+
+    machine->currentPageTable = pageTable;
+    machine->currentPageTableSize = numPages;
+    
+    char buf[] = new char[numBytes];
+    executable->readAt(buf,numBytes,position);
+
+    for(int i =0 ;i<numBytes;i++){
+        machine->WriteMem(virtualaddr+i,1,buf);
+    }
+    
+    machine->currentPageTable = currentPageTableSave;
+    machine->currentPageTableSize = currentPageTableSizeSave;
+}
+
+
+#endif 
+
+
+
 AddrSpace::~AddrSpace ()
 {
   
