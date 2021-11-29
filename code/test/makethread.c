@@ -16,6 +16,7 @@ void print2(char string[]){
 }
 
 int main (){
+    PutChar('c');
     char arg = 'k';
     void *f = print;
     int i;
