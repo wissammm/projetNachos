@@ -84,9 +84,11 @@ AddrSpace::AddrSpace (OpenFile * executable)
     map = new BitMap(UserStacksAreaSize/256);//je divise la pile par 256 pour chaques threads
     map->Mark(0);//le 0 est utilisé par le main
     sem = new Semaphore("map",(UserStacksAreaSize/256)-1);//semaphore pour protéger les instruction de map 
+    
     #endif
-
+    
     executable->ReadAt (&noffH, sizeof (noffH), 0);
+    
     if ((noffH.noffMagic != NOFFMAGIC) &&
 	(WordToHost (noffH.noffMagic) == NOFFMAGIC))
 	SwapHeader (&noffH);
@@ -96,9 +98,18 @@ AddrSpace::AddrSpace (OpenFile * executable)
 // how big is address space?
     size = noffH.code.size + noffH.initData.size + noffH.uninitData.size + UserStacksAreaSize;	// we need to increase the size
     // to leave room for the stack
-    numPages = divRoundUp (size, PageSize);
-    size = numPages * PageSize;
+    
+    numPages = divRoundUp (size, PageSize) +1;
 
+
+    DEBUG('p', "numPages : %d \n", numPages);
+    DEBUG('p', "size 1 : %d \n", size);
+    DEBUG('p', "PageSize : %d \n", PageSize);
+    
+
+    size = numPages  * PageSize;
+    DEBUG('p', "numPages 2 : %d \n", numPages);
+    DEBUG('p', "size 2 : %d \n", size);
     // check we're not trying
     // to run anything too big --
     // at least until we have
@@ -119,24 +130,27 @@ AddrSpace::AddrSpace (OpenFile * executable)
 	  pageTable[i].readOnly = FALSE;	// if the code segment was entirely on 
 	  // a separate page, we could set its 
 	  // pages to be read-only
-      }
-
-// then, copy in the code and data segments into memory
+      }// then, copy in the code and data segments into memory
     if (noffH.code.size > 0)
       {
 	  DEBUG ('a', "Initializing code segment, at 0x%x, size 0x%x\n",
 		 noffH.code.virtualAddr, noffH.code.size);
-	  executable->ReadAt (&(machine->mainMemory[noffH.code.virtualAddr]),
-			      noffH.code.size, noffH.code.inFileAddr);
+	//   executable->ReadAt (&(machine->mainMemory[noffH.code.virtualAddr]),
+	// 		      noffH.code.size, noffH.code.inFileAddr);
+         #ifdef CHANGED
+         ReadAtVirtual(executable, noffH.code.virtualAddr, noffH.code.size, noffH.code.inFileAddr, pageTable , numPages);
+         #endif
       }
     if (noffH.initData.size > 0)
       {
 	  DEBUG ('a', "Initializing data segment, at 0x%x, size 0x%x\n",
 		 noffH.initData.virtualAddr, noffH.initData.size);
-	  executable->ReadAt (&
-			      (machine->mainMemory
-			       [noffH.initData.virtualAddr]),
-			      noffH.initData.size, noffH.initData.inFileAddr);
+	//   executable->ReadAt (&(machine->mainMemory
+	// 		       [noffH.initData.virtualAddr]),
+	// 		      noffH.initData.size, noffH.initData.inFileAddr);
+         #ifdef CHANGED
+         ReadAtVirtual(executable, noffH.initData.virtualAddr, noffH.initData.size, noffH.initData.inFileAddr , pageTable , numPages);
+         #endif
       }
 
     DEBUG ('a', "Area for stacks at 0x%x, size 0x%x\n",
@@ -147,13 +161,10 @@ AddrSpace::AddrSpace (OpenFile * executable)
     AddrSpaceList.Append(this);
 }
 
-//----------------------------------------------------------------------
-// AddrSpace::~AddrSpace
-//      Dealloate an address space.  Nothing for now!
-//----------------------------------------------------------------------
 
 #ifdef CHANGED
-static void ReadAtVirtual(OpenFile *executable, int virtualaddr, int numBytes, int position, TranslationEntry *pageTable, unsigned numPages)
+void
+AddrSpace :: ReadAtVirtual(OpenFile *executable, int virtualaddr, int numBytes, int position, TranslationEntry *pageTable, unsigned numPages)
 {  
     
     TranslationEntry *currentPageTableSave = machine->currentPageTable;
@@ -161,12 +172,12 @@ static void ReadAtVirtual(OpenFile *executable, int virtualaddr, int numBytes, i
 
     machine->currentPageTable = pageTable;
     machine->currentPageTableSize = numPages;
-    
-    char buf[] = new char[numBytes];
-    executable->readAt(buf,numBytes,position);
+
+    char *buf = new char[numBytes];
+    executable->ReadAt(buf,numBytes,position);
 
     for(int i =0 ;i<numBytes;i++){
-        machine->WriteMem(virtualaddr+i,1,buf);
+        machine->WriteMem(virtualaddr+i,1,buf[i]);
     }
     
     machine->currentPageTable = currentPageTableSave;
@@ -176,6 +187,11 @@ static void ReadAtVirtual(OpenFile *executable, int virtualaddr, int numBytes, i
 
 #endif 
 
+
+//----------------------------------------------------------------------
+// AddrSpace::~AddrSpace
+//      Dealloate an address space.  Nothing for now!
+//----------------------------------------------------------------------
 
 
 AddrSpace::~AddrSpace ()
