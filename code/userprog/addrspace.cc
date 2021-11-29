@@ -99,7 +99,7 @@ AddrSpace::AddrSpace (OpenFile * executable)
     size = noffH.code.size + noffH.initData.size + noffH.uninitData.size + UserStacksAreaSize;	// we need to increase the size
     // to leave room for the stack
     
-    numPages = divRoundUp (size, PageSize) +1;
+    numPages = divRoundUp (size, PageSize) ;
 
 
     DEBUG('p', "numPages : %d \n", numPages);
@@ -121,9 +121,9 @@ AddrSpace::AddrSpace (OpenFile * executable)
 	   numPages, size);
 // first, set up the translation 
     pageTable = new TranslationEntry[numPages];
-    for (i = 0; i < numPages; i++)
+    for (i = 1; i < numPages -1 ; i++)
       {
-	  pageTable[i].physicalPage = i;	// for now, phys page # = virtual page #
+	  pageTable[i].physicalPage = i + 1;	// for now, phys page # = virtual page #
 	  pageTable[i].valid = TRUE;
 	  pageTable[i].use = FALSE;
 	  pageTable[i].dirty = FALSE;

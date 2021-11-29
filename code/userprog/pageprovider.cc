@@ -3,9 +3,9 @@
 #include "bitmap.h"
 
 
-PageProvider(){
-    map = new BitMap( NumPhysPages);
-    
+PageProvider(OpenFile * executable){
+    map = new BitMap(NumPhysPages);
+
 }
 
 int GetEmptyPage(){
