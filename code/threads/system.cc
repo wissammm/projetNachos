@@ -183,6 +183,11 @@ Initialize (int argc, char **argv)
 
 #ifdef USER_PROGRAM
     machine = new Machine (debugUserProg);	// this must come first
+	
+#ifdef CHANGED 
+pageProvider = new PageProvider(NumPhysPages);
+#endif 
+
 #endif
 
 #ifdef FILESYS

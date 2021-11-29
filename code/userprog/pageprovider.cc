@@ -3,7 +3,7 @@
 #include "bitmap.h"
 
 
-PageProvider(OpenFile * executable){
+PageProvider :: PageProvider(OpenFile * executable){
     map = new BitMap(NumPhysPages);
 
 }
