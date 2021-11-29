@@ -116,14 +116,15 @@ AddrSpace::AddrSpace (OpenFile * executable)
     // virtual memory
     if (numPages > NumPhysPages)
 	    throw std::bad_alloc();
+    DEBUG('p',"NumPhysPages : %d", NumPhysPages);
 
     DEBUG ('a', "Initializing address space, num pages %d, total size 0x%x\n",
 	   numPages, size);
 // first, set up the translation 
     pageTable = new TranslationEntry[numPages];
-    for (i = 1; i < numPages -1 ; i++)
+    for (i = 0; i < numPages  ; i++)
       {
-	  pageTable[i].physicalPage = i + 1;	// for now, phys page # = virtual page #
+	  pageTable[i].physicalPage = i +1 ;	// for now, phys page # = virtual page #
 	  pageTable[i].valid = TRUE;
 	  pageTable[i].use = FALSE;
 	  pageTable[i].dirty = FALSE;
