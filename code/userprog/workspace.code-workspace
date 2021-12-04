@@ -1,0 +1,20 @@
+{
+	"folders": [
+		{
+			"name": "code",
+			"path": ".."
+		}
+	],
+	"settings": {
+		"makefile.extensionOutputFolder": "./.vscode",
+		"C_Cpp.dimInactiveRegions": false,
+		"files.associations": {
+			"array": "cpp",
+			"string_view": "cpp",
+			"initializer_list": "cpp",
+			"utility": "cpp",
+			"new": "cpp"
+		},
+		"C_Cpp.errorSquiggles": "Disabled"
+	}
+}

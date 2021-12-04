@@ -10,17 +10,21 @@
 
 #include "copyright.h"
 #include "utility.h"
+
 #include "thread.h"
 #include "scheduler.h"
 #include "interrupt.h"
 #include "stats.h"
 #include "timer.h"
+
 #include <consoledriver.h>
 
 #ifdef CHANGED
 #define MAX_STRING_SIZE 32 // un string peut avoir 2^32 charactères, mais ca fait beaucoup de mémoire utilisé donc je me contente juste d'en utiliser 32 pour eviter de manger trop de mémoire
 // Initialization and cleanup routines
 #endif 
+
+
 
 extern void Initialize (int argc, char **argv);	// Initialization,
 						// called before anything else
@@ -37,13 +41,15 @@ extern Timer *timer;		// the hardware alarm clock
 #ifdef USER_PROGRAM
 #include "machine.h"
 
-#ifdef CHANGED 
-#include "pageprovider.h"
-extern PageProvider *pageProvider;
-#endif 
 
-extern Machine *machine;	// user program memory and registers
+extern Machine *machine; // user program memory and registers
+
+#include "pageprovider.h"
+extern PageProvider *pagepro;	
 #endif
+
+
+
 
 #ifdef FILESYS_NEEDED		// FILESYS or FILESYS_STUB
 #include "filesys.h"

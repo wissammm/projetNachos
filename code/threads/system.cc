@@ -12,9 +12,10 @@
 #include <locale.h>
 #ifdef __GLIBC__
 #include <malloc.h>
+
 #endif
 
-#include <consoledriver.h>
+
 
 // This defines *all* of the global data structures used by Nachos.
 // These are all initialized and de-allocated by this file.
@@ -37,6 +38,7 @@ SynchDisk *synchDisk;
 
 #ifdef USER_PROGRAM		// requires either FILESYS or FILESYS_STUB
 Machine *machine;		// user program memory and registers
+PageProvider *pagepro;
 #endif
 
 #ifdef NETWORK
@@ -185,7 +187,8 @@ Initialize (int argc, char **argv)
     machine = new Machine (debugUserProg);	// this must come first
 	
 #ifdef CHANGED 
-pageProvider = new PageProvider(NumPhysPages);
+	
+	pagepro = new PageProvider();
 #endif 
 
 #endif
