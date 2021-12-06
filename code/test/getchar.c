@@ -11,5 +11,5 @@ void print(char c, int n){
 int main(){
     char c = GetChar();
     PutChar(c); 
-    Halt();
+    Exit(0);
 }

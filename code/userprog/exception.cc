@@ -135,7 +135,8 @@ void ExceptionHandler (ExceptionType which)
 
 		  case SC_Exit:
 		  {
-			  Exit(machine->ReadRegister(4));
+
+			  do_ForkExit();
 			  break;
 		  }
 
@@ -166,6 +167,7 @@ void ExceptionHandler (ExceptionType which)
 			  do_ForkExec(to);
 			  break;
 		  }
+
 
 		  #endif 
 		default:

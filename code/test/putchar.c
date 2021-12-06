@@ -12,5 +12,6 @@ int
 main(){
     print('a',4);
     //Exit(5);
-    while(1);
+    //while(1);
+    Exit(0);
 }

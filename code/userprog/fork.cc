@@ -5,8 +5,11 @@
 #include "fork.h"
 
 
+int nbProcessus =1;
+
 static void StartUserProg(void * nullType){
      DEBUG('p',"Start user Prog \n");
+     
     spaceProcessus->InitRegisters ();	// set the initial register values
     spaceProcessus->RestoreState ();	// load page table register
 
@@ -34,6 +37,7 @@ do_ForkExec(const char *s){
     spaceProcessus = new AddrSpace (executable);
     Thread *t = new Thread("Nouveau processus");
     t->space = spaceProcessus;
+    nbProcessus ++;
     t->Start(StartUserProg, NULL);
     DEBUG('p',"do fork exec FIN %x , NextPcReg : %x\n", machine->ReadRegister(PCReg) , machine->ReadRegister(NextPCReg));
     DEBUG('p',"registre 31 : %x \n ", machine->ReadRegister(31));
@@ -41,4 +45,15 @@ do_ForkExec(const char *s){
 
     
     return 0;
+}
+
+int
+do_ForkExit(){
+  nbProcessus--;
+  if(nbProcessus==0){
+      //Exit(machine->ReadRegister(4));
+      interrupt->Powerdown();
+  }
+  currentThread->Finish();
+  return 0;
 }
