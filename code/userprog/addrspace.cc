@@ -236,6 +236,7 @@ AddrSpace::InitRegisters ()
 
     // Initial program counter -- must be location of "Start"
     machine->WriteRegister (PCReg, USER_START_ADDRESS);
+    
 
     // Need to also tell MIPS where next instruction is, because
     // of branch delay possibility

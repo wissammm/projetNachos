@@ -6,6 +6,7 @@
 
 
 static void StartUserProg(void * nullType){
+     DEBUG('p',"Start user Prog \n");
     spaceProcessus->InitRegisters ();	// set the initial register values
     spaceProcessus->RestoreState ();	// load page table register
 
@@ -29,11 +30,13 @@ do_ForkExec(const char *s){
 	  ClearColor (stdout);
 	  return 0;
       }
+    DEBUG('p',"do fork exec \n");
     spaceProcessus = new AddrSpace (executable);
     Thread *t = new Thread("Nouveau processus");
     t->space = spaceProcessus;
     t->Start(StartUserProg, NULL);
-    
+    DEBUG('p',"do fork exec FIN %x , NextPcReg : %x\n", machine->ReadRegister(PCReg) , machine->ReadRegister(NextPCReg));
+    DEBUG('p',"registre 31 : %x \n ", machine->ReadRegister(31));
     delete executable;		// close file
 
     

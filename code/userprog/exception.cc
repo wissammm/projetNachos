@@ -158,13 +158,12 @@ void ExceptionHandler (ExceptionType which)
 			  break;
 		  }
 
-		  case SC_Fork:
+		  case SC_ForkExec:
 		  {
 			  int c = machine->ReadRegister (4); // recupération de la chaine de caractère
-              char* to = new char[MAX_STRING_SIZE];
-			  consoledriver->copyStringFromMachine(c ,to,MAX_STRING_SIZE-1);
+              char* to = new char[100];
+			  consoledriver->copyStringFromMachine(c ,to,99);
 			  do_ForkExec(to);
-
 			  break;
 		  }
 

@@ -1,6 +1,7 @@
 #include "syscall.h"
 
 int main(){
-    ForkExec("./putchar");
+    ForkExec("/home/wissam/Documents/projetNachos/code/test/putchar");
+    PutChar('c');
     while(1);
 }
