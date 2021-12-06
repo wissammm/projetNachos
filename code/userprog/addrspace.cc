@@ -100,37 +100,43 @@ AddrSpace::AddrSpace (OpenFile * executable)
     // to leave room for the stack
     
     numPages = divRoundUp (size, PageSize) ;
-
+    
 
     DEBUG('p', "numPages : %d \n", numPages);
-    DEBUG('p', "size 1 : %d \n", size);
+    DEBUG('p', "size : %d \n", size);
     DEBUG('p', "PageSize : %d \n", PageSize);
     
 
     size = numPages  * PageSize;
-    DEBUG('p', "numPages 2 : %d \n", numPages);
-    DEBUG('p', "size 2 : %d \n", size);
+    
     // check we're not trying
     // to run anything too big --
     // at least until we have
     // virtual memory
     if (numPages > NumPhysPages)
 	    throw std::bad_alloc();
-    DEBUG('p',"NumPhysPages : %d", NumPhysPages);
+    DEBUG('p',"NumPhysPages : %d \n", NumPhysPages);
 
     DEBUG ('a', "Initializing address space, num pages %d, total size 0x%x\n",
 	   numPages, size);
 // first, set up the translation 
     pageTable = new TranslationEntry[numPages];
+    #ifdef CHANGED
+    int getpage;
     for (i = 0; i < numPages  ; i++)
       {
-	  pageTable[i].physicalPage = i +1 ;	// for now, phys page # = virtual page #
+
+      getpage = pagepro->GetEmptyPage();
+      DEBUG('p', "get empty page : %d \n",getpage);
+	  pageTable[i].physicalPage = getpage;	// for now, phys page # = virtual page #
+      #endif
 	  pageTable[i].valid = TRUE;
 	  pageTable[i].use = FALSE;
 	  pageTable[i].dirty = FALSE;
 	  pageTable[i].readOnly = FALSE;	// if the code segment was entirely on 
 	  // a separate page, we could set its 
 	  // pages to be read-only
+
       }// then, copy in the code and data segments into memory
     if (noffH.code.size > 0)
       {
@@ -160,6 +166,10 @@ AddrSpace::AddrSpace (OpenFile * executable)
     pageTable[0].valid = FALSE;			// Catch NULL dereference
 
     AddrSpaceList.Append(this);
+
+    #ifdef CHANGED
+    machine->DumpMem("addrspace.svg");
+    #endif
 }
 
 
@@ -197,8 +207,10 @@ AddrSpace :: ReadAtVirtual(OpenFile *executable, int virtualaddr, int numBytes, 
 
 AddrSpace::~AddrSpace ()
 {
-  
-  delete [] pageTable;
+  #ifdef CHANGED
+  delete pagepro;
+  #endif
+  delete pageTable;
   pageTable = NULL;
 
   AddrSpaceList.Remove(this);

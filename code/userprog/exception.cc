@@ -156,6 +156,11 @@ void ExceptionHandler (ExceptionType which)
 			  break;
 		  }
 
+		  case SC_Fork:
+		  {
+			  break;
+		  }
+
 		  #endif 
 		default:
 		  {

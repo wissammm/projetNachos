@@ -11,13 +11,21 @@ PageProvider :: PageProvider(){
 }
 
 PageProvider::~PageProvider(){
-    delete map;
+    delete[] map;
 }
 
 int 
 PageProvider::GetEmptyPage(){
-    int page = map->Find();
-    ASSERT(page == -1);
+    //int page = map->Find();
+    
+    //test random 
+    int k= rand() % 64;
+    while(map->Test(k) ){
+        k = rand() % 64;
+    }
+    map->Mark(k);
+    int page = k;
+    
     int adresse = page * PageSize;
     char *mem = &(machine->mainMemory[adresse]);
     memset(mem, 0, PageSize);

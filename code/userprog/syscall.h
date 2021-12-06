@@ -170,7 +170,9 @@ int UserThreadCreate(void f(void *arg), void *arg);
 void UserThreadExit();
 #endif 
 
-
+#ifdef CHANGED
+//ForkExec(const char *s);
+#endif
 
 #endif // IN_USER_MODE
 
