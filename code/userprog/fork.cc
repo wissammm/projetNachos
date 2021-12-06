@@ -5,7 +5,7 @@
 #include "fork.h"
 
 
-int StartUserProg(){
+static void StartUserProg(void * nullType){
     spaceProcessus->InitRegisters ();	// set the initial register values
     spaceProcessus->RestoreState ();	// load page table register
 
@@ -14,7 +14,6 @@ int StartUserProg(){
     ASSERT (FALSE);		// machine->Run never returns;
     // the address space exits
     // by doing the syscall "exit"
-    return 0;
 }
 
 int 
@@ -35,7 +34,6 @@ do_ForkExec(const char *s){
     t->space = spaceProcessus;
     t->Start(StartUserProg, NULL);
     
-
     delete executable;		// close file
 
     

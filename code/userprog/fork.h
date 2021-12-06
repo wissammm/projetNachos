@@ -6,4 +6,4 @@
 
 static AddrSpace *spaceProcessus;
 int do_ForkExec(const char *s );
-int StartUserProg(AddrSpace spaceProcessus);
+static void StartUserProg(void * nullType);
