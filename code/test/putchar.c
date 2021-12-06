@@ -11,5 +11,6 @@ void print(char c, int n){
 int
 main(){
     print('a',4);
-    Exit(5);
+    //Exit(5);
+    while(1);
 }

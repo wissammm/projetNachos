@@ -29,7 +29,7 @@
 #define SC_Read		6
 #define SC_Write	7
 #define SC_Close	8
-#define SC_Fork		9
+// #define SC_Fork		9
 #define SC_Yield	10
 
 
@@ -40,7 +40,7 @@
 #define SC_GetString 14
 #define SC_ThreadCreate 15
 #define SC_ThreadExit 16
-#define SC_Fork 17
+#define SC_Fork 9
 #endif 
 
 #ifdef IN_USER_MODE
@@ -171,7 +171,7 @@ void UserThreadExit();
 #endif 
 
 #ifdef CHANGED
-//ForkExec(const char *s);
+ForkExec(const char *s);
 #endif
 
 #endif // IN_USER_MODE

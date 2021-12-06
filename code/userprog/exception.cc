@@ -25,8 +25,10 @@
 #include "system.h"
 #include "syscall.h"
 
+#ifdef CHANGED
 #include "userthread.h"
-
+#include "fork.h"
+#endif 
 //----------------------------------------------------------------------
 // UpdatePC : Increments the Program Counter register in order to resume
 // the user program immediately after the "syscall" instruction.
@@ -158,6 +160,11 @@ void ExceptionHandler (ExceptionType which)
 
 		  case SC_Fork:
 		  {
+			  int c = machine->ReadRegister (4); // recupération de la chaine de caractère
+              char* to = new char[MAX_STRING_SIZE];
+			  consoledriver->copyStringFromMachine(c ,to,MAX_STRING_SIZE-1);
+			  do_ForkExec(to);
+
 			  break;
 		  }
 
